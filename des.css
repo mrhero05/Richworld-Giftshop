@@ -23,7 +23,6 @@ input {
   font-size: 1.2em;
   margin: 8px 0;
 }
-
 input::-webkit-input-placeholder {
   padding: 0 .3em;
 }
