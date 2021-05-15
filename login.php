@@ -1,5 +1,6 @@
 <?php
 include 'include/head.inc.php';
+<link rel="stylesheet" href="des.css">
 ?>
 <div class="container">
     <div class="row">
