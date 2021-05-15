@@ -11,3 +11,8 @@ body{
     margin-right: auto;
     border-radius: 10px;
 }
+
+h1{
+    color: brown;
+    font-size: 1.2em;
+}
