@@ -7,7 +7,9 @@ include 'include/head.inc.php';
             <div class="login-border">
                 <div class="row">
                         <div class="col-6">
-
+                        <div class="left">
+                        <img src="login.svg" alt="Team collaborating">
+                        </div>
                         </div>
                         <!-- for the right half of login -->
                         <div class="col-6">
