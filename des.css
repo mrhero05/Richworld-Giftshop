@@ -100,6 +100,11 @@ h1{
     }
     .right h1{
         color: white;
+        font-size: 40px;
+    }
+    .right p{
+        font-size: 19px;
+        width: 100%;
     }
     .login-border{
         margin-bottom: 5%;
