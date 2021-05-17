@@ -1,22 +1,13 @@
 
-.container{
-    margin-top: -20px;
-}
 
 .login-border{
     border: none;
     border-radius: 8px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    background-color: #fd5757;
-    margin-top: 10%;
-    border: none;
-    background-color: #000000;
-
     width: 80%;
     margin-top: 80px;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 h1{
@@ -25,27 +16,30 @@ h1{
 }
 
 .left{
-    color: #FD5757;
-    padding: 4em 2em;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    height: 100%;
+    padding: 18%;
+    background-color: #FD5757;
 }
 
 .left img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 70px;
     width: 100%;
 }
 
 
 
-.login-info{
+.right{
     background: #fdfdfd;
     padding: 4em 2em;
     text-align: center;
+    border-radius: 8px;
 }
 
-.login-info input{
+.right input{
     width: 80%;
     padding:20px;
     font-size: 15px;
@@ -57,28 +51,27 @@ h1{
 
 }
 
-.login-info input:focus, textarea:focus, select:focus{
+.right input:focus, textarea:focus, select:focus{
     outline-color: #fd5757;
     padding:20px;
 }
 
 
-.login-info p{
+.right p{
     font-weight: 500;
 }
 
-.login-info a{
+.right a{
     font-weight: 500;
     text-decoration: none;
     color: #fd5757;
 }
 
-.login-info a:hover{
+.right a:hover{
     color: #f84747;
 }
 
-
-.login-info button{
+.right button{
     background: #fd5757;
     padding: 8px;
     color: white;
@@ -89,18 +82,26 @@ h1{
     border-style: none;
 }
 
-.login-info button:hover{
+.right button:hover{
     background: #f76c6c;
    
 }
+<<<<<<< HEAD
 /*--For Responsiveness--*/
 
 @media screen and (max-width: 780px){
 
+=======
+ 
+/* for login reponsive */
+
+@media screen and (max-width:992px) {
+>>>>>>> upstream/main
     .left{
         display: none;
         align-items: center;
     }
+<<<<<<< HEAD
     .leftside{
         display:none;
     }
@@ -113,3 +114,13 @@ h1{
 
 
 
+=======
+    .right{
+        justify-content: center;
+        background: linear-gradient(0deg, rgba(255,181,181,1) 0%, rgba(253,87,87,1) 100%);
+    }
+    .right h1{
+        color: white;
+    }
+}
+>>>>>>> upstream/main

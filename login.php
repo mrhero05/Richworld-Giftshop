@@ -6,16 +6,20 @@ include 'include/head.inc.php';
        
             <div class="login-border">
                 <div class="row">
+<<<<<<< HEAD
                         <div class="col-6 leftside">
+=======
+                        <div class="col-sm-0 col-lg-6">
+>>>>>>> upstream/main
                         <div class="left">
                         <img src="login.svg" alt="Team collaborating">
                         </div>
                         </div>    
                         <!-- for the right half of login -->
-                        <div class="col-6">
+                        <div class="col-sm-12 col-lg-6">
                             <!-- eto boss mag create ng form submit na post method papunta sa login.inc.php -->
                             <form action="include/login.inc.php" method="POST">
-                            <div class="login-info">
+                            <div class="right">
                             <h1>Richworld Giftshop</h1>
                             <p>Ocassion made special</p>
                             <input type="text" placeholder="Username" name="user"><br>
