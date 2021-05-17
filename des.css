@@ -111,3 +111,16 @@ h1{
     }
 
 }
+
+/* for register.php */
+.left-register{
+    border: 1px solid black;
+    height: 100%;
+    background-color: orange;
+}
+.right-register{
+    border: 1px solid black;
+    height: 100%;
+    background-color: pink;
+    padding: 2%;
+}
