@@ -3,7 +3,7 @@ include 'include/head.inc.php';
 ?>
 <div class="container">
     <div class="row">
-       
+        <div class="col-12">
             <div class="login-border mt-5">
                 <div class="row">
                         <div class="col-sm-0 col-lg-6">
@@ -22,13 +22,14 @@ include 'include/head.inc.php';
                             <input type="password" placeholder="Password" name="pass">
                             <a href="" target="_blank"><p>Forgot password?</p></a>
                             <button type="submit" name="submit">Login</button>
-                            <a href="" target="_blank"><p>Dont have an account? Register here</p></a>
+                            <a href="register.php" target="_blank"><p>Dont have an account? Register here</p></a>
                             </div>
                             </form>
                         </div>
                 </div>
             </div>
         </div>
+    </div>
 
 </div>
 </body>
