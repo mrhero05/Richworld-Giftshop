@@ -77,7 +77,7 @@ h1{
     color: white;
     font-weight: 600;
     width: 80%;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     border-radius: 4px;
     border-style: none;
 }
@@ -86,41 +86,23 @@ h1{
     background: #f76c6c;
    
 }
-<<<<<<< HEAD
 /*--For Responsiveness--*/
 
-@media screen and (max-width: 780px){
+@media screen and (max-width: 992px){
 
-=======
- 
-/* for login reponsive */
-
-@media screen and (max-width:992px) {
->>>>>>> upstream/main
     .left{
         display: none;
         align-items: center;
     }
-<<<<<<< HEAD
-    .leftside{
-        display:none;
-    }
-    .login-info{
-        width: 100%;
-        justify-content: center;
-    }
-}
-
-
-
-
-=======
     .right{
         justify-content: center;
-        background: linear-gradient(0deg, rgba(255,181,181,1) 0%, rgba(253,87,87,1) 100%);
+        background: linear-gradient(0deg, rgb(240, 231, 231) 0%, rgba(251,83,90,1) 100%);
     }
     .right h1{
         color: white;
     }
+    .login-border{
+        margin-bottom: 5%;
+    }
+
 }
->>>>>>> upstream/main

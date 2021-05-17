@@ -4,13 +4,9 @@ include 'include/head.inc.php';
 <div class="container">
     <div class="row">
        
-            <div class="login-border">
+            <div class="login-border mt-5">
                 <div class="row">
-<<<<<<< HEAD
-                        <div class="col-6 leftside">
-=======
                         <div class="col-sm-0 col-lg-6">
->>>>>>> upstream/main
                         <div class="left">
                         <img src="login.svg" alt="Team collaborating">
                         </div>
