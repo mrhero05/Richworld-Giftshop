@@ -77,27 +77,37 @@ h1{
     color: white;
     font-weight: 600;
     width: 80%;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     border-radius: 4px;
     border-style: none;
 }
 
 .right button:hover{
     background: #f76c6c;
+   
 }
- 
-/* for login reponsive */
+/*--For Responsiveness--*/
 
-@media screen and (max-width:992px) {
+@media screen and (max-width: 992px){
+
     .left{
         display: none;
         align-items: center;
     }
     .right{
         justify-content: center;
-        background: linear-gradient(0deg, rgba(255,181,181,1) 0%, rgba(253,87,87,1) 100%);
+        background: linear-gradient(0deg, rgb(240, 231, 231) 0%, rgba(251,83,90,1) 100%);
     }
     .right h1{
         color: white;
+        font-size: 40px;
     }
+    .right p{
+        font-size: 19px;
+        width: 100%;
+    }
+    .login-border{
+        margin-bottom: 5%;
+    }
+
 }

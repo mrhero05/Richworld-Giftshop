@@ -3,14 +3,14 @@ include 'include/head.inc.php';
 ?>
 <div class="container">
     <div class="row">
-        <div class="col-12">
-            <div class="login-border">
+       
+            <div class="login-border mt-5">
                 <div class="row">
                         <div class="col-sm-0 col-lg-6">
                         <div class="left">
                         <img src="login.svg" alt="Team collaborating">
                         </div>
-                        </div>
+                        </div>    
                         <!-- for the right half of login -->
                         <div class="col-sm-12 col-lg-6">
                             <!-- eto boss mag create ng form submit na post method papunta sa login.inc.php -->
@@ -29,7 +29,7 @@ include 'include/head.inc.php';
                 </div>
             </div>
         </div>
-    </div>
+
 </div>
 </body>
 </html>
