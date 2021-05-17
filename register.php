@@ -1,7 +1,8 @@
 <?php
 include 'include/head.inc.php';
 ?>
-<div class="container-fluid">
+<!-- renamed class -->
+<div class="container-register">
     <div class="row">
         <div class="col-lg-2 p-0">
             <!-- column for the left side with 2 witdth -->
