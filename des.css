@@ -217,3 +217,47 @@ h1{
     }
 
 }
+
+/* for dashboard */
+.top-nav{
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+}
+.icon{
+  
+    border: 1px solid black;
+}
+.time{
+    border: 1px solid black;
+}
+.date{
+    border: 1px solid black;
+}
+.account-dashboard{
+    border: 1px solid black;
+}
+.left-nav{
+    border: 1px solid black; 
+    
+}
+
+.employee-summary{
+    border: 1px solid black;
+}
+.recent{
+    border: 1px solid black;
+}
+.announcement{
+    border: 1px solid black;
+    padding: 2%;
+}
+.announce-title{
+    border: 1px solid black;
+    padding: 2%;
+}
+.announce-user{
+    border: 1px solid black;
+    padding: 2%;
+}
+
