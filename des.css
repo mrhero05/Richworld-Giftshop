@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 .login-border{
     border: none;
@@ -159,7 +159,7 @@ h1{
 /* margin only left and right for label */
 .right-register label{
     margin: 0 20px;
-}
+}       
 
 /* Register inputs when active/clicked */
 .right-register input:focus, textarea:focus, select:focus{
@@ -219,45 +219,211 @@ h1{
 }
 
 /* for dashboard */
+
+
 .top-nav{
-    border: 1px solid black;
+    background: #fd5757;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.icon{
+    /* nothing */
+}
+
+.icon p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 1.2em;
+    margin-top: 12px;
+    font-weight: 700;
+    color:#2F2E41;
+}
+
+.icon span{
+    color: white;
+    margin-right: 50px;
+}
+
+.time{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-weight: 600;
+}
+.date{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: white;
+}
+.account-dashboard{
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    height: 60px;
+    color: white;
+    margin: 0;
+    padding: 10px;
+}
+
+.name{
+    font-size:85%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pos{
+    font-family: 'Poppins', sans-serif;
+    font-size: 70%;
+    color: rgb(235, 235, 235);
+}
+
+.account-dashboard p{
     margin: 0;
     padding: 0;
 }
-.icon{
-  
-    border: 1px solid black;
+
+
+.account-dashboard img{
+    float: left;
+    margin-right: 8px;
 }
-.time{
-    border: 1px solid black;
-}
-.date{
-    border: 1px solid black;
-}
-.account-dashboard{
-    border: 1px solid black;
-}
+
 .left-nav{
-    border: 1px solid black; 
-    
+    font-family: 'Poppins', sans-serif;
+    background: #2F2E41 !important;
+    height: 100%;
+    width: 95%;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bg{
+    background: #2F2E41 !important;
+}
+
+.burger-menu{
+    border: 1px solid white;
+    height: 20px;
+}
+
+.left-nav button{
+    text-align: left;
+    color: white;
+    border: none;
+    margin-left: -8px;
+    margin-top: 25px;
+    font-size: 14px;
+    background: none;
+    font-weight: 600;
+}
+
+.left-nav button:last-child{
+    margin-top: 0;
+}
+.left-nav img{
+    margin-right: 10px;
+}
+
+.left-nav button:hover{
+    color: #FD5757;
 }
 
 .employee-summary{
-    border: 1px solid black;
+    font-family: 'Poppins', sans-serif;
+    margin: 1.1em 1.5em;
+    padding: 1.5em 2em;
+    box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
+    text-align: center;
 }
+
+
+.emp-title{
+    margin-bottom: 40px;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.emp-sum{
+    border:none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emp-sum p{
+    margin-right: 200px;
+}
+
+.emp-sum p:last-child{
+    margin-right:0;
+}
+
+
 .recent{
-    border: 1px solid black;
+    font-family: 'Poppins', sans-serif;
+    margin: 1.1em 1.5em 0 1.1em;
+    margin-left: -10px;
+    padding: 1.5em 2em;
+    box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
 }
+
+.recent:last-child{
+    margin-bottom: 0;
+}
+
+.recent-title{
+    text-align:center;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.recent-des{
+    font-weight: 600;
+}
+
 .announcement{
-    border: 1px solid black;
+    font-family: 'Poppins', sans-serif;
+    margin: 1.1em 1.5em;
+    padding: 2em 2em;
+    box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
     padding: 2%;
 }
+
+
 .announce-title{
-    border: 1px solid black;
-    padding: 2%;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 600;
 }
-.announce-user{
-    border: 1px solid black;
-    padding: 2%;
+
+.post{
+    padding: 1.2em 1.5em;
+    text-align: left;
+    height: fit-content;
+    margin-bottom: 10px;
 }
+
+.post span{
+    float: right;
+}
+
+.post img{
+    margin-right: 10px;
+}
+
+.post-title{
+    font-weight: 600;
+    margin-top: -10px;
+    margin-left: 60px;
+}
+
+.post-name{
+    font-weight: 600;
+}
+
+.post-des{
+    margin-top: -10px;
+    margin-left: 60px;
+    word-wrap: break-word;
+}
+
 
