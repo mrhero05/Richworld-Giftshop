@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
 .login-border{
     border: none;
@@ -228,12 +228,12 @@ h1{
     align-items: center;
     margin: 0;
 }
-.icon{
-    /* nothing */
+.icon img{
+   width: 10%;
 }
 
 .icon p{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 1.2em;
     margin-top: 12px;
     font-weight: 700;
@@ -246,18 +246,18 @@ h1{
 }
 
 .time{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: white;
     font-weight: 600;
 }
 .date{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 600;
     color: white;
 }
 .account-dashboard{
     text-align: left;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     height: 60px;
     color: white;
     margin: 0;
@@ -265,13 +265,15 @@ h1{
 }
 
 .name{
-    font-size:85%;
-    font-family: 'Poppins', sans-serif;
+    font-size:90%;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
 }
 
 .pos{
-    font-family: 'Poppins', sans-serif;
-    font-size: 70%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 75%;
+
     color: rgb(235, 235, 235);
 }
 
@@ -287,7 +289,7 @@ h1{
 }
 
 .left-nav{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background: #2F2E41 !important;
     height: 100%;
     width: 95%;
@@ -320,14 +322,21 @@ h1{
 }
 .left-nav img{
     margin-right: 10px;
+    fill: white;
 }
 
 .left-nav button:hover{
+    border-left: 5px solid #FD5757;
+    color: #FD5757;
+}
+
+.left-nav button:active{
+    border-left: 5px solid #FD5757;
     color: #FD5757;
 }
 
 .employee-summary{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 1.1em 1.5em;
     padding: 1.5em 2em;
     box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
@@ -336,12 +345,15 @@ h1{
 
 
 .emp-title{
+    font-family: 'Roboto', sans-serif;
     margin-bottom: 40px;
     font-size: 1.5em;
     font-weight: 600;
 }
 
 .emp-sum{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
     border:none;
     display: flex;
     align-items: center;
@@ -352,21 +364,21 @@ h1{
     margin-right: 200px;
 }
 
+.emp-sum img{
+    margin-bottom: 10px;
+}
+
 .emp-sum p:last-child{
     margin-right:0;
 }
 
-
+/* .recent cards */
 .recent{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 1.1em 1.5em 0 1.1em;
     margin-left: -10px;
     padding: 1.5em 2em;
     box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
-}
-
-.recent:last-child{
-    margin-bottom: 0;
 }
 
 .recent-title{
@@ -375,13 +387,27 @@ h1{
     font-weight: 600;
 }
 
-.recent-des{
-    font-weight: 600;
+.recent-des span{
+    float: right;
 }
 
+
+.recent-des{
+    font-weight: 600;
+    /* .auto scroll */
+    overflow: auto;
+}
+
+.recent label{
+    float: right;
+}
+
+/* .recent cards */
+
+/* .announcement cards */
 .announcement{
-    font-family: 'Poppins', sans-serif;
-    margin: 1.1em 1.5em;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 1.5em 0 1.5em;
     padding: 2em 2em;
     box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
     padding: 2%;
@@ -394,36 +420,48 @@ h1{
     font-size: 1.5em;
     font-weight: 600;
 }
-
+/* .announcement post cards */
 .post{
-    padding: 1.2em 1.5em;
+    font-family: 'Roboto', sans-serif;
+    padding: 1.2em 1.2em;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    color: #2F2E41;
     text-align: left;
     height: fit-content;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.post:hover{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .post span{
     float: right;
+    margin-top: 10px;
+    margin-right: 80px;
 }
 
 .post img{
     margin-right: 10px;
+    fill: white;
 }
 
 .post-title{
     font-weight: 600;
     margin-top: -10px;
-    margin-left: 60px;
+    margin-left: 62px;
 }
 
 .post-name{
     font-weight: 600;
+    margin-left: 10px;
 }
 
 .post-des{
     margin-top: -10px;
-    margin-left: 60px;
+    margin-left: 62px;
     word-wrap: break-word;
 }
-
+/* .announcement post cards */
 

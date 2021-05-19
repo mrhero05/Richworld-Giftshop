@@ -1,6 +1,1 @@
-<svg id="dashboard" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
-  <path id="Path_272" data-name="Path 272" d="M10.021,0H1.9A1.9,1.9,0,0,0,0,1.9V6.771a1.9,1.9,0,0,0,1.9,1.9h8.125a1.9,1.9,0,0,0,1.9-1.9V1.9A1.9,1.9,0,0,0,10.021,0Zm0,0" fill="#fbfbfb"/>
-  <path id="Path_273" data-name="Path 273" d="M10.021,213.332H1.9a1.9,1.9,0,0,0-1.9,1.9V226.6a1.9,1.9,0,0,0,1.9,1.9h8.125a1.9,1.9,0,0,0,1.9-1.9V215.228A1.9,1.9,0,0,0,10.021,213.332Zm0,0" transform="translate(0 -202.499)" fill="#fbfbfb"/>
-  <path id="Path_274" data-name="Path 274" d="M287.353,341.332h-8.125a1.9,1.9,0,0,0-1.9,1.9V348.1a1.9,1.9,0,0,0,1.9,1.9h8.125a1.9,1.9,0,0,0,1.9-1.9v-4.875A1.9,1.9,0,0,0,287.353,341.332Zm0,0" transform="translate(-263.249 -323.999)" fill="#fbfbfb"/>
-  <path id="Path_275" data-name="Path 275" d="M287.353,0h-8.125a1.9,1.9,0,0,0-1.9,1.9V13.271a1.9,1.9,0,0,0,1.9,1.9h8.125a1.9,1.9,0,0,0,1.9-1.9V1.9A1.9,1.9,0,0,0,287.353,0Zm0,0" transform="translate(-263.249)" fill="#fbfbfb"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="36px" viewBox="0 0 20 20" width="36px" fill="#FFFFFF"><rect fill="none" height="20" width="20"/><path d="M17,4.5C17,3.67,16.33,3,15.5,3h-11C3.67,3,3,3.67,3,4.5v10.94C3,16.3,3.7,17,4.56,17H15.5c0.83,0,1.5-0.67,1.5-1.5V4.5z M15.5,4.5v4h-4.75v-4H15.5z M4.5,15.5v-11h4.75v11H4.5z M15.5,15.5h-4.75V10h4.75V15.5z"/></svg>

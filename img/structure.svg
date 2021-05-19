@@ -1,11 +1,1 @@
-<svg id="structure" xmlns="http://www.w3.org/2000/svg" width="25.15" height="25" viewBox="0 0 25.15 25">
-  <path id="Path_276" data-name="Path 276" d="M214.348,78.685a2.5,2.5,0,0,0-5,0v2.233h5Zm0,0" transform="translate(-199.061 -72.441)" fill="#fff"/>
-  <path id="Path_277" data-name="Path 277" d="M229.04,1.7a1.7,1.7,0,1,0-1.7,1.7A1.7,1.7,0,0,0,229.04,1.7Zm0,0" transform="translate(-214.553)" fill="#fff"/>
-  <path id="Path_278" data-name="Path 278" d="M211.845,412.57a2.5,2.5,0,0,0-2.5,2.5V417.3h5v-2.232A2.5,2.5,0,0,0,211.845,412.57Zm0,0" transform="translate(-199.06 -392.304)" fill="#fff"/>
-  <path id="Path_279" data-name="Path 279" d="M229.04,338.085a1.7,1.7,0,1,0-1.7,1.7A1.7,1.7,0,0,0,229.04,338.085Zm0,0" transform="translate(-214.553 -319.859)" fill="#fff"/>
-  <path id="Path_280" data-name="Path 280" d="M412.634,412.57a2.5,2.5,0,0,0-2.5,2.5V417.3h5v-2.232A2.5,2.5,0,0,0,412.634,412.57Zm0,0" transform="translate(-389.986 -392.304)" fill="#fff"/>
-  <path id="Path_281" data-name="Path 281" d="M429.829,338.085a1.7,1.7,0,1,0-1.7,1.7A1.7,1.7,0,0,0,429.829,338.085Zm0,0" transform="translate(-405.479 -319.859)" fill="#fff"/>
-  <path id="Path_282" data-name="Path 282" d="M2.5,412.57a2.5,2.5,0,0,0-2.5,2.5V417.3H5v-2.232a2.5,2.5,0,0,0-2.5-2.5Zm0,0" transform="translate(0 -392.304)" fill="#fff"/>
-  <path id="Path_283" data-name="Path 283" d="M19.7,338.085a1.7,1.7,0,1,0-1.7,1.7A1.7,1.7,0,0,0,19.7,338.085Zm0,0" transform="translate(-15.493 -319.859)" fill="#fff"/>
-  <path id="Path_284" data-name="Path 284" d="M39.506,217.733a.811.811,0,0,0,.811-.811v-1.21h8.45v.921a.811.811,0,1,0,1.623,0v-.921h8.451v1.21a.811.811,0,0,0,1.623,0V214.9a.811.811,0,0,0-.811-.811H50.39v-.408a.811.811,0,1,0-1.623,0v.408H39.506a.811.811,0,0,0-.811.811v2.021a.811.811,0,0,0,.811.811Zm0,0" transform="translate(-36.794 -202.414)" fill="#fff"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="36px" viewBox="0 0 24 24" width="36px" fill="#FFFFFF"><rect fill="none" height="24" width="24"/><path d="M22,11V3h-7v3H9V3H2v8h7V8h2v10h4v3h7v-8h-7v3h-2V8h2v3H22z M7,9H4V5h3V9z M17,15h3v4h-3V15z M17,5h3v4h-3V5z"/></svg>
