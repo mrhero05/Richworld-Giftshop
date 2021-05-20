@@ -4,14 +4,14 @@ include 'include/head.inc.php';
 
 <div class="container-fluid">
     <div class="row top-nav"> 
-            <div class="col-sm-2">
+            <div class="col-sm-12 col-lg-2">
                 <div class="icon">
                     <!-- for icon -->
                     
                     <p>richworld<span>giftshop</span></p>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-sm-0 col-lg-4">
                 <div class="time">
                 <!-- for the time -->
                     <?php
@@ -19,7 +19,7 @@ include 'include/head.inc.php';
                     ?>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-sm-0 col-lg-4">
                 <div class="date">
                 <!-- for date -->
                 <?php
@@ -27,7 +27,7 @@ include 'include/head.inc.php';
                 ?>
                 </div>
             </div>
-            <div class="col-sm-2">
+            <div class="col-sm-12 col-lg-2">
                 <div class="account-dashboard">
                     <img src="img/daryl.svg" alt="sadboi">
                     <p class="name"> Daryl Rodriguez </p>
@@ -39,13 +39,12 @@ include 'include/head.inc.php';
     <div class="row">
         <div class="col-lg-2 p-0">
             <div class="left-nav">
-
                 <section id="nav-bar">
                     <nav class="navbar navbar-expand-lg navbar-light nav-bg">
                       <div class="container-fluid">
                        
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">  
-                        <span class="navbar-toggler-icon burger-menu"></span>
+                        <button class="navbar-toggler burger-menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">  
+                        <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNav">
                           <ul class="nav flex-column">
@@ -80,17 +79,25 @@ include 'include/head.inc.php';
                 </section>
             </div>
         </div>
-        <div class="col-lg-10 p-0">
+        <div class="col-lg-10">
             <div class="row">
                 <div class="col-lg-9 p-0">
                     <div class="employee-summary">
                         <!-- added <p> classes  -->
                         <p class="emp-title">Employee Summary</p>
-                        <div class="emp-sum">
-                        <p><img src="img/act-emp.svg" alt="sample"><br> 15 Active Employees</p>
-                        <p><img src="img/departments.svg" alt="sample"><br> 4 Departments</p>
-                        <p><img src="img/notif.svg" alt="sample"><br> 8 New Request Leave</p>
-                        </div>  
+                      
+                            <div class="row">
+                            <div class="col-sm-12 col-lg-4">
+                            <p class="border-sum"><img src="img/act-emp.svg" alt="sample"><br><br> 15 Active Employees</p>
+                            </div>
+                            <div class="col-sm-12 col-lg-4">
+                            <p class="border-sum"><img src="img/departments.svg" alt="sample"><br><br> 4 Departments</p>
+                            </div>
+                            <div class="col-sm-12 col-lg-4">
+                            <p class="border-sum"><img src="img/notif.svg" alt="sample"><br><br> 8 New Request Leave</p>
+                            </div>
+                            </div>
+                      
                     </div>  
                     <div class="row">
                         <div class="col-lg-12">

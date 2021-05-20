@@ -8,7 +8,7 @@ include 'include/head.inc.php';
                 <div class="row">
                         <div class="col-sm-0 col-lg-6">
                         <div class="left">
-                        <img src="login.svg" alt="Team collaborating">
+                        <img src="img/login.svg" alt="Team collaborating">
                         </div>
                         </div>    
                         <!-- for the right half of login -->
