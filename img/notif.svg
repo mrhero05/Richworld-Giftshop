@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="77" height="77" viewBox="0 0 77 77">
+  <g id="notif" transform="translate(-716 -141)">
+    <circle id="Ellipse_55" data-name="Ellipse 55" cx="38.5" cy="38.5" r="38.5" transform="translate(716 141)" fill="#fd5757"/>
+    <g id="notif-2" data-name="notif" transform="translate(732 160)">
+      <path id="Path_294" data-name="Path 294" d="M0,0H46V46H0Z" fill="none"/>
+      <path id="Path_295" data-name="Path 295" d="M36.5,2H5.833A3.828,3.828,0,0,0,2.019,5.833L2,40.333l7.667-7.667H36.5a3.845,3.845,0,0,0,3.833-3.833v-23A3.845,3.845,0,0,0,36.5,2Zm0,26.833H8.076L6.945,29.964,5.833,31.076V5.833H36.5ZM19.25,21.167h3.833V25H19.25Zm0-11.5h3.833v7.667H19.25Z" transform="translate(1.833 1.833)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

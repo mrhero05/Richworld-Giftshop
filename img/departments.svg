@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="77" height="77" viewBox="0 0 77 77">
+  <g id="departments" transform="translate(-619 -145)">
+    <circle id="Ellipse_54" data-name="Ellipse 54" cx="38.5" cy="38.5" r="38.5" transform="translate(619 145)" fill="#64d158"/>
+    <g id="department" transform="translate(630 155.532)">
+      <g id="Group_58" data-name="Group 58" transform="translate(0 -0.532)">
+        <rect id="Rectangle_87" data-name="Rectangle 87" width="56" height="56" fill="none"/>
+      </g>
+      <g id="Group_59" data-name="Group 59" transform="translate(8.309 11.154)">
+        <path id="Path_293" data-name="Path 293" d="M33.466,17.848V4H14.079v8.309H3V37.236H22.387V28.927h2.77v8.309H41.775V17.848ZM11.309,31.7H8.539v-2.77h2.77Zm0-5.539H8.539v-2.77h2.77Zm0-5.539H8.539v-2.77h2.77Zm11.079,2.77h-2.77v-2.77h2.77Zm0-5.539h-2.77v-2.77h2.77Zm0-5.539h-2.77V9.539h2.77Zm5.539,11.079h-2.77v-2.77h2.77Zm0-5.539h-2.77v-2.77h2.77Zm0-5.539h-2.77V9.539h2.77ZM36.236,31.7h-2.77v-2.77h2.77Zm0-5.539h-2.77v-2.77h2.77Z" transform="translate(-3 -4)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -7,6 +7,7 @@ include 'include/head.inc.php';
             <div class="col-sm-2">
                 <div class="icon">
                     <!-- for icon -->
+                    
                     <p>richworld<span>giftshop</span></p>
                 </div>
             </div>
@@ -58,19 +59,19 @@ include 'include/head.inc.php';
                                 </li>
                                 <li class="nav-item">
                                 <a href="#project" style="text-decoration:none;">
-                                    <button type="button"><img src="img/clock.svg" alt="dashboard icon"> Recent Activities</button><br></a>
+                                    <button type="button"><img src="img/recent.svg" alt="dashboard icon"> Recent Activities</button><br></a>
                                 </li>
                                 <li class="nav-item">
                                 <a href="#footer" style="text-decoration:none;">
-                                    <button type="button"><img src="img/people.svg" alt="dashboard icon"> Employees</button><br></a>
+                                    <button type="button"><img src="img/employee.svg" alt="dashboard icon"> Employees</button><br></a>
                                 </li>
                                 <li class="nav-item">
                                 <a href="#footer" style="text-decoration:none;">
-                                    <button type="button"><img src="img/news.svg" alt="dashboard icon">Announcements</button><br></a>
+                                    <button type="button"><img src="img/announcement.svg" alt="dashboard icon">Announcements</button><br></a>
                                 </li>
                                 <li class="nav-item">
                                 <a href="#footer" style="text-decoration:none;">
-                                    <button type="button"><img src="img/exitr.svg" alt="dashboard icon"> Request leave</button><br></a>
+                                    <button type="button"><img src="img/leave.svg" alt="dashboard icon"> Request leave</button><br></a>
                                 </li>
                           </ul>
                         </div>
@@ -83,27 +84,29 @@ include 'include/head.inc.php';
             <div class="row">
                 <div class="col-lg-9 p-0">
                     <div class="employee-summary">
+                        <!-- added <p> classes  -->
                         <p class="emp-title">Employee Summary</p>
                         <div class="emp-sum">
-                        <p><img src="img/sample.svg" alt="sample"><br> 15 active</p>
-                        <p><img src="img/sample.svg" alt="sample"><br> 15 active</p>
-                        <p><img src="img/sample.svg" alt="sample"><br> 15 active</p>
+                        <p><img src="img/act-emp.svg" alt="sample"><br> 15 Active Employees</p>
+                        <p><img src="img/departments.svg" alt="sample"><br> 4 Departments</p>
+                        <p><img src="img/notif.svg" alt="sample"><br> 8 New Request Leave</p>
                         </div>  
                     </div>  
                     <div class="row">
                         <div class="col-lg-12">
                                 <div class="announcement">
                                     <div class="announce-title">
-                                        <p>News / Announcement</p>
+                                        <p>News/Announcements</p>
                                     </div>
+                                    <!-- /* post cards like twitter w/ hover */ -->
                                     <div class="post">
-                                           <p class="post-name"><img src="img/sample.svg" alt="sample">Billy Jack Sanchez <span>Date/time</span></p>
+                                           <p class="post-name"><img src="img/daryl.svg" alt="sadboi">Mark Angelo Reynante<span>Date/time</span></p>
                                             <p class="post-title">Title</p>
                                             <p class="post-des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus molestiae excepturi, quia debitis placeat, quidem quibusdam id quaerat commodi, dolorem aperiam. Nobis adipisci at totam non quod fuga, ratione beatae!</p>
                                         </div>
-
+                                        <!-- /* post cards like twitter w/ hover */ -->
                                         <div class="post">
-                                           <p class="post-name"><img src="img/sample.svg" alt="sample">Billy Jack Sanchez <span>Date/time</span></p>
+                                           <p class="post-name"><img src="img/daryl.svg" alt="sadboi">Mark Angelo Reynante <span>Date/time</span></p>
                                             <p class="post-title">Title</p>
                                             <p class="post-des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus molestiae excepturi, quia debitis placeat, quidem quibusdam id quaerat commodi, dolorem aperiam. Nobis adipisci at totam non quod fuga, ratione beatae!</p>
                                         </div>
@@ -113,9 +116,11 @@ include 'include/head.inc.php';
                 </div>
                 <div class="col-lg-3 p-0">
                     <div class="recent">
+                        <!-- added each <p> classes  -->
+                         <!-- added span for time   -->
                         <p class="recent-title">Recent Activities</p>
-                        <p class="recent-des">Description</p>
-                        <p>Employee Data <label>Time</label></p>
+                        <p class="recent-des">Description <span>Time</span></p>
+                        <p>Employee Data<label>Time</label></p>
                         <p>Employee Data <label>Time</label></p>
                         <p>Employee Data <label>Time</label></p>
                         <p>Employee Data <label>Time</label></p>
