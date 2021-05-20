@@ -441,6 +441,10 @@ h1{
     background: white;
 }
 
+.recent:hover{
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+}
+
 .recent-title{
     text-align:center;
     font-size: 1.2em;
@@ -474,6 +478,10 @@ h1{
     overflow-y: scroll;
     border-radius: 8px;
     background: white;
+}
+
+.announcement:hover{
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
 }
 
 .announce-title{
