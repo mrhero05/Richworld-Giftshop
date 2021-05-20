@@ -263,6 +263,25 @@ h1{
     margin: 0;
     padding: 10px;
 }
+@media screen and (max-width: 1000px){
+    .time{
+        display: none;
+    }
+    .date{
+        display: none;
+    }
+    .account-dashboard{
+        text-align: left;
+    }
+    
+}
+@media screen and (max-width: 1220px){
+    
+.account-dashboard p{
+    font-size: 70%;
+}
+    
+}
 
 .name{
     font-size:90%;
@@ -292,7 +311,6 @@ h1{
     font-family: 'Roboto', sans-serif;
     background: #2F2E41 !important;
     height: 100%;
-    width: 95%;
     margin: 0;
     padding: 0;
 }
@@ -300,12 +318,9 @@ h1{
 .nav-bg{
     background: #2F2E41 !important;
 }
-
 .burger-menu{
-    border: 1px solid white;
-    height: 20px;
+    width: 100% !important;
 }
-
 .left-nav button{
     text-align: left;
     color: white;
@@ -342,8 +357,6 @@ h1{
     box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
     text-align: center;
 }
-
-
 .emp-title{
     font-family: 'Roboto', sans-serif;
     margin-bottom: 40px;
@@ -351,13 +364,16 @@ h1{
     font-weight: 600;
 }
 
-.emp-sum{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
-    border:none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@media screen and (max-width:960px) {
+    .border-sum{
+        border: none;
+        box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
+        width: 50%;
+        padding: 2%;
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .emp-sum p{
@@ -376,8 +392,8 @@ h1{
 .recent{
     font-family: 'Roboto', sans-serif;
     margin: 1.1em 1.5em 0 1.1em;
-    margin-left: -10px;
-    padding: 1.5em 2em;
+    margin-left: -10px; 
+    padding: 1.5em 2em; 
     box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
 }
 
@@ -390,7 +406,6 @@ h1{
 .recent-des span{
     float: right;
 }
-
 
 .recent-des{
     font-weight: 600;
