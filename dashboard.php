@@ -2,7 +2,7 @@
 include 'include/head.inc.php';
 ?>
 
-<div class="container-fluid">
+<div class="container-fluid body">
     <div class="row top-nav"> 
             <div class="col-sm-12 col-lg-2">
                 <div class="icon">
@@ -42,7 +42,6 @@ include 'include/head.inc.php';
                 <section id="nav-bar">
                     <nav class="navbar navbar-expand-lg navbar-light nav-bg">
                       <div class="container-fluid">
-                       
                         <button class="navbar-toggler burger-menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">  
                         <span class="navbar-toggler-icon"></span>
                         </button>
@@ -82,29 +81,34 @@ include 'include/head.inc.php';
         <div class="col-lg-10">
             <div class="row">
                 <div class="col-lg-9 p-0">
+                <!-- <div class="header">
+                    <h1>Dashboard</h1>
+                    </div> -->
                     <div class="employee-summary">
                         <!-- added <p> classes  -->
-                        <p class="emp-title">Employee Summary</p>
+                        <p class="emp-title">Good Morning, Ogie</p>
+                        <p class="emp-des">Here's whats happening in your company today.</p>
                       
                             <div class="row">
-                            <div class="col-sm-12 col-lg-4">
+                            <div class="col-sm-12 col-lg-4 bg-emp">
                             <p class="border-sum"><img src="img/act-emp.svg" alt="sample"><br><br> 15 Active Employees</p>
                             </div>
-                            <div class="col-sm-12 col-lg-4">
+                            <div class="col-sm-12 col-lg-4 bg-emp">
                             <p class="border-sum"><img src="img/departments.svg" alt="sample"><br><br> 4 Departments</p>
                             </div>
-                            <div class="col-sm-12 col-lg-4">
+                            <div class="col-sm-12 col-lg-4 bg-emp">
                             <p class="border-sum"><img src="img/notif.svg" alt="sample"><br><br> 8 New Request Leave</p>
                             </div>
                             </div>
-                      
-                    </div>  
+                    </div>
+
                     <div class="row">
                         <div class="col-lg-12">
-                                <div class="announcement">
-                                    <div class="announce-title">
+                        <div class="announce-title">
                                         <p>News/Announcements</p>
                                     </div>
+                                <div class="announcement">
+
                                     <!-- /* post cards like twitter w/ hover */ -->
                                     <div class="post">
                                            <p class="post-name"><img src="img/daryl.svg" alt="sadboi">Mark Angelo Reynante<span>Date/time</span></p>
@@ -117,8 +121,26 @@ include 'include/head.inc.php';
                                             <p class="post-title">Title</p>
                                             <p class="post-des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus molestiae excepturi, quia debitis placeat, quidem quibusdam id quaerat commodi, dolorem aperiam. Nobis adipisci at totam non quod fuga, ratione beatae!</p>
                                         </div>
+
+                                        <div class="post">
+                                           <p class="post-name"><img src="img/daryl.svg" alt="sadboi">Mark Angelo Reynante <span>Date/time</span></p>
+                                            <p class="post-title">Title</p>
+                                            <p class="post-des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus molestiae excepturi, quia debitis placeat, quidem quibusdam id quaerat commodi, dolorem aperiam. Nobis adipisci at totam non quod fuga, ratione beatae!</p>
+                                        </div>
+
+                                        <div class="post">
+                                           <p class="post-name"><img src="img/daryl.svg" alt="sadboi">Mark Angelo Reynante <span>Date/time</span></p>
+                                            <p class="post-title">Title</p>
+                                            <p class="post-des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus molestiae excepturi, quia debitis placeat, quidem quibusdam id quaerat commodi, dolorem aperiam. Nobis adipisci at totam non quod fuga, ratione beatae!</p>
+                                        </div>
+
+                                        <div class="post">
+                                           <p class="post-name"><img src="img/daryl.svg" alt="sadboi">Mark Angelo Reynante <span>Date/time</span></p>
+                                            <p class="post-title">Title</p>
+                                            <p class="post-des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus molestiae excepturi, quia debitis placeat, quidem quibusdam id quaerat commodi, dolorem aperiam. Nobis adipisci at totam non quod fuga, ratione beatae!</p>
+                                        </div>
                                 </div>
-                        </div>
+                                </div>
                     </div>    
                 </div>
                 <div class="col-lg-3 p-0">
@@ -134,13 +156,24 @@ include 'include/head.inc.php';
                         <p>Employee Data <label>Time</label></p>
                         <p>Employee Data <label>Time</label></p>
                         <p>Employee Data <label>Time</label></p>
+                        <p>Employee Data <label>Time</label></p>
+                        <p>Employee Data <label>Time</label></p>
+                        <p>Employee Data <label>Time</label></p>
+                        <p>Employee Data <label>Time</label></p>
+                        <p>Employee Data <label>Time</label></p>
+                        <p>Employee Data <label>Time</label></p>
+                        <p>Employee Data <label>Time</label></p>
+                        <p>Employee Data <label>Time</label></p>
+                        <p>Employee Data <label>Time</label></p>
+                        <p>Employee Data <label>Time</label></p>
+                        <p>Employee Data <label>Time</label></p>
+                        <p>Employee Data <label>Time</label></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 
  </body>
 </html>

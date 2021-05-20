@@ -296,6 +296,13 @@ h1{
     color: rgb(235, 235, 235);
 }
 
+.header h1{
+    margin-top: 25px;
+    margin-left: 20px;
+    color: #2F2E41;
+    font-weight: 600;
+}
+
 .account-dashboard p{
     margin: 0;
     padding: 0;
@@ -352,54 +359,92 @@ h1{
 
 .employee-summary{
     font-family: 'Roboto', sans-serif;
-    margin: 1.1em 1.5em;
-    padding: 1.5em 2em;
-    box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
+    padding: 1.5em 1.5em;
+    background: none;
     text-align: center;
 }
+
+
 .emp-title{
     font-family: 'Roboto', sans-serif;
-    margin-bottom: 40px;
-    font-size: 1.5em;
+    text-align: left;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.emp-des{
+    text-align: left;
+    font-weight: 500;
+    margin-top: -5px;
+}
+
+.body{
+    background: #F1f1f1;
+}
+
+.bg-emp p{
+    background: white;
+    box-shadow: 0 0px 2px 0 rgba(0,0,0,0.2);
+    border-radius: 8px;
+    padding:2em 0;
+    margin-right: 2px;
+}
+
+.bg-emp p:hover{
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
+}
+
+.bg-emp p:last-child{
+    margin-right: 0;
+}
+
+.border-sum{
     font-weight: 600;
 }
 
 @media screen and (max-width:960px) {
-    .border-sum{
+    .border-sum p{
         border: none;
         box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
-        width: 50%;
+        width: 40%;
         padding: 2%;
         border-radius: 10px;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
     }
+
+    .emp-title{
+        text-align: center;
+    }
+
+    .emp-des{
+        text-align: center;
+    }
+
+    /* not-finished */
 }
 
 .emp-sum p{
-    margin-right: 200px;
-}
-
-.emp-sum img{
-    margin-bottom: 10px;
-}
-
-.emp-sum p:last-child{
-    margin-right:0;
+    font-weight: 600;
 }
 
 /* .recent cards */
 .recent{
     font-family: 'Roboto', sans-serif;
-    margin: 1.1em 1.5em 0 1.1em;
-    margin-left: -10px; 
+    box-shadow: 0 0px 2px 0 rgba(0,0,0,0.2);
+    margin: 7.3em 1.5em 0 1.1em;
+    margin-left: 5px; 
+    /* height will auto-resize if description is added */
+    height: 620px;
+    overflow-y: scroll;
+    border-radius: 8px;
     padding: 1.5em 2em; 
-    box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
+    background: white;
 }
 
 .recent-title{
     text-align:center;
     font-size: 1.2em;
+    margin-bottom:60px ;
     font-weight: 600;
 }
 
@@ -422,23 +467,27 @@ h1{
 /* .announcement cards */
 .announcement{
     font-family: 'Roboto', sans-serif;
-    margin: 0 1.5em 0 1.5em;
+    box-shadow: 0 0px 2px 0 rgba(0,0,0,0.2);
+    margin: 0 1.5em 2em 1.5em;
     padding: 2em 2em;
-    box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
-    padding: 2%;
+    height: 350px;
+    overflow-y: scroll;
+    border-radius: 8px;
+    background: white;
 }
 
-
 .announce-title{
-    margin-top: 20px;
-    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 5px;
+    margin-left: 25px;
+    text-align: left;
     font-size: 1.5em;
-    font-weight: 600;
+    font-weight: 700;
 }
 /* .announcement post cards */
 .post{
     font-family: 'Roboto', sans-serif;
-    padding: 1.2em 1.2em;
+    padding: 1.3em 1.2em;
     border: 2px solid #ccc;
     border-radius: 10px;
     color: #2F2E41;
@@ -447,14 +496,16 @@ h1{
     margin-bottom: 15px;
 }
 
-.post:hover{
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+/* removing last post margin-bottom */
+.post:last-child{
+    margin-bottom: 0;
 }
 
 .post span{
     float: right;
     margin-top: 10px;
     margin-right: 80px;
+    color: #707070;
 }
 
 .post img{
@@ -480,3 +531,49 @@ h1{
 }
 /* .announcement post cards */
 
+
+/* sample animations */
+@keyframes slide{
+    0%{
+      transform: translateY(25px);
+      opacity: 0;
+    }
+    80%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* recent material-scrollbar */
+.recent::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+.recent::-webkit-scrollbar-track {
+background: #d6d6d6; 
+}
+   
+.recent::-webkit-scrollbar-thumb {
+background:#2F2E41; 
+}
+  
+.recent::-webkit-scrollbar-thumb:hover {
+background:#3d3b53; 
+} 
+
+/* news/announcement material scroll-bar */
+.announcement::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+.announcement::-webkit-scrollbar-track {
+background: #d6d6d6; 
+}
+   
+.announcement::-webkit-scrollbar-thumb {
+background:#2F2E41; 
+}
+
+.announcement::-webkit-scrollbar-thumb:hover {
+background:#3d3b53; 
+} 
