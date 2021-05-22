@@ -29,9 +29,21 @@ include 'include/head.inc.php';
             </div>
             <div class="col-sm-12 col-lg-2">
                 <div class="account-dashboard">
-                    <img src="img/daryl.svg" alt="sadboi">
-                    <p class="name"> Daryl Rodriguez </p>
-                    <p class="pos"> Software Engineer </p>
+                <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Daryl Rodriguez
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">Account Settings</a></li>
+    <li><a class="dropdown-item" href="#">Help</a></li>
+    <li><a class="dropdown-item" href="#">Logout Account</a></li>
+  </ul>
+</div>
+
+
+                    <!-- <img src="img/daryl.svg" alt="sadboi"> -->
+                    <!-- <p class="name"> Daryl Rodriguez </p>
+                    <p class="pos"> Software Engineer </p> -->
                 </div>
             </div>
         

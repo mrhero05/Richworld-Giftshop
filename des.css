@@ -255,14 +255,31 @@ h1{
     font-weight: 600;
     color: white;
 }
-.account-dashboard{
+/* .account-dashboard{
     text-align: left;
     font-family: 'Roboto', sans-serif;
     height: 60px;
     color: white;
     margin: 0;
     padding: 10px;
+} */
+
+.dropdown button{
+    background: #fd5757;
+    color: white;
+    border: none;
+    font-weight: 600;
 }
+
+.dropdown button:hover{
+    background: #f76c6c;
+}
+
+.dropdown-menu{
+    background: #c1c1c1;
+    color: #202020;
+}
+
 @media screen and (max-width: 1000px){
     .time{
         display: none;
@@ -277,13 +294,13 @@ h1{
 }
 @media screen and (max-width: 1220px){
     
-.account-dashboard p{
+/* .account-dashboard p{
     font-size: 70%;
 }
     
 }
 
-.name{
+/* .name{
     font-size:90%;
     font-weight: 600;
     font-family: 'Roboto', sans-serif;
@@ -294,6 +311,8 @@ h1{
     font-size: 75%;
 
     color: rgb(235, 235, 235);
+}
+*/
 }
 
 .header h1{
@@ -496,24 +515,24 @@ h1{
 .post{
     font-family: 'Roboto', sans-serif;
     padding: 1.3em 1.2em;
-    border: 2px solid #ccc;
+    background: #3d3b53;
     border-radius: 10px;
-    color: #2F2E41;
+    color: white;
     text-align: left;
     height: fit-content;
     margin-bottom: 15px;
 }
 
-/* removing last post margin-bottom */
-.post:last-child{
-    margin-bottom: 0;
+.post:hover{
+    background: #4b4966;
 }
+
 
 .post span{
     float: right;
     margin-top: 10px;
     margin-right: 80px;
-    color: #707070;
+    color: #cfcfcf;
 }
 
 .post img{
