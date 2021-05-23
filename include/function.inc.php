@@ -58,7 +58,7 @@ function register($conn,$fname,$lname,$contact,$uname,$pass,$email){
     }
     //to hash the password to make it more secure
     $hashpass = password_hash($pass,PASSWORD_DEFAULT);
-    mysqli_stmt_bind_param($stmt,"ssisss",$fname,$lname,$contact,$uname,$pass,$email);
+    mysqli_stmt_bind_param($stmt,"ssssss",$fname,$lname,$contact,$uname,$pass,$email);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header("location: ../register.php?account-create-successfully");
