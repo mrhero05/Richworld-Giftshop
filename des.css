@@ -255,30 +255,6 @@ h1{
     font-weight: 600;
     color: white;
 }
-/* .account-dashboard{
-    text-align: left;
-    font-family: 'Roboto', sans-serif;
-    height: 60px;
-    color: white;
-    margin: 0;
-    padding: 10px;
-} */
-
-.dropdown button{
-    background: #fd5757;
-    color: white;
-    border: none;
-    font-weight: 600;
-}
-
-.dropdown button:hover{
-    background: #f76c6c;
-}
-
-.dropdown-menu{
-    background: #c1c1c1;
-    color: #202020;
-}
 
 @media screen and (max-width: 1000px){
     .time{
@@ -292,28 +268,19 @@ h1{
     }
     
 }
-@media screen and (max-width: 1220px){
-    
-/* .account-dashboard p{
-    font-size: 70%;
-}
-    
-}
-
-/* .name{
+.name{
     font-size:90%;
-    font-weight: 600;
+    font-weight: 500;
     font-family: 'Roboto', sans-serif;
 }
 
-.pos{
-    font-family: 'Roboto', sans-serif;
-    font-size: 75%;
+.btn-group button{
+    padding: 0 !important;
+    background-color: transparent !important;
+    border: none !important;
+    margin-left: 2% !important;
+}
 
-    color: rgb(235, 235, 235);
-}
-*/
-}
 
 .header h1{
     margin-top: 25px;

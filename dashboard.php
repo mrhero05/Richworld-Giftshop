@@ -1,95 +1,9 @@
 <?php
 include 'include/head.inc.php';
+include 'include/nav.inc.php';
+
 ?>
 
-<div class="container-fluid body">
-    <div class="row top-nav"> 
-            <div class="col-sm-12 col-lg-2">
-                <div class="icon">
-                    <!-- for icon -->
-                    
-                    <p>richworld<span>giftshop</span></p>
-                </div>
-            </div>
-            <div class="col-sm-0 col-lg-4">
-                <div class="time">
-                <!-- for the time -->
-                    <?php
-                    echo date("h:i:sa");
-                    ?>
-                </div>
-            </div>
-            <div class="col-sm-0 col-lg-4">
-                <div class="date">
-                <!-- for date -->
-                <?php
-                echo date("m/d/Y");
-                ?>
-                </div>
-            </div>
-            <div class="col-sm-12 col-lg-2">
-                <div class="account-dashboard">
-                <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    Daryl Rodriguez
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li><a class="dropdown-item" href="#">Account Settings</a></li>
-    <li><a class="dropdown-item" href="#">Help</a></li>
-    <li><a class="dropdown-item" href="#">Logout Account</a></li>
-  </ul>
-</div>
-
-
-                    <!-- <img src="img/daryl.svg" alt="sadboi"> -->
-                    <!-- <p class="name"> Daryl Rodriguez </p>
-                    <p class="pos"> Software Engineer </p> -->
-                </div>
-            </div>
-        
-    </div>
-    <div class="row">
-        <div class="col-lg-2 p-0">
-            <div class="left-nav">
-                <section id="nav-bar">
-                    <nav class="navbar navbar-expand-lg navbar-light nav-bg">
-                      <div class="container-fluid">
-                        <button class="navbar-toggler burger-menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">  
-                        <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                          <ul class="nav flex-column">
-                                <li class="nav-item">
-                                <a href="#nav-bar" style="text-decoration:none;">
-                                <button type="button" style="margin-top:45px;"><img src="img/dashboard.svg" alt="dashboard icon"> Dashboard</button><br></a>
-                                </li>   
-                                <li class="nav-item">
-                                <a href="#banner" style="text-decoration:none;">
-                                    <button type="button"><img src="img/structure.svg" alt="dashboard icon"> Company</button><br></a>
-                                </li>
-                                <li class="nav-item">
-                                <a href="#project" style="text-decoration:none;">
-                                    <button type="button"><img src="img/recent.svg" alt="dashboard icon"> Recent Activities</button><br></a>
-                                </li>
-                                <li class="nav-item">
-                                <a href="#footer" style="text-decoration:none;">
-                                    <button type="button"><img src="img/employee.svg" alt="dashboard icon"> Employees</button><br></a>
-                                </li>
-                                <li class="nav-item">
-                                <a href="#footer" style="text-decoration:none;">
-                                    <button type="button"><img src="img/announcement.svg" alt="dashboard icon">Announcements</button><br></a>
-                                </li>
-                                <li class="nav-item">
-                                <a href="#footer" style="text-decoration:none;">
-                                    <button type="button"><img src="img/leave.svg" alt="dashboard icon"> Request leave</button><br></a>
-                                </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </nav>
-                </section>
-            </div>
-        </div>
         <div class="col-lg-10">
             <div class="row">
                 <div class="col-lg-9 p-0">
