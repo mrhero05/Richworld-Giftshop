@@ -571,3 +571,28 @@ background:#2F2E41;
 .announcement::-webkit-scrollbar-thumb:hover {
 background:#3d3b53; 
 } 
+
+/*------ for company structure-------*/
+
+.company-container{
+    position:relative;
+    border: 1px solid black;
+    width: 90%;
+    height: 500px;
+    border-radius: 10px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.admin-container{
+    position: absolute;
+    border: 1px solid #0000;
+    width: 20%;
+    height: 20%;
+    border-radius: 10px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto; 
+
+}

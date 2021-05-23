@@ -18,6 +18,14 @@ include 'include/head.inc.php';
                             <div class="right">
                             <h1>Richworld Giftshop</h1>
                             <p>Ocassion made special</p>
+                            <?php
+                            if (isset($_GET["error"])){
+                                if($_GET["error"]="wronglogin"){
+                                    echo "<p>Wrong Username or password</p>";
+
+                                }
+                            }
+                            ?>
                             <input type="text" placeholder="Username" name="user"><br>
                             <input type="password" placeholder="Password" name="pass">
                             <a href="" target="_blank"><p>Forgot password?</p></a>
