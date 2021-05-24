@@ -602,3 +602,46 @@ background:#3d3b53;
     border-radius: 10px;
     background-color: rgb(197, 197, 197);
 }
+
+/* for employee container  */
+.searchbtn{
+    border: 1px solid gray;
+    border-radius: 20px;
+    width: 20rem;
+    height: 2rem;
+    margin: 2%;
+}
+.searchGo{
+    background-color: #FD5757;
+    color: white;
+    width: 7rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 50px;
+}
+.addGo{
+    background-color: #2F2E41;
+    color: white;
+    width: 7rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 50px;
+}
+.updateGo{
+    background-color: #2F2E41;
+    color: white;
+    width: 7rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 50px;
+}
+.employee{
+  height: 100vh;
+
+}
+.resultTbl{
+    margin: 5%;
+    background-color: white;
+    border-radius: 8px;
+    
+}
