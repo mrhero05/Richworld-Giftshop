@@ -575,24 +575,30 @@ background:#3d3b53;
 /*------ for company structure-------*/
 
 .company-container{
-    position:relative;
-    border: 1px solid black;
-    width: 90%;
+    width: 95%;
     height: 500px;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: white;
     margin-left: auto;
     margin-right: auto; 
+    margin-bottom: 2%;
 }
 
-.admin-container{
-    position: absolute;
-    border: 1px solid #0000;
+.company-title button{
+    background-color: #FD5757;
+    color: white;
+    width: 10rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 50px;
+
+}
+.admin{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
     width: 20%;
     height: 20%;
     border-radius: 10px;
-    background-color: white;
-    margin-left: auto;
-    margin-right: auto; 
-
+    background-color: rgb(197, 197, 197);
 }
