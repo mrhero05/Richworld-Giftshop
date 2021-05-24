@@ -61,11 +61,11 @@
                         <div class="collapse navbar-collapse" id="navbarNav">
                           <ul class="nav flex-column">
                                 <li class="nav-item">
-                                <a href="#nav-bar" style="text-decoration:none;">
+                                <a href="dashboard.php" style="text-decoration:none;">
                                 <button type="button" style="margin-top:45px;"><img src="img/dashboard.svg" alt="dashboard icon"> Dashboard</button><br></a>
                                 </li>   
                                 <li class="nav-item">
-                                <a href="#banner" style="text-decoration:none;">
+                                <a href="company.php" style="text-decoration:none;">
                                     <button type="button"><img src="img/structure.svg" alt="dashboard icon"> Company</button><br></a>
                                 </li>
                                 <li class="nav-item">
@@ -73,7 +73,7 @@
                                     <button type="button"><img src="img/recent.svg" alt="dashboard icon"> Recent Activities</button><br></a>
                                 </li>
                                 <li class="nav-item">
-                                <a href="#footer" style="text-decoration:none;">
+                                <a href="employee.php" style="text-decoration:none;">
                                     <button type="button"><img src="img/employee.svg" alt="dashboard icon"> Employees</button><br></a>
                                 </li>
                                 <li class="nav-item">
