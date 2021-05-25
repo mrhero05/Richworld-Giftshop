@@ -579,20 +579,14 @@ background:#3d3b53;
     height: 500px;
     border-radius: 5px;
     background-color: white;
+    box-shadow: 0 0px 2px 0 rgba(0,0,0,0.2);
+    padding: 1.5em;
+    margin-top: -1em;
     margin-left: auto;
     margin-right: auto; 
     margin-bottom: 2%;
 }
 
-.company-title button{
-    background-color: #FD5757;
-    color: white;
-    width: 10rem;
-    height: 2.5rem;
-    border: none;
-    border-radius: 50px;
-
-}
 .admin{
     margin-left: auto;
     margin-right: auto;
@@ -603,13 +597,77 @@ background:#3d3b53;
     background-color: rgb(197, 197, 197);
 }
 
+.com-title p{
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    font-size: 1.8em;
+    padding: .7em;
+    font-weight: 600;
+}
+
+.modal-header button{
+    border: none;
+    width: 6%;
+    height: auto;
+    border-radius: 50px;
+    font-weight: 700;
+
+}
+
+.modal-title span{
+    font-size: .7em;
+    font-weight: 400;
+}
+
+.modal-body h5{
+    margin: .5em 0;
+}
+
+.modal-footer button{
+    background: #2F2E41;
+}
+
+.modal-footer button:hover{
+    background: #3d3c55;
+}
+
+/* add department button */
+.add-trigger button{
+    background: #fd5757;
+    float: right;
+    margin-right: 2em;
+    width: 30%;
+    color: white;
+    width: 10rem;
+    height: 2.5rem;
+    padding: 8px;
+    border: none;
+    border-radius: 50px;
+}
+
+.add-trigger button:hover{
+    background: #f56464;
+}
+
+.admin{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 1.5em;
+    width: 20%;
+    height: 20%;
+    border-radius: 10px;
+    background-color: rgb(197, 197, 197);
+} 
+
+
 /* for employee container  */
 .searchbtn{
     border: 1px solid gray;
-    border-radius: 20px;
+    border-radius: 8px;
     width: 20rem;
     height: 2rem;
-    margin: 2%;
+    margin: 20px 5px;
 }
 .searchGo{
     background-color: #FD5757;
@@ -640,8 +698,20 @@ background:#3d3b53;
 
 }
 .resultTbl{
-    margin: 5%;
     background-color: white;
-    border-radius: 8px;
+    overflow: auto;
     
+}
+
+.emp-container button{
+    float: right;
+}
+
+.emplo-title{
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    font-size: 1.8em;
+    padding: 10px 0;
+    font-weight: 600;
+    margin-right:-4em;
 }

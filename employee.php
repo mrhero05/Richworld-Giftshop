@@ -6,7 +6,7 @@ include 'include/nav.inc.php';
     <div class="employee">
         <div class="row">
             <div class="col-lg-12">
-                <h1>Employees</h1>
+                <p class="emplo-title">Employees</p>
                 <div class="row">
                     <!-- for employee view  -->
                     <div class="col-lg-12">
