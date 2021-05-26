@@ -11,26 +11,29 @@ include 'include/nav.inc.php';
                     <!-- for employee view  -->
                     <div class="col-lg-12">
                         <div class="employee-container">
-                            <input type="text" placeholder="Type something here..." class="searchbtn">
-                            <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                            <label class="form-check-label" for="inlineRadio1">ID</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                            <label class="form-check-label" for="inlineRadio2">First name</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                            <label class="form-check-label" for="inlineRadio2">Last name</label>
-                            </div>
-
-                            <button type="button" class="searchGo">Search</button>
-                            <button type="button" class="addGo">Add</button>
-                            <button type="button" class="updateGo">Update</button>
+                            
+                                <input type="text" placeholder="Type something here..." class="searchbtn" id="searchInp">
+                                <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="inlineRadio1">ID</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2">First name</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2">Last name</label>
+                                </div>
+                                <script src="js/script.js?v=<?php echo time(); ?>"></script>
+                                <button type="button" class="searchGo" name="search" onclick="search()">Search</button>
+                                <button type="button" class="addGo">Add</button>
+                                <button type="button" class="updateGo">Update</button>
+                                <button type="button" class="viewGo">View All</button>
+                          
                         </div>
                     <!-- for table employee -->
-                        <div class="table-responsive resultTbl">
+                        <div class="table-responsive resultTbl" id="viewSearch">
                             <table class="table table-hover">
                                 <thead class="table-dark">
                                     <tr>
@@ -45,41 +48,15 @@ include 'include/nav.inc.php';
                                     <th scope="col">Employment</th>
                                     </tr>
                                 </thead>
+                              
                                 <tbody>
-                                    <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
+                                    
+                                    <tr>                                
+                                    <td> </td>
                                     </tr>
-                                    <tr>
-                                    <th scope="row">2</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    </tr>
-                                    <tr>
-                                    <th scope="row">3</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    </tr>
+                                    
                                 </tbody>
+                               
                             </table>
                         </div>
                     </div>

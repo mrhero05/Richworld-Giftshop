@@ -693,6 +693,14 @@ background:#3d3b53;
     border: none;
     border-radius: 50px;
 }
+.viewGo{
+    background-color: #32adff;
+    color: white;
+    width: 7rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 50px;
+}
 .employee{
   height: 100vh;
 
@@ -702,11 +710,9 @@ background:#3d3b53;
     overflow: auto;
     
 }
-
 .emp-container button{
     float: right;
 }
-
 .emplo-title{
     font-family: 'Roboto', sans-serif;
     text-align: left;
