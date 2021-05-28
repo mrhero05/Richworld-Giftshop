@@ -14,15 +14,15 @@ include 'include/nav.inc.php';
                                 <script src="js/script.js?v=<?php echo time(); ?>"></script>
                                 <input type="text" placeholder="Type something here..." class="searchbtn" id="searchInp">
                                 <div class="form-check form-check-inline">
-                                <input class="form-check-input searchR" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="acc_id">
+                                <input class="form-check-input searchR" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="emp_id">
                                 <label class="form-check-label" for="inlineRadio1">ID</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                <input class="form-check-input searchR" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="firstname">
+                                <input class="form-check-input searchR" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="emp_fname">
                                 <label class="form-check-label" for="inlineRadio2">First name</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                <input class="form-check-input searchR" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="lastname">
+                                <input class="form-check-input searchR" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="emp_lname">
                                 <label class="form-check-label" for="inlineRadio2">Last name</label>
                                 </div>
                                 
@@ -42,8 +42,8 @@ include 'include/nav.inc.php';
                                     <div class="modal-body">
                                         <div class="container-fluid p-0">
                                         <div class="row">
-                                        <div class="col-12">
-                                        <input type="text" class="form-control" placeholder="ID"></div>
+                                        <!-- <div class="col-12">
+                                        <input type="text" class="form-control" placeholder="ID"></div> -->
                                         <div class="col-sm-12 col-lg-4">
                                         <input type="text" class="form-control" placeholder="Firstname" id="fname"></div> 
                                         <div class="col-sm-12 col-lg-4">
@@ -81,7 +81,61 @@ include 'include/nav.inc.php';
                             </div>
                
                             <!-- modal end for add employee -->
-                                <button type="button" class="updateGo">Update</button>
+                               
+                                <button type="button" class="updateGo" data-toggle="modal" data-target="#updateModal" disabled>Update</button>
+                            <!-- modal for update employee -->
+                            
+                            <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Update Employee</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container-fluid p-0">
+                                        <div class="row">
+                                        <div class="col-12">
+                                        <input type="text" class="form-control" placeholder="ID" id="Uid" readonly></div>
+                                        <div class="col-sm-12 col-lg-4">
+                                        <input type="text" class="form-control" placeholder="Firstname" id="Ufname"></div> 
+                                        <div class="col-sm-12 col-lg-4">
+                                        <input type="text" class="form-control" placeholder="Lastname" id="Ulname"></div>
+                                        <div class="col-sm-12 col-lg-4">
+                                        <input type="text" class="form-control" placeholder="Age" id="Uage"></div>
+                                        <div class="col-sm-12 col-lg-6">
+                                        <input type="text" class="form-control" placeholder="Email" id="Uemail"></div>
+                                        <div class="col-sm-12 col-lg-6">
+                                        <input type="text" class="form-control" placeholder="Gender" id="Ugender"></div>
+                                        <div class="col-sm-12 col-lg-6">
+                                        <input type="text" class="form-control" placeholder="Civil Status" id="Ucivil"></div>
+                                        <div class="col-sm-12 col-lg-6">
+                                        <input type="text" class="form-control" placeholder="Contact" id="Ucontact"></div>
+                                        <div class="col-sm-12 col-lg-6">
+                                        <input type="text" class="form-control" placeholder="Job title" id="Ujobtitle"></div>
+                                        <div class="col-sm-12 col-lg-6">
+                                        <input type="text" class="form-control" placeholder="Employment type" id="Uemptype"></div>
+                                        <div class="col-12">
+                                        <input type="text" class="form-control" placeholder="Probation period" id="Uprobperiod"></div> 
+                                        <div class="col-12">
+                                        <input type="text" class="form-control" placeholder="Permanent Address" id="Uperadd"></div>
+                                        <div class="col-12">
+                                        <input type="text" class="form-control" placeholder="Employee contract" id="Uempcontract"></div>                                               
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary" onclick="updateEmp()">Save Changes</button>
+                                        <div id="update"></div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+               
+                            <!-- modal end for update employee -->
                                 <button type="button" class="viewGo" onclick="viewAll()">View All</button>
                           
                         </div>

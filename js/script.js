@@ -63,3 +63,130 @@ function addEmp(){
         
     });
 }
+
+//code to pass the data in update modal
+function dataUpdate(){
+    var id,fname,lname,age,email,gender,civil,contact,jobtitle,emptype,probperiod,peradd,empcontract;
+    var table = document.getElementById('viewTable'),rIndex;
+    for(var x = 0;x < table.rows.length;x++){
+        table.rows[x].onclick = function (){
+            rIndex = this.rowIndex;
+            // getting the value of cell in the selected row
+             id = document.getElementById('viewTable').rows[rIndex].cells[0].innerHTML;
+             fname = document.getElementById('viewTable').rows[rIndex].cells[1].innerHTML;
+             lname = document.getElementById('viewTable').rows[rIndex].cells[2].innerHTML;
+             age = document.getElementById('viewTable').rows[rIndex].cells[3].innerHTML;
+             email = document.getElementById('viewTable').rows[rIndex].cells[4].innerHTML;
+             gender = document.getElementById('viewTable').rows[rIndex].cells[5].innerHTML;
+             civil = document.getElementById('viewTable').rows[rIndex].cells[6].innerHTML;
+             contact = document.getElementById('viewTable').rows[rIndex].cells[7].innerHTML;
+             jobtitle = document.getElementById('viewTable').rows[rIndex].cells[8].innerHTML;
+             emptype = document.getElementById('viewTable').rows[rIndex].cells[9].innerHTML;
+             probperiod = document.getElementById('viewTable').rows[rIndex].cells[10].innerHTML;
+             peradd = document.getElementById('viewTable').rows[rIndex].cells[11].innerHTML;
+             empcontract = document.getElementById('viewTable').rows[rIndex].cells[12].innerHTML;
+
+             console.log(id);
+             //assigning the variable to the modal input
+             document.getElementById("Uid").value = id;
+             document.getElementById("Ufname").value = fname;
+             document.getElementById("Ulname").value = lname;
+             document.getElementById("Uage").value = age;
+             document.getElementById("Uemail").value = email;
+             document.getElementById("Ugender").value = gender;
+             document.getElementById("Ucivil").value = civil;
+             document.getElementById("Ucontact").value = contact;
+             document.getElementById("Ujobtitle").value = jobtitle;
+             document.getElementById("Uemptype").value = emptype;
+             document.getElementById("Uprobperiod").value = probperiod;
+             document.getElementById("Uperadd").value = peradd;
+             document.getElementById("Uempcontract").value = empcontract;
+             
+        }
+    }
+   
+}
+// for search update
+function dataUpdateSearch(){
+    var id,fname,lname,age,email,gender,civil,contact,jobtitle,emptype,probperiod,peradd,empcontract;
+    var table = document.getElementById('viewTableSearch'),rIndex;
+    for(var x = 0;x < table.rows.length;x++){
+        table.rows[x].onclick = function (){
+            rIndex = this.rowIndex;
+            // getting the value of cell in the selected row
+             id = document.getElementById('viewTableSearch').rows[rIndex].cells[0].innerHTML;
+             fname = document.getElementById('viewTableSearch').rows[rIndex].cells[1].innerHTML;
+             lname = document.getElementById('viewTableSearch').rows[rIndex].cells[2].innerHTML;
+             age = document.getElementById('viewTableSearch').rows[rIndex].cells[3].innerHTML;
+             email = document.getElementById('viewTableSearch').rows[rIndex].cells[4].innerHTML;
+             gender = document.getElementById('viewTableSearch').rows[rIndex].cells[5].innerHTML;
+             civil = document.getElementById('viewTableSearch').rows[rIndex].cells[6].innerHTML;
+             contact = document.getElementById('viewTableSearch').rows[rIndex].cells[7].innerHTML;
+             jobtitle = document.getElementById('viewTableSearch').rows[rIndex].cells[8].innerHTML;
+             emptype = document.getElementById('viewTableSearch').rows[rIndex].cells[9].innerHTML;
+             probperiod = document.getElementById('viewTableSearch').rows[rIndex].cells[10].innerHTML;
+             peradd = document.getElementById('viewTableSearch').rows[rIndex].cells[11].innerHTML;
+             empcontract = document.getElementById('viewTableSearch').rows[rIndex].cells[12].innerHTML;
+
+             console.log(id);
+             //assigning the variable to the modal input
+             document.getElementById("Uid").value = id;
+             document.getElementById("Ufname").value = fname;
+             document.getElementById("Ulname").value = lname;
+             document.getElementById("Uage").value = age;
+             document.getElementById("Uemail").value = email;
+             document.getElementById("Ugender").value = gender;
+             document.getElementById("Ucivil").value = civil;
+             document.getElementById("Ucontact").value = contact;
+             document.getElementById("Ujobtitle").value = jobtitle;
+             document.getElementById("Uemptype").value = emptype;
+             document.getElementById("Uprobperiod").value = probperiod;
+             document.getElementById("Uperadd").value = peradd;
+             document.getElementById("Uempcontract").value = empcontract;
+             
+        }
+    }
+   
+}
+
+
+//function to add new employee
+function updateEmp(){
+    $(document).ready(function(){
+        var id = document.getElementById("Uid").value;
+        var fname = document.getElementById("Ufname").value;
+        var lname = document.getElementById("Ulname").value;
+        var age = document.getElementById("Uage").value;
+        var email = document.getElementById("Uemail").value;
+        var gender = document.getElementById("Ugender").value;
+        var civil = document.getElementById("Ucivil").value;
+        var contact = document.getElementById("Ucontact").value;
+        var jobtitle = document.getElementById("Ujobtitle").value;
+        var emptype = document.getElementById("Uemptype").value;
+        var probperiod = document.getElementById("Uprobperiod").value;
+        var peradd = document.getElementById("Uperadd").value;
+        var empcontract = document.getElementById("Uempcontract").value;
+        console.log(fname,lname,age,email);
+        
+        $('#update').load('include/updateEmp.inc.php',{
+            id:id,
+            fname:fname,
+            lname:lname,
+            age:age,
+            email:email,
+            gender:gender,
+            civil:civil,
+            contact:contact,
+            jobtitle:jobtitle,
+            emptype:emptype,
+            probperiod:probperiod,
+            peradd:peradd,
+            empcontract:empcontract
+        });
+        var result = "<?php success(); ?>;";
+        console.log(result);
+        
+        $('#exampleModalCenter').modal('hide');
+        
+    });
+}
