@@ -724,3 +724,22 @@ background:#3d3b53;
 .modal-body input{
     margin-top: 4%;
 }
+
+/* for index page (landing page) */
+
+#navbarNav li{
+    margin: 15px;
+    font-size: 18px;  
+}
+#navbarNav a{
+    color: #FD5757;
+    font-weight: 500;
+}
+.nav-login{
+    background-color: #FD5757;
+    border: none;
+    width: 140px;
+    height: 40px;
+    border-radius: 20px;
+    color: white;
+}
