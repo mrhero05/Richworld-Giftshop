@@ -719,10 +719,12 @@ background:#3d3b53;
     font-size: 1.8em;
     padding: 10px 0;
     font-weight: 600;
+
 }
 /* for employee modal */
 .modal-body input{
     margin-top: 4%;
+
 }
 
 /* for index page (landing page) */
