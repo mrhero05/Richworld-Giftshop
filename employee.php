@@ -27,7 +27,60 @@ include 'include/nav.inc.php';
                                 </div>
                                 
                                 <button type="button" class="searchGo" name="search" onclick="search()">Search</button>
-                                <button type="button" class="addGo">Add</button>
+                                <button type="button" class="addGo" data-toggle="modal" data-target="#exampleModalCenter">Add</button>
+                            <!-- modal for add employee -->
+                            
+                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Add Employee</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container-fluid p-0">
+                                        <div class="row">
+                                        <div class="col-12">
+                                        <input type="text" class="form-control" placeholder="ID"></div>
+                                        <div class="col-sm-12 col-lg-4">
+                                        <input type="text" class="form-control" placeholder="Firstname" id="fname"></div> 
+                                        <div class="col-sm-12 col-lg-4">
+                                        <input type="text" class="form-control" placeholder="Lastname" id="lname"></div>
+                                        <div class="col-sm-12 col-lg-4">
+                                        <input type="text" class="form-control" placeholder="Age" id="age"></div>
+                                        <div class="col-sm-12 col-lg-6">
+                                        <input type="text" class="form-control" placeholder="Email" id="email"></div>
+                                        <div class="col-sm-12 col-lg-6">
+                                        <input type="text" class="form-control" placeholder="Gender" id="gender"></div>
+                                        <div class="col-sm-12 col-lg-6">
+                                        <input type="text" class="form-control" placeholder="Civil Status" id="civil"></div>
+                                        <div class="col-sm-12 col-lg-6">
+                                        <input type="text" class="form-control" placeholder="Contact" id="contact"></div>
+                                        <div class="col-sm-12 col-lg-6">
+                                        <input type="text" class="form-control" placeholder="Job title" id="jobtitle"></div>
+                                        <div class="col-sm-12 col-lg-6">
+                                        <input type="text" class="form-control" placeholder="Employment type" id="emptype"></div>
+                                        <div class="col-12">
+                                        <input type="text" class="form-control" placeholder="Probation period" id="probperiod"></div> 
+                                        <div class="col-12">
+                                        <input type="text" class="form-control" placeholder="Permanent Address" id="peradd"></div>
+                                        <div class="col-12">
+                                        <input type="text" class="form-control" placeholder="Employee contract" id="empcontract"></div>                                               
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary" onclick="addEmp()">Add Employee</button>
+                                        <div id="add"></div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+               
+                            <!-- modal end for add employee -->
                                 <button type="button" class="updateGo">Update</button>
                                 <button type="button" class="viewGo" onclick="viewAll()">View All</button>
                           
