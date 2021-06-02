@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
 .login-border{
     border: none;
@@ -736,6 +737,24 @@ background:#3d3b53;
 #navbarNav a{
     color: #FD5757;
     font-weight: 500;
+}
+
+.navbar-brand{
+    font-family: 'Bungee', cursive;
+    
+}
+
+.navbar-brand p{
+    color:#2F2E41;
+    font-size: 2.8em;
+    margin-left: 10%;
+}
+
+
+.navbar-brand span{
+    color: #fd5757;
+    margin-left: -12px;
+
 }
 .nav-login{
     background-color: #FD5757;
