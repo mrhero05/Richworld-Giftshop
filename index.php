@@ -125,9 +125,9 @@ include 'include/head.inc.php';
           </div>
         </div>
         <div class="col-lg-7">
-        <div data-aos="slide-left"
+        <div data-aos="fade-up"
               data-aos-delay="50"
-              data-aos-duration="2000"
+              data-aos-duration="1100"
               data-aos-easing="ease-in-out"
           >
           <div class="d-title">
