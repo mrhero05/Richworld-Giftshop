@@ -115,7 +115,7 @@ include 'include/head.inc.php';
       <div class="row">
         <div class="col-lg-5">
           <div class="d-img">
-          <div data-aos="slide-right"
+          <div data-aos="fade-right"
                 data-aos-delay="40"
                 data-aos-duration="1100"
                 data-aos-easing="ease-in-out"
@@ -125,12 +125,12 @@ include 'include/head.inc.php';
           </div>
         </div>
         <div class="col-lg-7">
-        <div data-aos="slide-left"
-              data-aos-delay="50"
-              data-aos-duration="2000"
-              data-aos-easing="ease-in-out"
-          >
           <div class="d-title">
+          <div data-aos="fade-up"
+              data-aos-delay="50"
+              data-aos-duration="800"
+              data-aos-easing="ease-in"
+          >
           <h1>Richworld Giftshop App</h1>
           <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet consectetur adipiscing elit pellentesque. Ultrices gravida dictum fusce ut placerat orci. Egestas sed sed risus pretium quam vulputate. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. </h5>
           <button type="button">Download App</button>
