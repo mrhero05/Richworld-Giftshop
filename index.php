@@ -144,20 +144,185 @@ include 'include/head.inc.php';
 </section>
 
 <!-- for testimonial -->
-<section id="testimonial">
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="testimonial">
-      <h1>Testimonials</h1>
-      <img src="img/index_icon/daryl.svg">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet consectetur adipiscing elit pellentesque. Ultrices gravida dictum fusce ut placerat orci. Egestas sed sed risus pretium quam vulputate. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. </p>
-      <h5>Daryl Rodriguez</h5>
-      <h6>Senior Developer</h6>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <!-- for carousel using bootstrap -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      
+      <section id="testimonial">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="testimonial">
+              <h1>Testimonials</h1>
+              <img src="img/index_icon/daryl.svg">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet consectetur adipiscing elit pellentesque. Ultrices gravida dictum fusce ut placerat orci. Egestas sed sed risus pretium quam vulputate. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. </p>
+              <h5>Daryl Rodriguez</h5>
+              <h6>Senior Developer</h6>
+              <br>
+              <br>
+              </div>
+            </div>
+          </div>
+        </div>
+        </section>
+
+    </div>
+    <div class="carousel-item">
+      
+      <section id="testimonial">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="testimonial">
+              <h1>Testimonials</h1>
+              <img src="img/index_icon/daryl.svg">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet consectetur adipiscing elit pellentesque. Ultrices gravida dictum fusce ut placerat orci. Egestas sed sed risus pretium quam vulputate. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. </p>
+              <h5>Daryl Rodriguez</h5>
+              <h6>Senior Developer</h6>
+              <br>
+              <br>
+              </div>
+            </div>
+          </div>
+        </div>
+        </section>
+
+    </div>
+    <div class="carousel-item">
+      
+      <section id="testimonial">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="testimonial">
+              <h1>Testimonials</h1>
+              <img src="img/index_icon/daryl.svg">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet consectetur adipiscing elit pellentesque. Ultrices gravida dictum fusce ut placerat orci. Egestas sed sed risus pretium quam vulputate. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. </p>
+              <h5>Daryl Rodriguez</h5>
+              <h6>Senior Developer</h6>
+              <br>
+              <br>
+              </div>
+            </div>
+          </div>
+        </div>
+        </section>
+
+    </div>
+  </div>
+  
+</div>
+
+<!-- for about us -->
+<section id="about">
+  <div class="about">
+    <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1>About Us</h1>
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet consectetur adipiscing elit pellentesque. Ultrices gravida dictum fusce ut placerat orci. Egestas sed sed risus pretium quam vulputate. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant.</p>
+        <br><br><br>   
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+<section id="about-card">
+  <div class="about-card">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="about-frame">
+            <img src="img/index_icon/daryl.svg">
+            <h4>Daryl Rodriguez</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="about-frame">
+            <img src="img/index_icon/daryl.svg">
+            <h4>Daryl Rodriguez</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="about-frame">
+            <img src="img/index_icon/daryl.svg">
+            <h4>Daryl Rodriguez</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="about-frame">
+            <img src="img/index_icon/daryl.svg">
+            <h4>Daryl Rodriguez</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="about-frame">
+            <img src="img/index_icon/daryl.svg">
+            <h4>Daryl Rodriguez</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="about-frame">
+            <img src="img/index_icon/daryl.svg">
+            <h4>Daryl Rodriguez</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
+
+<section id="footer">
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-lg-4">
+          <div class="footer-title">
+          <p>Richworld <span>Giftshop</span></p></div>
+        </div>
+        <div class="col-sm-12 col-lg-2">
+          <div class="flink">
+          <p>Support</p>
+            <a href=""><h6>Contact Us</h6></a>
+            <a href=""><h6>FAQ</h6></a>
+            <a href=""><h6>Downloads</h6></a>
+        </div>
+        </div>
+        <div class="col-sm-12 col-lg-2">
+          <div class="flink">
+          <p>Follow</p>
+          <a href=""><h6>Facebook</h6></a>
+          <a href=""><h6>Twitter</h6></a>
+          <a href=""><h6>Linkedin</h6></a>
+        </div>
+        </div>
+        <div class="col-sm-12 col-lg-2">
+          <div class="flink">
+          <p>Legal</p>
+          <a href=""><h6>Terms</h6></a>
+          <a href=""><h6>Privacy</h6></a>
+        </div>
+        </div>
+      </div>
+      <br>
+      <span style="color: white;">All rights reserved 2021-2022 </span>
+      <br><br><br>
+    </div>
+  </div>
+ 
 </section>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
