@@ -30,29 +30,34 @@ include 'include/head.inc.php';
   </div>
 </nav>
 <section id="nav-body">
-<div data-aos="fade-up"
-    data-aos-delay="50"
-    data-aos-duration="800"
-    data-aos-easing="ease-in"
->
 <div class="container">
     <div class="row">
       <!-- for introduction part -->
         <div class="col-lg-4">
+        <div data-aos="zoom-in"
+                  data-aos-delay="40"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-in-out"
+              >
           <div class="title">
             <h1>The easiest way to organize your employees</h1>
             <p>Your all-in-one hr solutions.</p>
             <button type="button">Get started</button>
           </div>
+</div>
         </div>
         <div class="col-lg-6 ms-auto">
+        <div data-aos="fade-right"
+                  data-aos-delay="60"
+                  data-aos-duration="1100"
+                  data-aos-easing="ease-in-out"
+              >
           <div class="hrimg">
             <img src="img/index_icon/hr.svg">
           </div>
+</div>
         </div>
     </div>
-    </div>
-
 </div>
 
 <div class="container-fluid">
@@ -84,7 +89,7 @@ include 'include/head.inc.php';
               >
               <div class="recruit">
                 <img src="img/index_icon/recruitment.svg">
-                <h2>recruitment</h2>
+                <h2>Recruitment</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet consectetur adipiscing elit pellentesque. Ultrices gravida dictum fusce ut placerat orci. Egestas sed sed risus pretium quam vulputate. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. </p>
                 </div>
                 </div>
@@ -235,54 +240,66 @@ include 'include/head.inc.php';
   </div>
 </section>
 <section id="about-card">
+<div data-aos="fade-up"
+      data-aos-delay="50"
+      data-aos-duration="900"
+      data-aos-easing="ease-in-out"
+  >
   <div class="about-card">
     <div class="container">
       <div class="row">
         <div class="col-sm-6 col-lg-4 mb-4">
           <div class="about-frame">
-            <img src="img/index_icon/daryl.svg">
-            <h4>Daryl Rodriguez</h4>
+            <img src="img/profile/ogie-icon.svg">
+            <h4>Ogie Sanchez</h4>
+            <h6>Front-End &amp; Back-End Developer</h6>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
         </div>
         <div class="col-sm-6 col-lg-4 mb-4">
           <div class="about-frame">
-            <img src="img/index_icon/daryl.svg">
-            <h4>Daryl Rodriguez</h4>
+            <img src="img/profile/thom-icon.svg">
+            <h4>Thompie Lumerio</h4>
+            <h6>Front-End Developer &amp; Document Specialist</h6>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
         </div>
         <div class="col-sm-6 col-lg-4 mb-4">
           <div class="about-frame">
-            <img src="img/index_icon/daryl.svg">
-            <h4>Daryl Rodriguez</h4>
+            <img src="img/profile/vince-icon.svg">
+            <h4>Jhon Vince Macatigbac</h4>
+            <h6>Document Specialist &amp; Graphic Designer</h6>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
         </div>
         <div class="col-sm-6 col-lg-4 mb-4">
           <div class="about-frame">
-            <img src="img/index_icon/daryl.svg">
-            <h4>Daryl Rodriguez</h4>
+            <img src="img/profile/pole-icon.svg">
+            <h4>Kenneth Pole</h4>
+            <h6>Front-End Developer &amp; UI/UX Designer</h6>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
         </div>
         <div class="col-sm-6 col-lg-4 mb-4">
           <div class="about-frame">
-            <img src="img/index_icon/daryl.svg">
+            <img src="img/profile/daryl-icon.svg">
             <h4>Daryl Rodriguez</h4>
+            <h6>Document Specialist</h6>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
         </div>
         <div class="col-sm-6 col-lg-4 mb-4">
           <div class="about-frame">
-            <img src="img/index_icon/daryl.svg">
-            <h4>Daryl Rodriguez</h4>
+            <img src="img/profile/gelo-icon.svg">
+            <h4>Mark Angelo Reynante</h4>
+            <h6>Document Specialist</h6>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 </section>
 
 <section id="footer">
@@ -290,31 +307,55 @@ include 'include/head.inc.php';
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-lg-4">
-          <div class="footer-title">
+        <div data-aos="flip-down"
+                  data-aos-delay="50"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-in-out">
+        <div class="footer-title">
           <p>Richworld <span>Giftshop</span></p></div>
-        </div>
+<!-- animations closing div -->
+</div>
+          </div>
         <div class="col-sm-12 col-lg-2">
+        <div data-aos="fade-up"
+                  data-aos-delay="50"
+                  data-aos-duration="900"
+                  data-aos-easing="ease-in-out">
           <div class="flink">
           <p>Support</p>
             <a href=""><h6>Contact Us</h6></a>
             <a href=""><h6>FAQ</h6></a>
             <a href=""><h6>Downloads</h6></a>
         </div>
+<!-- animations closing div -->
+</div>
         </div>
         <div class="col-sm-12 col-lg-2">
+        <div data-aos="fade-up"
+                  data-aos-delay="50"
+                  data-aos-duration="900"
+                  data-aos-easing="ease-in-out">
           <div class="flink">
           <p>Follow</p>
           <a href=""><h6>Facebook</h6></a>
           <a href=""><h6>Twitter</h6></a>
           <a href=""><h6>Linkedin</h6></a>
         </div>
+<!-- animations closing div -->
+</div>
         </div>
         <div class="col-sm-12 col-lg-2">
+        <div data-aos="fade-up"
+                  data-aos-delay="50"
+                  data-aos-duration="900"
+                  data-aos-easing="ease-in-out">
           <div class="flink">
           <p>Legal</p>
           <a href=""><h6>Terms</h6></a>
           <a href=""><h6>Privacy</h6></a>
         </div>
+<!-- animations closing div -->
+</div> 
         </div>
       </div>
       <br>
