@@ -773,6 +773,10 @@ background:#3d3b53;
 .bgwave-red > svg {
     display: block;
 }
+.bgwave-red{
+    padding: 0 !important;
+    margin: 0 !important;
+}
 .title h1{ 
 color: black;
 text-align: left !important;
@@ -852,6 +856,7 @@ text-align: left !important;
 /* for download */
 .download{
     background-color: #2f2e41;
+    padding-bottom: 1% !important;
 }
 .d-img{
     text-align: center;
@@ -912,4 +917,78 @@ text-align: left !important;
 }
 .testimonial h6{
     color: gray;
+}
+.carousel-indicators button{
+    background-color: red !important;
+    margin-top: 20% !important;
+}
+
+/* for about us */
+#about{
+    background-color: #2f2e41;
+    color: white;
+    padding-bottom: 10%;
+}
+.about h1{
+    text-align: center;
+    margin-top: 8%;
+}
+.about p{
+    text-align: left;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about-card{
+    text-align: center;
+}
+.about-frame{
+    border-radius: 10px;
+    border:none;
+    padding: 5%;
+    padding-bottom: 40%;
+    background-color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    height: 100%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -120px;
+}
+.about-frame h4{
+    margin-top: 10%;
+}
+.about-frame p{
+    margin-top: 10%;
+    word-wrap: break-word;
+}
+.about-frame img{
+    margin-top: 2%;
+    width: 50%;
+    height: 50%;
+}
+
+/* for footer part */
+#footer{
+    background-color: #0f0f0f;
+}
+.footer-title p{
+    padding-top: 20%;
+    font-family: 'Bungee', cursive;
+    color: #FD5757;
+    font-size: 2em;
+}
+.footer-title span{
+    color: #2f2e41;
+}
+.flink p{
+    color: white;
+    padding-top: 50%;
+}
+
+@media screen and (max-width: 1000px){
+    .flink p{
+        color: white;
+        padding-top: 0;
+    }
 }
