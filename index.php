@@ -14,13 +14,16 @@ include 'include/head.inc.php';
       <ul class="navbar-nav ms-auto">
         
             <li class="nav-item">
-            <a class="nav-link active"aria-current="page" href="#">Home</a>
+            <a class="nav-link active"aria-current="page" href="#nav-body">Home</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Download</a>
+            <a class="nav-link active" aria-current="page" href="#download">Download</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#" style="margin-right:20px">About</a>
+            <a class="nav-link active" aria-current="page" href="job.php" style="margin-right:20px">Job Listing</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#about" style="margin-right:20px">About</a>
             </li>
             <li class="nav-item">
             <a href="login.php"><button type="button" class="nav-login">Login</button></a>
