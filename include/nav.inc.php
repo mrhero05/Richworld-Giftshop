@@ -69,12 +69,16 @@
                                     <button type="button"><img src="img/structure.svg" alt="dashboard icon"> Company</button><br></a>
                                 </li>
                                 <li class="nav-item">
-                                <a href="#project" style="text-decoration:none;">
-                                    <button type="button"><img src="img/recent.svg" alt="dashboard icon"> Recent Activities</button><br></a>
-                                </li>
-                                <li class="nav-item">
                                 <a href="employee.php" style="text-decoration:none;">
                                     <button type="button"><img src="img/employee.svg" alt="dashboard icon"> Employees</button><br></a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="joblisting.php" style="text-decoration:none;">
+                                    <button type="button"><img src="img/employee.svg" alt="dashboard icon"> Job Listings</button><br></a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="#project" style="text-decoration:none;">
+                                    <button type="button"><img src="img/recent.svg" alt="dashboard icon"> Recent Activities</button><br></a>
                                 </li>
                                 <li class="nav-item">
                                 <a href="#footer" style="text-decoration:none;">
