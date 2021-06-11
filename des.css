@@ -333,6 +333,9 @@ h1{
     margin-right: 10px;
     fill: white;
 }
+.left-nav li{
+    margin: 0 !important;
+}
 
 .left-nav button:hover{
     border-left: 5px solid #FD5757;
@@ -1052,7 +1055,59 @@ text-align: left !important;
     border-radius: 10px;
     margin-bottom: 3%;
     padding: 5%;
+    height: 200px;
+    max-height: 100%;
 }
 .job-div h4{
     color: #FD5757;
+}
+
+/* for joblisting */
+.job-title{
+    margin-top: 5%;
+    background-color: #2F2E41;
+    border-radius: 10px;
+    text-align: center; 
+    
+}
+.job-title h3{
+    color: white;
+}
+.job-title button{
+    color: white;
+    background-color: transparent;
+    border: none;
+    margin-top: 2%;
+    margin-bottom: 2.5%;
+}
+.createjob{
+    border: dotted;
+    width: 100%;
+    height: 100%;
+}
+.createjob button{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.createjob button:hover{
+    background-color: #2F2E41;
+}
+.job-div2{
+    color: white;
+    background-color: #2f2e41;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 3%;
+    padding: 5%;
+    height: 200px;
+    max-height: 100%;
+}
+.job-div2 button{
+    float: right;
+    background-color: #45445e;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    width: 50%;
 }

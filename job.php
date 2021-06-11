@@ -38,43 +38,9 @@ include 'include/head.inc.php';
         <div class="container">
             <div class="row">
                 <h1>Job Vacancies</h1>
-                <div class="col-sm-12 col-lg-3">
-                    <div class="job-div">  
-                    <h4>
-                        Semi Truck Driver
-                    </h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
-                    <button type="button" data-toggle="modal" data-target="#exampleModalCenter">Learn more</button>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-lg-3">
-                    <div class="job-div"> 
-                    <h4>
-                        Semi Truck Driver
-                    </h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
-                    <button type="button" data-toggle="modal" data-target="#exampleModalCenter">Learn more</button>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-lg-3">
-                    <div class="job-div"> 
-                    <h4>
-                        Semi Truck Driver
-                    </h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
-                    <button type="button" data-toggle="modal" data-target="#exampleModalCenter">Learn more</button>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-lg-3">
-                    <div class="job-div"> 
-                    <h4>
-                        Semi Truck Driver
-                    </h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
-                    <button type="button" data-toggle="modal" data-target="#exampleModalCenter">Learn more</button>
-                    </div>
-                </div>
-
+                <?php include "include/showjob.inc.php";?> 
+                
+                
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
