@@ -128,7 +128,7 @@ include 'include/head.inc.php';
                 data-aos-duration="1100"
                 data-aos-easing="ease-in-out"
             >
-          <img src="img/index_icon/android.png">
+          <img src="img/index_icon/mobile-mockup3.svg">
           </div>
           </div>
         </div>
@@ -255,7 +255,7 @@ include 'include/head.inc.php';
           <div class="about-frame">
             <img src="img/profile/ogie-icon.svg">
             <h4>Ogie Sanchez</h4>
-            <h6>Front-End &amp; Back-End Developer</h6>
+            <h6>Fullstack Developer</h6>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
         </div>
