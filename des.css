@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
 .login-border{
@@ -224,17 +224,18 @@ h1{
 
 .top-nav{
     background: #fd5757;
+    font-family: 'Rubik', sans-serif;
     display: block;
     justify-content: center;
     align-items: center;
     margin: 0;
+    height: 100%;
 }
 .icon img{
    width: 10%;
 }
 
 .icon p{
-    font-family: 'Roboto', sans-serif;
     font-weight: 1.2em;
     margin-top: 12px;
     font-weight: 700;
@@ -302,7 +303,7 @@ h1{
 }
 
 .left-nav{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik', sans-serif;
     background: #2F2E41 !important;
     height: 100%;
     margin: 0;
@@ -348,7 +349,7 @@ h1{
 }
 
 .employee-summary{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik', sans-serif;
     padding: 1.5em 1.5em;
     background: none;
     text-align: center;
@@ -356,7 +357,7 @@ h1{
 
 
 .emp-title{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik', sans-serif;
     text-align: left;
     font-size: 1.8em;
     font-weight: 600;
@@ -419,7 +420,7 @@ h1{
 
 /* .recent cards */
 .recent{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik', sans-serif;
     box-shadow: 0 0px 2px 0 rgba(0,0,0,0.2);
     margin: 7.3em 1.5em 0 1.1em;
     margin-left: 5px; 
@@ -437,6 +438,7 @@ h1{
 
 .recent-title{
     text-align:center;
+    font-family: 'Rubik', sans-serif;
     font-size: 1.2em;
     margin-bottom:60px ;
     font-weight: 600;
@@ -453,6 +455,7 @@ h1{
 }
 
 .recent label{
+    font-family: 'Rubik', sans-serif;
     float: right;
 }
 
@@ -460,7 +463,7 @@ h1{
 
 /* .announcement cards */
 .announcement{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik', sans-serif;
     box-shadow: 0 0px 2px 0 rgba(0,0,0,0.2);
     margin: 0 1.5em 2em 1.5em;
     padding: 2em 2em;
@@ -484,7 +487,7 @@ h1{
 }
 /* .announcement post cards */
 .post{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik', sans-serif;
     padding: 1.3em 1.2em;
     background: #3d3b53;
     border-radius: 10px;
@@ -602,7 +605,7 @@ background:#3d3b53;
 }
 
 .com-title p{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik', sans-serif;
     text-align: left;
     font-size: 1.8em;
     padding: .7em;
@@ -638,6 +641,7 @@ background:#3d3b53;
 /* add department button */
 .add-trigger button{
     background: #fd5757;
+    font-family: 'Rubik', sans-serif;
     float: right;
     margin-right: 2em;
     width: 30%;
@@ -718,7 +722,7 @@ background:#3d3b53;
     float: right;
 }
 .emplo-title{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik', sans-serif;
     text-align: left;
     font-size: 1.8em;
     padding: 10px 0;
@@ -734,12 +738,12 @@ background:#3d3b53;
 /* for index page (landing page) */
 
 #navbarNav li{
-    margin: 15px;
+    margin: 0 10px;
     font-size: 18px;  
 }
 #navbarNav a{
     color: #FD5757;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .navbar-brand{
@@ -781,7 +785,8 @@ background:#3d3b53;
     margin: 0 !important;
 }
 .title h1{ 
-color: black;
+color: #202020;
+font-weight: 700;
 text-align: left !important;
 }
 .title p{
@@ -882,7 +887,8 @@ text-align: left !important;
     padding-bottom: 1% !important;
 }
 .d-img{
-    text-align: center;
+    align-self: center;
+    width: 90%;
 }
 .d-img img{
     margin-left: auto;
@@ -981,6 +987,18 @@ text-align: left !important;
     /* smooth animations in hovering */
     transition: all 500ms;
 }
+
+.about-frame h4{
+    font-weight: 600;
+    color: #fd5757;
+}
+
+.about-frame h6{
+    font-weight: 600;
+}
+
+
+
 /* Hover effects */
 .about-frame:hover{
     transform: translateY(-2.5px) scale(1.05);
@@ -1063,23 +1081,48 @@ text-align: left !important;
 }
 
 /* for joblisting */
+
 .job-title{
-    margin-top: 5%;
+    margin-top: 4%;
     background-color: #2F2E41;
-    border-radius: 10px;
-    text-align: center; 
+    border-radius: 8px;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    padding: 0.8em 1.1em; 
     
 }
+
+.title-job h2{
+    margin: 1.1rem 0 ;
+    font-weight: 600;
+}
+
+/* centering all child elements of job-title */
+.job-title > *{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .job-title h3{
     color: white;
+    text-align: left;
+    font-weight: normal;
+    /* top and bottom set to 0, right to left is set to 0.4em */
+    margin: 0 0.4em;
+    padding: 0;
 }
 .job-title button{
     color: white;
     background-color: transparent;
     border: none;
-    margin-top: 2%;
-    margin-bottom: 2.5%;
+    font-weight: 500;
 }
+
+.job-title button:hover{
+    color: #fd5757;
+}
+
 .createjob{
     border: dotted;
     width: 100%;
@@ -1089,25 +1132,46 @@ text-align: left !important;
     width: 100%;
     height: 100%;
     border: none;
+    font-weight: 600;
 }
 .createjob button:hover{
     background-color: #2F2E41;
+    color: white;
 }
 .job-div2{
     color: white;
+    font-family: 'Rubik', sans-serif;
+    overflow: hidden;
     background-color: #2f2e41;
     border: none;
     border-radius: 10px;
     margin-bottom: 3%;
-    padding: 5%;
-    height: 200px;
+    padding: 1.2em;
+    height: 13rem;
     max-height: 100%;
 }
+
+.job-div2 h4{
+    color: #fd5757;
+    font-weight: 600;
+}
+
+.job-div2 h6{
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.job-div2 p{
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+}
+
 .job-div2 button{
+    font-family: 'Rubik', sans-serif;
     float: right;
     background-color: #45445e;
     border: none;
     color: white;
     border-radius: 10px;
-    width: 50%;
+    width: 40%;
 }

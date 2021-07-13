@@ -74,7 +74,7 @@
                                 </li>
                                 <li class="nav-item">
                                 <a href="joblisting.php" style="text-decoration:none;">
-                                    <button type="button"><img src="img/employee.svg" alt="dashboard icon"> Job Listings</button><br></a>
+                                    <button type="button"><img src="img/job.svg" alt="dashboard icon"> Job Listings</button><br></a>
                                 </li>
                                 <li class="nav-item">
                                 <a href="#project" style="text-decoration:none;">
