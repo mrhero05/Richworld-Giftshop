@@ -190,3 +190,30 @@ function updateEmp(){
         
     });
 }
+
+//for adding job
+function addjob(){
+    $(document).ready(function(){
+        var jtitle = document.getElementById("jtitle").value;
+        var jsalary = document.getElementById("jsalary").value;
+        var jvacant = document.getElementById("jvacant").value;
+        var jdesc = document.getElementById("jobdesc").value;
+        var bjob = true;
+      $('#addjob-div').load('include/addjob.inc.php',{
+        title:jtitle,
+        salary:jsalary,
+        vacant:jvacant,
+        desc:jdesc,
+        jobb:bjob
+      });
+    });
+}
+//for showing job
+function showjob(){
+    $(document).ready(function(){
+        $('#job-list').load('include/showjob.inc.php',{
+            job:showjob
+        });
+    });
+}
+

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 
 <div class="container-fluid body">
     <div class="row top-nav"> 
@@ -29,7 +32,7 @@
                 <div class="dropdown">       
                         <div class="btn-group">
                             <img src="img/daryl.svg" alt="sadboi">
-                            <p class="name"> Daryl Rodriguez</p>
+                            <p class="name"> <?php echo $_SESSION["profile-name"]?></p>
                         <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="visually-hidden">Toggle Dropdown</span>
                         </button>
@@ -41,7 +44,7 @@
                             <li><a class="dropdown-item" href="#">TBD</a></li>
                             <li><a class="dropdown-item" href="#">TBD</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Log out</a></li>
+                            <li><form action="include/logout.inc.php" method="POST"><a class="dropdown-item"><button type="submit" name="logout">Log out</button></a></form></li>
                         </ul>
                         </div>
                 </div>     

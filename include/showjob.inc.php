@@ -1,22 +1,25 @@
 <?php
+$show = $_POST["job"];
+if(isset($_POST["job"])){
 include 'dbc.inc.php';
-
 $sql = "SELECT * from job";
 $result = mysqli_query($conn,$sql);
-
 if(mysqli_num_rows($result) > 0){
     while($row = mysqli_fetch_assoc($result)){
         echo '
-        <div class="col-sm-12 col-lg-3">
-            <div class="job-div">
+            <div class="job-div2">
                 <h4>
                     '.$row["job_name"].'  
                 </h4>
+                <h6>$10,000 - $15,000</h6>
                 <p>'.$row["job_desc"].'</p>
+                <span>no of submitted</span>
                 <br>
                 <button type="button" data-toggle="modal" data-target="#exampleModalCenter">Learn more</button>
             </div>
-        </div>
         ';
     }
+}
+}else{
+    echo "error";
 }
