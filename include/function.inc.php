@@ -15,6 +15,8 @@ function login($conn,$user,$pass){
     if($row = mysqli_fetch_assoc($result)){
         $userGranted = $row["acc_pass"];
         if($userGranted == $pass){
+            session_start();
+            $_SESSION["profile-name"]= $row["firstname"]." ".$row["lastname"];
             header("location: ../dashboard.php");
             exit();
         }else{
