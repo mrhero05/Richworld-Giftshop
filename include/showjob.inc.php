@@ -11,7 +11,7 @@ if(mysqli_num_rows($result) > 0){
                 <h4>
                     '.$row["job_name"].'  
                 </h4>
-                <h6>$10,000 - $15,000</h6>
+                <h6>$'.$row["job_salary_min"].' - $'.$row["job_salary_max"].'</h6>
                 <p>'.$row["job_desc"].'</p>
                 <span>no of submitted</span>
                 <br>
