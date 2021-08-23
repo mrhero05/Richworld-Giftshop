@@ -195,13 +195,15 @@ function updateEmp(){
 function addjob(){
     $(document).ready(function(){
         var jtitle = document.getElementById("jtitle").value;
-        var jsalary = document.getElementById("jsalary").value;
+        var jsalarymin = document.getElementById("jsalarymin").value;
+        var jsalarymax = document.getElementById("jsalarymax").value;
         var jvacant = document.getElementById("jvacant").value;
         var jdesc = document.getElementById("jobdesc").value;
         var bjob = true;
       $('#addjob-div').load('include/addjob.inc.php',{
         title:jtitle,
-        salary:jsalary,
+        salarymin:jsalarymin,
+        salarymax:jsalarymax,
         vacant:jvacant,
         desc:jdesc,
         jobb:bjob
@@ -214,6 +216,10 @@ function showjob(){
         $('#job-list').load('include/showjob.inc.php',{
             job:showjob
         });
+    });
+
+    $(document).ready(function(){
+        $('#jobcount').load('include/countjob.inc.php');
     });
 }
 

@@ -19,7 +19,7 @@ include 'include/nav.inc.php';
         </div>
         </div>
         <div class="row">
-            <div class="title-job">
+            <div class="title-job" id="jobcount">
             <h2>Showing 3 Jobs</h2>
             </div>
             <div class="col-sm-12 col-lg-9">
@@ -36,7 +36,7 @@ include 'include/nav.inc.php';
                                             <h4>
                                                 '.$row["job_name"].'  
                                             </h4>
-                                            <h6>$10,000 - $15,000</h6>
+                                            <h6>$'.$row["job_salary_min"].' - $'.$row["job_salary_max"].'</h6>
                                             <p>'.$row["job_desc"].'</p>
                                             <span>no of submitted</span>
                                             <br>
@@ -70,17 +70,20 @@ include 'include/nav.inc.php';
                                         <div class="col-12">
                                         <input type="text" class="form-control" placeholder="Job Title:" id="jtitle"></div>
                                         <div class="col-sm-12 col-lg-6">
-                                        <input type="text" class="form-control" placeholder="Salary:" id="jsalary"></div> 
+                                        <input type="text" class="form-control" placeholder="Job Salary min:" id="jsalarymin"></div> 
                                         <div class="col-sm-12 col-lg-6">
+                                        <input type="text" class="form-control" placeholder="Job Salary max:" id="jsalarymax"></div> 
+                                        <div class="col-sm-12 col-lg-12">
                                         <input type="text" class="form-control" placeholder="How many vacant:" id="jvacant"></div>  
+                                        <br><br><br>
                                         <div class="col-sm-12 col-lg-12">
                                         <label for="jobdesc">Job Description</label>
                                         <textarea class="form-control" id="jobdesc" rows="3"></textarea>
                                         </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary" id="bjob" onclick="addjob()">Save Job</button>
+                                        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                                        <button type="button" class="jobbuttonpost" id="bjob" onclick="addjob()">Post</button>
                                         <div id="addjob-div"></div>
                                     </div>
                                     </div>
