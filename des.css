@@ -305,7 +305,7 @@ h1{
 .left-nav{
     font-family: 'Rubik', sans-serif;
     background: #2F2E41 !important;
-    height: 100%;
+    height: 100vh;
     margin: 0;
     padding: 0;
 }
