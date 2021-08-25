@@ -16,15 +16,19 @@ if(isset($_POST["submit"])){
     //check kung empty input ba
     $emptyInput = emptyInputRegister($fname,$lname,$contact,$uname,$pass,$pass2,$email);
     if($emptyInput == false){
-    
-        //check kung tama ba yung retype pass
-        $passmatch = retypePass($pass,$pass2);
-        
-        if($passmatch == true){
-        register($conn,$fname,$lname,$contact,$uname,$pass,$email);
+        if(is_numeric($contact)){
+            //check kung tama ba yung retype pass
+            $passmatch = retypePass($pass,$pass2);
+            
+            if($passmatch == true){
+            register($conn,$fname,$lname,$contact,$uname,$pass,$email);
+            }else{
+                header("location: ../register.php?error=password-not-match");
+                exit();
+            }
         }else{
-            header("location: ../register.php?error=password-not-match");
-            exit();
+            header("location: ../register.php?error=contact-number-only");
+                exit();
         }
 
     }else{
