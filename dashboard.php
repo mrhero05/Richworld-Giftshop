@@ -1,7 +1,6 @@
 <?php
 include 'include/head.inc.php';
 include 'include/nav.inc.php';
-
 ?>
 
         <div class="col-lg-10">

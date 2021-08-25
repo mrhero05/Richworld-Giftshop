@@ -20,12 +20,18 @@ include 'include/head.inc.php';
                             <p>Ocassion made special</p>
                             <?php
                             if(isset($_GET["error"])){
-                                if($_GET["error"]="wronglogin"){
-                                    echo "<p style='color:white;background-color:red'>Wrong Username or password</p>";
-                                }
+                            if($_GET["error"]=="empty-input"){
+                                echo "<p style='color:white;background-color:red'>Empty Input</p>";
+                                echo '<script> alert("Please input username or password")</script>';
+                              
                             }
-
-                            ?>
+                            // else if(isset($_GET["error"])){
+                            else if($_GET["error"]=="wronglogin"){
+                                    echo "<p style='color:white;background-color:red'>Wrong Username or password</p>";
+                                    echo '<script> alert("Wrong Username or password")</script>';
+                                
+                                }
+                            }?>
                             <input type="text" placeholder="Username" name="user"><br>
                             <input type="password" placeholder="Password" name="pass">
                             <a href="" target="_blank"><p>Forgot password?</p></a>

@@ -17,7 +17,20 @@ include 'include/head.inc.php';
                 <form action="include/register.inc.php" method="POST">
                 <div class="row">
                     <!-- changed the p tag to label for the input -->
+                    <?php
+                            if(isset($_GET["error"])){
+                                if($_GET["error"]=="empty-input"){
+                                    echo "<p style='color:white;background-color:red;text-align:center;font-weight:bold;font-size:18px'>Empty Input</p>";
+                                    echo '<script> alert("Please fill up all fields")</script>';}
+                                else if($_GET["error"]=="password-not-match"){
+                                    echo "<p style='color:white;background-color:red;text-align:center;font-weight:bold;font-size:18px'>Password not match</p>";
+                                    echo '<script> alert("Password not match. Please retype password")</script>';}
+                                else if($_GET["error"]=="contact-number-only"){
+                                    echo "<p style='color:white;background-color:red;text-align:center;font-weight:bold;font-size:18px'>Invalid contact number</p>";
+                                    echo '<script> alert("Please number only in contact")</script>';}
+                                    }?>
                     <div class="col-lg-6">
+                        
                         <label for="firstname">First Name</label>
                         <br>
                         <input type="text" name="fname" id="firstname">
@@ -48,7 +61,9 @@ include 'include/head.inc.php';
                         <br>
                         <input type="text"  name="email" id="email">
                         <br>
-                        <button type="submit" name="submit">Register</button>                       
+                        <button type="submit" name="submit">Register</button>  
+                       
+                        <a style="text-decoration:none" href="login.php"><p style="color:#FD5757;text-align:center">Already have an account? Login here</p></a>                
                     </div>
                     
                 </div>
