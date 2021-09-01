@@ -119,8 +119,23 @@ h1{
     height: 100%;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
-    box-shadow: 0 16px 24px 0 rgba(0,0,0,0.2);
-    background-color: #FD5757;
+    border-right: none;
+    box-shadow: -16px 0 24px 0 rgba(0,0,0,0.2);
+    background-color: #ffffff;
+    position: relative;
+    font-size: 12px;
+}
+
+
+.left-img{
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    margin: auto;
+    height: 35%;
+    width: 95%;
+    
 }
 
 .container-register{
@@ -132,16 +147,16 @@ h1{
 
 .right-register{
     height: 100%;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 4em 2em;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
-
-    box-shadow: 0 16px 24px 0 rgba(0,0,0,0.2);
-    background: #2F2E41;
+    border-left: none;
+    box-shadow: 16px 0  24px 0 rgba(0,0,0,0.2);
+    background: #ffffff;
 }
 
-.right-register h1{
+.right-register h1,h5{
     margin-left: 20px;
     margin-bottom: 30px;
 }
@@ -154,7 +169,7 @@ h1{
     font-size: 15px;
     font-weight: 500;
     border-radius: 8px;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     height: 1.2rem;
 }
 /* margin only left and right for label */
@@ -164,7 +179,7 @@ h1{
 
 /* Register inputs when active/clicked */
 .right-register input:focus, textarea:focus, select:focus{
-    outline-color:white;
+    outline-color:rgb(0, 0, 0);
     padding:18px;
 }
 
@@ -185,7 +200,7 @@ h1{
 }
 
 /* for mobile view */
-@media screen and (max-width: 768px){
+@media screen and (max-width: 991px){
 
     .container-register{
         margin: 0;
@@ -216,10 +231,16 @@ h1{
     .right-register button{
         width: 85%;
     }
+    .left-register{
+        display: none;
+    }
 
 }
 
 /* for dashboard */
+.login-here:hover{
+    color: #2F2E41 !important;
+}
 
 
 .top-nav{
@@ -1049,9 +1070,7 @@ text-align: left !important;
 }
 
 /* for job listing */
-.job{
-    text-align: center;
-}
+
 .job h1{
     text-align: left;
     margin-bottom: 2%;
@@ -1129,8 +1148,10 @@ text-align: left !important;
     border: dotted;
     margin-top: 4%;
     width: 90%;
-    height: 90%;
+    /* height: 90%; */
     border-radius: 20px;
+    height: 13rem;
+    max-height: 100%;
 }
 .createjob button{
     width: 100%;
@@ -1143,6 +1164,7 @@ text-align: left !important;
     background-color: #2F2E41;
     color: white;
 }
+
 .job-div2{
     
     position: relative;
@@ -1158,7 +1180,7 @@ text-align: left !important;
     max-height: 100%;
     width: 240px;
     font-size: 80%;
-    float: left;
+    float:left;
 }
 
 .job-div2 h4{
@@ -1195,4 +1217,32 @@ text-align: left !important;
     height: 2rem;
     border-radius: 10px;
     border: none;
+}
+
+/* for register title */
+.register-title p{
+    padding-top: 20%;
+    font-family: 'Bungee', cursive;
+    color: #45445e;
+    font-size: 2em;
+    text-align: center;
+    margin-top: -25%;
+}
+
+/* complete your profile */
+.complete-prof{
+    text-align: center;
+}
+.complete-prof h1{
+    text-align: center;
+    color:black;
+}
+.complete-prof p{
+    text-align: center;
+}
+.complete-prof img{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 250px;
 }

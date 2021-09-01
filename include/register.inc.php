@@ -9,6 +9,7 @@ if(isset($_POST["submit"])){
     $pass = $_POST["pass"];
     $pass2 = $_POST["pass2"];
     $email = $_POST["email"];
+    
     // pag aadd ng connection at file ng function
     require_once 'dbc.inc.php';
     require_once 'function.inc.php';
@@ -21,7 +22,14 @@ if(isset($_POST["submit"])){
             $passmatch = retypePass($pass,$pass2);
             
             if($passmatch == true){
-            register($conn,$fname,$lname,$contact,$uname,$pass,$email);
+                $result = $_POST["userExistId"];
+                if($result == 1){
+                    header("location: ../register.php?error=user-exist");
+                    exit();
+                }else{        
+                   register($conn,$uname,$pass,$fname,$lname,$contact,$email);
+                }
+                   
             }else{
                 header("location: ../register.php?error=password-not-match");
                 exit();

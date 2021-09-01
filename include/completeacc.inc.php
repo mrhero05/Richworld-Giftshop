@@ -18,25 +18,12 @@ include 'include/head.inc.php';
                             <div class="right">
                             <h1>Richworld Giftshop</h1>
                             <p>Ocassion made special</p>
-                            <?php
-                            if(isset($_GET["error"])){
-                            if($_GET["error"]=="empty-input"){
-                                echo "<p style='color:white;background-color:red'>Empty Input</p>";
-                                echo '<script> alert("Please input username or password")</script>';
-                              
-                            }
-                            // else if(isset($_GET["error"])){
-                            else if($_GET["error"]=="wronglogin"){
-                                    echo "<p style='color:white;background-color:red'>Wrong Username or password</p>";
-                                    echo '<script> alert("Wrong Username or password")</script>';
-                                
-                                }
-                            }?>
+                           
                             <input type="text" placeholder="Username" name="user"><br>
                             <input type="password" placeholder="Password" name="pass">
                             <a href="" target="_blank"><p>Forgot password?</p></a>
                             <button type="submit" name="submit">Login</button>
-                            <a href="register.php"><p>Dont have an account? Register here</p></a>
+                            <a href="register.php" target="_blank"><p>Dont have an account? Register here</p></a>
                             </div>
                             </form>
                         </div>
