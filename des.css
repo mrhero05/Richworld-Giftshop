@@ -1246,3 +1246,61 @@ text-align: left !important;
     border-radius: 50%;
     width: 250px;
 }
+
+/* comp-profile */
+
+
+.choosefile input{
+    max-width: 300px;
+    margin:auto auto;
+}
+
+
+.comp_dropdown button{
+    background: white;
+    font-weight: 600;
+    border: 1px solid #707070;
+    text-align: center;
+    width: 18.75rem;
+}
+
+
+.comp_dropdown button:active{
+    border-color: #FD5757;
+}
+
+.complete-prof p{
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.complete-prof img{
+    width: 200px;
+    height: 200px;
+}
+
+
+.complete-prof input{
+    min-width: 18.75rem;
+    border: 1px solid #707070;
+    padding: 0.5em;
+    border-radius: 8px;
+}
+
+.complete-prof input:focus, textarea:focus, select:focus{
+    border:1px solid #fd5757;
+}
+
+.comp_submit button{
+    min-width: 18.75rem;
+    background: #FD5757;
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 0.5em;
+    border-radius: 8px;
+}
+
+.complete-prof{
+    margin: 2rem;
+}

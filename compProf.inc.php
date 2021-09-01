@@ -6,15 +6,16 @@ include "include/head.inc.php";
         <div class="row">
             <div class="col-12">
                 <div class="complete-prof">
-                    <h1>One more step to complete your profile</h1>
+                    <h2>One more step to complete your profile</h2>
                     <p>You can add change your profile later in the settings.</p>
                     <img src="img/account-profile/default.jpg">
                     <br>
-                    <input type="file">
+                    <div class="choosefile">
+                    <input class="form-control form-control" id="formFile" type="file" />
+                    </div>
                     <br>
-                    <br>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="comp_dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                           Select a security question
                         </button>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
@@ -29,7 +30,7 @@ include "include/head.inc.php";
                         <bR><br>
                         <input type="text" placeholder="Your answer...">
                         <br><br>
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
                             Account type
                         </button>
                           <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
@@ -38,8 +39,9 @@ include "include/head.inc.php";
                               
                     </div>
                     <br>
-                    <button type="submit">Submit</button>
-                    
+                    <div class="comp_submit">
+                    <button type="submit">Finish</button>
+                    </div>
                 </div>
             </div>
         </div>
