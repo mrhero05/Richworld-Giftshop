@@ -4,15 +4,23 @@ include 'include/head.inc.php';
 <!-- renamed class -->
 <div class="container-register">
     <div class="row">
-        <div class="col-lg-2 p-0">
+        <div class="col-lg-4 p-0">
             <!-- column for the left side with 2 witdth -->
-            <div class="left-register"></div>
+            
+            <div class="left-register">
+            <a class="navbar-brand" style="font-size:18px;"><p style="margin-top:20%;text-align:center">R<span>G</span></p></a>
+            <div class="register-title">
+            <p>Richworld <span>Giftshop</span></p></div>
+            <img src="img/register.svg" class="left-img">
+            </div>
+            
         </div>
 
-        <div class="col-lg-10 p-0">
+        <div class="col-lg-8 p-0">
             <!-- column for the right side with 10 with its like a container -->
             <div class="right-register">
             <h1>Register an account.</h1>
+            <h5>Lets get you all set up.</h5>
                 <!-- another row para sa pag 2 column ng list ng fname - Contact at uname to pass -->
                 <form action="include/register.inc.php" method="POST">
                 <div class="row">
@@ -28,7 +36,16 @@ include 'include/head.inc.php';
                                 else if($_GET["error"]=="contact-number-only"){
                                     echo "<p style='color:white;background-color:red;text-align:center;font-weight:bold;font-size:18px'>Invalid contact number</p>";
                                     echo '<script> alert("Please number only in contact")</script>';}
-                                    }?>
+                                else if($_GET["error"]=="user-exist"){
+                                    echo "<p style='color:white;background-color:red;text-align:center;font-weight:bold;font-size:18px'>Account Already Exist</p>";
+                                    echo '<script> alert("Please use another username")</script>';}
+                                    }
+                            if(isset($_GET["success"])){
+                                if($_GET["success"] == "account-create-successfully"){
+                                    echo '<script>alert("Account Create Succesfully!");</script>';
+                                }
+                            }    
+                                    ?>
                     <div class="col-lg-6">
                         
                         <label for="firstname">First Name</label>
@@ -47,7 +64,10 @@ include 'include/head.inc.php';
                     <div class="col-lg-6">
                         <label for="username">Username</label>
                         <br>
-                        <input type="text" name="uname" id="username">
+                        <script src="js/script.js?v=<?php echo time(); ?>"></script>
+                        <input type="text" name="uname" id="username" onchange="checkuser(this.value);">
+                        <div id="cuser" style="padding-left: 7%;"><p style="color: cornflowerblue;">Check username availability</p>
+                        </div>
                         <br>
                         <label for="password">Password</label>
                         <br>
@@ -63,7 +83,7 @@ include 'include/head.inc.php';
                         <br>
                         <button type="submit" name="submit">Register</button>  
                        
-                        <a style="text-decoration:none" href="login.php"><p style="color:#FD5757;text-align:center">Already have an account? Login here</p></a>                
+                        <p style="color:#000;text-align:center">Already have an account?<a style="text-decoration:none;color:#FD5757" href="login.php" class="login-here"> Login here</a> </p>               
                     </div>
                     
                 </div>

@@ -49,20 +49,46 @@ function emptyInputRegister($fname,$lname,$contact,$uname,$pass,$pass2,$email){
     }
     return $result;
 }
-
+//for user exist
+function uexist($conn,$uname){
+    $result = 1;
+    $checkuser = "SELECT * from account where acc_user = ".$uname."";
+    $result = mysqli_query($conn,$checkuser);
+    if(mysqli_num_rows($result) > 0){
+        $result = 1;
+    }else{
+        $result = 0;
+    }
+    return $result;
+    exit();
+}
 //function para sa register
-function register($conn,$fname,$lname,$contact,$uname,$pass,$email){
-    $sql = "INSERT into account (firstname,lastname,contact,acc_user,acc_pass,email) values (?,?,?,?,?,?)";
+function register($conn,$uname,$pass,$fname,$lname,$contact,$email){
+    // $result = uexist($conn,$uname);
+  
+    //  if($result == 1){
+    //     // echo "error";
+    //     header("location: ../register.php?error=user-exist");
+    //     exit();
+    //    //register($conn,$uname,$pass,$fname,$lname,$contact,$email);
+    //   }else{}
+      
+      
+    $type = "0";
+    $sql = "INSERT into account (acc_user,acc_pass,firstname,lastname,contact,email,user_type) values (?,?,?,?,?,?,?);";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt,$sql)) {
         header("location: ../register.php?error=stmt-failed");
         exit();
     }
     //to hash the password to make it more secure
-    $hashpass = password_hash($pass,PASSWORD_DEFAULT);
-    mysqli_stmt_bind_param($stmt,"ssssss",$fname,$lname,$contact,$uname,$pass,$email);
+    //$hashpass = password_hash($pass,PASSWORD_DEFAULT);
+    
+    mysqli_stmt_bind_param($stmt,"ssssiss",$uname,$pass,$fname,$lname,$contact,$email,$type);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../register.php?account-create-successfully");
+    header("location: ../register.php?success=account-create-successfully");
+    return true;
     exit();
+
 }

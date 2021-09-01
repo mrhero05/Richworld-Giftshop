@@ -223,3 +223,13 @@ function showjob(){
     });
 }
 
+function checkuser(){
+    console.log("success");
+    var searchuser = document.getElementById("username").value;
+    $(document).ready(function(){
+        $('#cuser').load('include/checkExist.inc.php',{
+            suser:searchuser
+        });
+    });
+}
+
