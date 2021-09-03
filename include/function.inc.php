@@ -17,8 +17,25 @@ function login($conn,$user,$pass){
         if($userGranted == $pass){
             session_start();
             $_SESSION["profile-name"]= $row["firstname"]." ".$row["lastname"];
-            header("location: ../dashboard.php");
+            $_SESSION["usertype"] = $row["user_status"];
+            $_SESSION["userId"]=$row["acc_id"];
+            
+            if($_SESSION["usertype"] == 0){
+            header("location: ../compProf.inc.php");
             exit();
+            }else{
+            // header("location: ../dashboard.php");
+            // exit(); 
+            $_SESSION["acc_type"] = $row["acc_type"];  
+                if($_SESSION["acc_type"]=="user"){
+                    header("location: ../index.php");
+                    exit();
+                }else if($_SESSION["acc_type"]=="admin"){
+                    header("location: ../dashboard.php");
+                    exit();
+                }
+            }
+            
         }else{
         return false;
         }
@@ -75,7 +92,7 @@ function register($conn,$uname,$pass,$fname,$lname,$contact,$email){
       
       
     $type = "0";
-    $sql = "INSERT into account (acc_user,acc_pass,firstname,lastname,contact,email,user_type) values (?,?,?,?,?,?,?);";
+    $sql = "INSERT into account (acc_user,acc_pass,firstname,lastname,contact,email,user_status,prof_path,q_number,q_answer,acc_type) values (?,?,?,?,?,?,?,?,?,?,?);";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt,$sql)) {
         header("location: ../register.php?error=stmt-failed");
@@ -84,9 +101,10 @@ function register($conn,$uname,$pass,$fname,$lname,$contact,$email){
     //to hash the password to make it more secure
     //$hashpass = password_hash($pass,PASSWORD_DEFAULT);
     
-    mysqli_stmt_bind_param($stmt,"ssssiss",$uname,$pass,$fname,$lname,$contact,$email,$type);
+    mysqli_stmt_bind_param($stmt,"ssssisssiss",$uname,$pass,$fname,$lname,$contact,$email,$type,$type,$type,$type,$type);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
+    echo "<script>alert('123')</script>";
     header("location: ../register.php?success=account-create-successfully");
     return true;
     exit();

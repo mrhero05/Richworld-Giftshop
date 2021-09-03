@@ -1263,6 +1263,15 @@ text-align: left !important;
     text-align: center;
     width: 18.75rem;
 }
+.comp_select{
+    width: 18.75rem !important;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 18.75rem;
+    border: 1px solid #414141 !important;
+    border-radius: 8px;
+}
 
 
 .comp_dropdown button:active{

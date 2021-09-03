@@ -233,3 +233,7 @@ function checkuser(){
     });
 }
 
+function img_pathUrl(input){
+    $('#profImg')[0].src = (window.URL ? URL : webkitURL).createObjectURL(input.files[0]);
+}
+
