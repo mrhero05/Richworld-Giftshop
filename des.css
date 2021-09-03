@@ -1313,3 +1313,51 @@ text-align: left !important;
 .complete-prof{
     margin: 2rem;
 }
+
+/* Application Status Tab */
+
+.step-header{
+    text-align: center;
+}
+
+.step-header h2{
+margin-top: 1.3em;
+}
+
+.step-header p{
+    font-weight: 600;
+}
+
+.step-progress{
+    margin: auto auto;
+    padding: 2em 0;
+    background: #2F2E41;
+    color: white;
+    width: 150px;
+    border-radius: 8px;
+}
+
+.step-progress ul{
+    margin: 0;
+    padding: 0;
+}
+
+.step-progress li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.step-progress img{
+margin-right:1.2em;
+}
+
+.step-progress h5{
+    color: #707070;
+}
+
+.step-progress p{
+    margin-left: 4.5em; 
+    padding: 0;
+    color: #707070;
+}
