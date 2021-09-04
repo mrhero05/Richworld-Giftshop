@@ -31,7 +31,10 @@ session_start();
             <div class="account-dashboard">
                 <div class="dropdown">       
                         <div class="btn-group">
-                            <img src="img/daryl.svg" alt="sadboi">
+                            <?php
+                            $prof_name = "img/account-profile/".$_SESSION["profPath"];?>
+                            <img src="<?php echo $prof_name;?>" class="profile_img" alt="profile">
+                            
                             <p class="name"> <?php echo $_SESSION["profile-name"]?></p>
                         <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="visually-hidden">Toggle Dropdown</span>
