@@ -25,7 +25,7 @@ if(isset($_POST["finishSubmit"])){
 
                         if(in_array($fileActExt,$allowed)){
                             if($fileError === 0){
-                                if($fileSize < 500000){
+                                if($fileSize < 10000000){
                                     //$newname = uniqid('',true).".".$fileActExt;
                                     //$fileDestination = '../img/account-profile/'.$newname;
                                     $userId = $_SESSION["userId"];
@@ -39,10 +39,12 @@ if(isset($_POST["finishSubmit"])){
                                     mysqli_query($conn,$sql);
                                     
                                     if($tanswer == "user"){
+                                       
                                         echo '<script>alert("Successfully Finish Account")</script>';
                                         header("location:../index.php");
                                         exit();
                                     }else if($tanswer == "admin"){
+                                    
                                         echo '<script>alert("Successfully Finish Account")</script>';
                                         header("location:../dashboard.php");
                                         exit();
