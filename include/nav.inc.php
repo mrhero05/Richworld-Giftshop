@@ -87,11 +87,11 @@ session_start();
                                     <button type="button"><img src="img/recent.svg" alt="dashboard icon"> Recent Activities</button><br></a>
                                 </li>
                                 <li class="nav-item">
-                                <a href="#footer" style="text-decoration:none;">
+                                <a href="announcement.php" style="text-decoration:none;">
                                     <button type="button"><img src="img/announcement.svg" alt="dashboard icon">Announcements</button><br></a>
                                 </li>
                                 <li class="nav-item">
-                                <a href="#footer" style="text-decoration:none;">
+                                <a href="requestleave.php" style="text-decoration:none;">
                                     <button type="button"><img src="img/leave.svg" alt="dashboard icon"> Request leave</button><br></a>
                                 </li>
                           </ul>

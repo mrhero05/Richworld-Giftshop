@@ -11,7 +11,7 @@ include 'include/nav.inc.php';
                     </div> -->
                     <div class="employee-summary">
                         <!-- added <p> classes  -->
-                        <p class="emp-title">Good Morning, <span style="color:red"><?php echo $_SESSION["profile-name"]?></span></p>
+                        <p class="emp-title">Good Morning, <span><?php echo $_SESSION["profile-name"]?></span></p>
                         <p class="emp-des">Here's whats happening in your company today.</p>
                       
                             <div class="row">
