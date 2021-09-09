@@ -384,6 +384,14 @@ h1{
     font-weight: 600;
 }
 
+.emp-title span{
+    font-family: 'Rubik', sans-serif;
+    text-align: left;
+    font-size: 1em;
+    font-weight: 600;
+    color: #FD5757;
+}
+
 .emp-des{
     text-align: left;
     font-weight: 500;
@@ -1135,6 +1143,7 @@ text-align: left !important;
     color: white;
     background-color: transparent;
     border: none;
+    margin: 0;
     font-weight: 500;
 }
 
@@ -1368,3 +1377,256 @@ margin-right:1.2em;
     height: 45px;
 }
 
+/* for announcement tab */
+
+.news-header h2{
+    font-family: 'Rubik', sans-serif;
+    color: black;
+    margin: 15px 0;
+}
+
+.ann-news{
+    font-family: 'Rubik', sans-serif;
+    background: white;
+    border-radius: 8px;
+    height: 600px;
+    margin: 0 0 0 1.1rem;
+    padding: 0 1.5rem;
+    overflow-y:scroll;
+    box-shadow: 0 0px 2px 0 rgba(0,0,0,0.2);
+}
+
+.ann-news h4{
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+.ann-create{
+    font-family: 'Rubik', sans-serif;
+    background: white;
+    margin: 0 0 0 2.5rem;
+    border-radius: 8px;
+    height: 600px;
+    box-shadow: 0 0px 2px 0 rgba(0,0,0,0.2);
+}
+
+.ann-create h4{
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    margin: 20px;
+    padding: 0;
+}
+
+.post-info input{
+    font-family: 'Rubik', sans-serif;
+    margin: 10px 15px;
+    width: 90%;
+    padding:18px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    height: 1.1rem;
+}
+/* margin only left and right for label */
+.post-info label{
+    font-family: 'Rubik', sans-serif;
+    margin: 0 15px;
+    font-weight: 600;
+}       
+
+/* post info inputs when active/clicked */
+.post-info input:focus, textarea:focus, select:focus{
+    outline-color:#fd5757;
+    padding:18px;
+}
+
+.desc textarea{
+    font-family: 'Rubik', sans-serif;
+    width: 90%;
+    margin: 10px 15px;
+    font-weight: 600;
+    padding:  8px 10px;
+    max-height: 250px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+}
+
+.post-info button{
+    font-family: 'Rubik', sans-serif;
+    display: block;
+    background: #fd5757;
+    font-weight: 600;
+    width: 90%;
+    border-radius: 8px;
+    margin: auto;
+    border: none;
+    color: white;
+    padding: 0.55rem;
+}
+
+.post-info button:hover{
+    background: #f76a6a;
+}
+
+.ann-post{
+    font-family: 'Rubik', sans-serif;
+    padding: 1.3em 1.2em;
+    margin: auto;
+    background: #3d3b53;
+    border-radius: 10px;
+    width: 90%;
+    color: white;
+    text-align: left;
+    height: fit-content;
+    margin-bottom: 15px;
+}
+
+.ann-name{
+    font-weight: 700;
+}
+
+.ann-post span{
+    float: right;
+    margin-right: 80px;
+    color: #cfcfcf;
+}
+
+.ann-news:hover{
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+}
+
+.ann-create:hover{
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+}
+
+.ann-news::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+.ann-news::-webkit-scrollbar-track {
+background: #d6d6d6; 
+}
+   
+.ann-news::-webkit-scrollbar-thumb {
+background:#2F2E41; 
+}
+  
+.ann-news::-webkit-scrollbar-thumb:hover {
+background:#3d3b53; 
+}
+
+/* for request leave tab */
+
+.request-header h2{
+    font-family: 'Rubik', sans-serif;
+    color: black;
+    margin: 15px 0;
+   }
+
+.leave-list{
+    font-family: 'Rubik', sans-serif;
+    background: white;
+    border-radius: 8px;
+    height: 600px;
+    margin: 0 0 0 1.1rem;
+    padding: 0 1.5rem;
+    overflow-y:scroll;
+    box-shadow: 0 0px 2px 0 rgba(0,0,0,0.2);
+}
+
+.create-leave{
+    font-family: 'Rubik', sans-serif;
+    background: white;
+    margin: 0 0 0 2.5rem;
+    border-radius: 8px;
+    height: 600px;
+    box-shadow: 0 0px 2px 0 rgba(0,0,0,0.2);
+}
+
+.leave-list h4{
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    margin: 20px;
+    padding: 0;
+}
+
+
+.create-leave h4{
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    margin: 20px;
+    padding: 0;
+}
+
+.leave-info input{
+    font-family: 'Rubik', sans-serif;
+    margin: 10px 15px;
+    width: 90%;
+    padding:18px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    height: 1.1rem;
+}
+
+.leave-list:hover{
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+}
+
+.create-leave:hover{
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+}
+
+.leave-info label{
+    margin: 0 15px;
+    font-weight: 600;
+}
+
+.leave-info select{
+    margin: 10px 15px;
+    width: 90%;
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+.leave-info button{
+    display: block;
+    background: #fd5757;
+    font-weight: 600;
+    width: 90%;
+    border-radius: 8px;
+    margin: auto;
+    border: none;
+    color: white;
+    padding: 0.55rem;
+}
+
+.leave-date{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.leave-info button:hover{
+    background: #f76a6a;
+}
+
+.leave-list::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+.leave-list::-webkit-scrollbar-track {
+background: #d6d6d6; 
+}
+   
+.leave-list::-webkit-scrollbar-thumb {
+background:#2F2E41; 
+}
+  
+.leave-list::-webkit-scrollbar-thumb:hover {
+background:#3d3b53; 
+}
