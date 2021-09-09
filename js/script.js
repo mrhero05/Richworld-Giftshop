@@ -149,6 +149,27 @@ function dataUpdateSearch(){
    
 }
 
+function viewjobIndex(click_id){
+    
+    $(document).ready(function(){
+        var parent = $(click_id).closest(".job-div2");
+        var name = parent.find('.indexjobname').val();
+        var min = parent.find('.indexjobmin').val();
+        var max = parent.find('.indexjobmax').val();
+        var desc = parent.find('.indexjobdesc').val();
+
+        $('#showjobIndex').load('include/indexmodaljob.inc.php',{
+            name:name,
+            min:min,
+            max:max,
+            desc:desc
+            
+        });
+        console.log("123");
+        
+    });
+}
+
 
 //function to add new employee
 function updateEmp(){
@@ -213,13 +234,18 @@ function addjob(){
 //for showing job
 function showjob(){
     $(document).ready(function(){
-        $('#job-list').load('include/showjob.inc.php',{
-            job:showjob
-        });
+        $('#job-list').load('include/showjob.inc.php');
     });
 
     $(document).ready(function(){
         $('#jobcount').load('include/countjob.inc.php');
+    });
+}
+
+function showjobIndex(){
+    $(document).ready(function (){
+        $('#job-listIndex').load('include/showjobIndex.inc.php');
+        console.log("1");
     });
 }
 

@@ -1,6 +1,5 @@
 <?php
-$show = $_POST["job"];
-if(isset($_POST["job"])){
+
 include 'dbc.inc.php';
 $sql = "SELECT * from job";
 $result = mysqli_query($conn,$sql);
@@ -19,7 +18,4 @@ if(mysqli_num_rows($result) > 0){
             </div>
         ';
     }
-}
-}else{
-    echo "error";
 }
