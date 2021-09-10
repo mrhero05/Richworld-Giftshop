@@ -158,8 +158,8 @@ function viewjobIndex(click_id){
         var max = parent.find('.indexjobmax').val();
         var desc = parent.find('.indexjobdesc').val();
         $('#exampleModalLongTitle').text(name);
-        $('.min').text(min);
-        $('.max').text(max);
+        $('.min').text("₱ "+ min);
+        $('.max').text("₱ "+ max);
         $('.desc').text(desc);
          console.log(name);
         
