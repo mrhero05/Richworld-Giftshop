@@ -1,6 +1,16 @@
 <?php
+include "dbc.inc.php";
 session_start();
-?>
+if(isset($_SESSION["profile-name"])){
+$accid = $_SESSION["userId"];
+$sql = "SELECT * from account where acc_id = '$accid'";
+$result = mysqli_query($conn,$sql);
+if(mysqli_num_rows($result) > 0){
+while($row = mysqli_fetch_assoc($result)){
+    $_SESSION["refreshpath"] = $row["prof_path"];
+}
+}
+}?>
 
 <div class="container-fluid body">
     <div class="row top-nav"> 
@@ -32,8 +42,8 @@ session_start();
                 <div class="dropdown">       
                         <div class="btn-group">
                             <?php
-                            $prof_name = "img/account-profile/".$_SESSION["profPath"];?>
-                            <img src="<?php echo $prof_name;?>" class="profile_img" alt="profile">
+                           $prof_name = "img/account-profile/".$_SESSION["refreshpath"];?>
+                           <img src="<?php echo $prof_name;?>" class="profile_img" alt="profile">
                             
                             <p class="name"> <?php echo $_SESSION["profile-name"]?></p>
                         <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
