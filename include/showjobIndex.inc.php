@@ -18,7 +18,7 @@ if(mysqli_num_rows($result) > 0){
                 <p>'.$row["job_desc"].'</p>
                 <span>no of submitted</span>
                 <br>
-                <button type="button" data-toggle="modal" data-target="#viewjobIndex" onclick="viewjobIndex(this);">Learn more</button>
+                <button type="button" onclick="viewjobIndex(this);" data-toggle="modal" data-target="#viewjobIndex">Learn more</button>
             </div>
             </div>
             

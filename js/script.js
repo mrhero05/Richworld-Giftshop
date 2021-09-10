@@ -157,15 +157,11 @@ function viewjobIndex(click_id){
         var min = parent.find('.indexjobmin').val();
         var max = parent.find('.indexjobmax').val();
         var desc = parent.find('.indexjobdesc').val();
-
-        $('#showjobIndex').load('include/indexmodaljob.inc.php',{
-            name:name,
-            min:min,
-            max:max,
-            desc:desc
-            
-        });
-        console.log("123");
+        $('#exampleModalLongTitle').text(name);
+        $('.min').text(min);
+        $('.max').text(max);
+        $('.desc').text(desc);
+         console.log(name);
         
     });
 }
