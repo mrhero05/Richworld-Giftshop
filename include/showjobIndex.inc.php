@@ -15,7 +15,6 @@ if(mysqli_num_rows($result) > 0){
                     '.$row["job_name"].'  
                 </h4>
                 <h6>$'.$row["job_salary_min"].' - $'.$row["job_salary_max"].'</h6>
-                <p>'.$row["job_desc"].'</p>
                 <span>no of submitted</span>
                 <br>
                 <button type="button" onclick="viewjobIndex(this);" data-toggle="modal" data-target="#viewjobIndex">Learn more</button>

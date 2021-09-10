@@ -1631,3 +1631,47 @@ background:#2F2E41;
 .leave-list::-webkit-scrollbar-thumb:hover {
 background:#3d3b53; 
 }
+
+
+/* for job modal  */
+
+.modal-title{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #fd5757;
+}
+
+.salary-min{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    margin-left: 25px;
+}
+
+.salary-max{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+}
+
+.job-des h6{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    margin-left: 25px;
+}
+
+.job-des p {
+    font-family: 'Rubik', sans-serif;
+    margin-left: 25px;
+    max-height: 150px;
+    height: 20%;
+}
+
+.job-des{
+    overflow-y:scroll;
+}
+
+.pdf{
+    font-family: 'Rubik', sans-serif;
+}
+
+

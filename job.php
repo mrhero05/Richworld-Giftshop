@@ -84,7 +84,7 @@ include 'include/dbc.inc.php';
           </div>
     </div>
     <!-- start modal view job index -->
-    <div class="modal fade" id="viewjobIndex" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="viewjobIndex" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
  <div class="modal-dialog modal-dialog-centered" role="document">
      <div class="modal-content">
      <div class="modal-header">
@@ -98,14 +98,17 @@ include 'include/dbc.inc.php';
          <div class="row">
          <!-- <div class="col-12">
          <input type="text" class="form-control" placeholder="ID"></div> -->
-         <div class="col-sm-12 col-lg-6">
+         <div class="col-4 salary-min">
            <p class="min"></p>
          </div>
-         <div class="col-sm-12 col-lg-6">
+         <div class="col-1 salary-min">
+           <p>-</p>
+         </div>
+         <div class="col-4 salary-max">
            <p class="max"></p>
          </div>
-         <div class="col-sm-12 col-lg-12">
-           <h1>Job Description: </h1>
+         <div class="col-sm-12 col-lg-12 job-des">
+           <h6>Job Description: </h6>
            <p class="desc"></p>
          </div>                                             
          </div>
@@ -114,7 +117,7 @@ include 'include/dbc.inc.php';
      <div class="modal-footer">
          <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
          <button type="button" class="btn btn-primary" onclick="addEmp()" style="width:100%">Apply Now</button>
-         <p style="width:100%;text-align:center">* You must sign in to upload your pdf resume *</p>
+         <p style="width:100%;text-align:center" class="pdf">* You must sign in to upload your pdf resume *</p>
          <div id="add"></div>
      </div>
      </div>
