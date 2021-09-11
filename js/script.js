@@ -259,3 +259,12 @@ function img_pathUrl(input){
     $('#profImg')[0].src = (window.URL ? URL : webkitURL).createObjectURL(input.files[0]);
 }
 
+function search_click(){
+    var search_input = document.getElementById("search_name").value;
+    $(document).ready(function(){
+        $('#job-listIndex').load('include/searchindex.inc.php',{
+            search_int: search_input 
+        });
+    });
+}
+

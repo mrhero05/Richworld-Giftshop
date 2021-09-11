@@ -73,15 +73,30 @@ include 'include/dbc.inc.php';
 
 <section id="job-body">
     <div class="job">
-        <h1 style="margin-left:8%">Job Vacancies</h1>
-          <div id="job-listIndex">
-            <div class="container">
+          <div class="container">
             <div class="row">
-            <?php
-              include 'include/showjobIndex.inc.php';?>
-            </div>
+              <div class="col-sm-12 col-lg-6">
+                <h1 style="margin-left:8%">Job Vacancies</h1>
+              </div>
+              <div class="col-sm-12 col-lg-6">
+                <input type="text" name="search_input" id="search_name">
+                <button type="button" name="button_input" onclick="search_click();">Search</button>
+              </div>
             </div>
           </div>
+
+      
+          
+                <div id="job-listIndex">
+                  <div class="container">
+                  <div class="row">
+                  <?php
+                    include 'include/showjobIndex.inc.php';?>
+                  </div>
+                  </div>
+                </div>
+           
+          
     </div>
     <!-- start modal view job index -->
   <div class="modal fade" id="viewjobIndex" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
