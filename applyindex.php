@@ -91,7 +91,7 @@ include 'include/dbc.inc.php';
                             <button type="button" class="back-button">Back</button>
                         </div>
                         <div class="col-sm-12">
-                        <button type="button" class="submit-button">Submit</button>
+                        <button type="button" class="submit-button">Submit </button>
                         </div>
                 </div>
               </div>
