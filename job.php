@@ -79,22 +79,21 @@ include 'include/dbc.inc.php';
                 <h1 style="margin-left:8%">Job Vacancies</h1>
               </div>
               <div class="col-sm-12 col-lg-6">
-                <input type="text" name="search_input" id="search_name">
-                <button type="button" name="button_input" onclick="search_click();">Search</button>
+                <input type="text" class="searchI" name="search_input" id="search_name">
+                <button type="button" class="searchB" name="button_input" onclick="search_click();">Search</button>
+               
               </div>
             </div>
           </div>
-
-      
           
-                <div id="job-listIndex">
-                  <div class="container">
-                  <div class="row">
-                  <?php
-                    include 'include/showjobIndex.inc.php';?>
-                  </div>
-                  </div>
-                </div>
+          <div id="job-listIndex">
+            <div class="container">
+            <div class="row">
+            <?php
+              include 'include/showjobIndex.inc.php';?>
+            </div>
+            </div>
+          </div>
            
           
     </div>
