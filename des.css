@@ -1669,9 +1669,48 @@ background:#3d3b53;
 .job-des{
     overflow-y:scroll;
 }
-
-.pdf{
-    font-family: 'Rubik', sans-serif;
+.searchI{
+    margin-left: 10% !important;
+    width: 200px !important;
+    max-width: 80%;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid #fd5757;
+}
+.searchI:hover{
+    border: 3px solid #fc4747;
 }
 
+.searchB{
+margin-top: 2%;
+margin-left: 10% !important;
+max-width: 80%;
+}
+.searchB:hover{
+    background-color: #ff3b3b;
+}
 
+.addInterview{
+    background-color: #d6d6d6;
+    border: 1px solid #fd5757;
+    border-radius: 7px;
+    padding: 3%;
+}
+.addInterview p{
+    background-color: #afafaf;
+    border-radius: 7px;
+    display: inline-block;
+    padding: 1%;
+
+}
+.addInterview button{
+    background-color: transparent;
+    border: none;
+}
+
+.meetlink{
+    border: none;
+    background-color: #d6d6d6;
+    padding: 2%;
+    width: 100%;
+}

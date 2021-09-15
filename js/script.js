@@ -268,3 +268,14 @@ function search_click(){
     });
 }
 
+function searchMeet(){
+    $(document).ready(function(){
+        var search = document.getElementById("searchMeet").value;
+        var try1= document.getElementById("searchMeet").value;
+        console.log(try1);
+        $('#searchOption').load('include/searchUserMeet.inc.php',{
+            searchUser:search
+        });
+    });
+}
+
