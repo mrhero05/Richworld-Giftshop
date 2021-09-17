@@ -1714,3 +1714,44 @@ max-width: 80%;
     padding: 2%;
     width: 100%;
 }
+
+.apply-div{
+    text-align: center;
+    background-color: #3d3b53;
+    border-radius: 20px;
+    width:80%;
+    margin-left: auto;
+    margin-right: auto; 
+    padding-bottom: 10%;
+}
+
+.back-button{
+    background-color: #524f6e;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    width: 18%;
+    height: 40px;
+    margin: 1.2%;
+}
+.submit-button{
+    background-color: #ff3b3b;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    width: 18%;
+    height: 40px;
+    margin: 1.2%;
+}
+
+.apply {
+    text-align: center;
+}
+
+.apply-div h1, p{
+    color: #fff;
+}
+
+.apply-div h1{
+    padding-top: 10%;
+}

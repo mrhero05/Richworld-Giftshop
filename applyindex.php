@@ -71,72 +71,32 @@ include 'include/dbc.inc.php';
   </div>
 </nav>
 
-<section id="job-body">
-    <div class="job">
+<section id="apply-body">
+    <div class="apply">
           <div class="container">
             <div class="row">
-              <div class="col-sm-12 col-lg-6">
-                <h1 style="margin-left:8%">Job Vacancies</h1>
-              </div>
-              <div class="col-sm-12 col-lg-6">
-                <input type="text" class="searchI" name="search_input" id="search_name">
-                <button type="button" class="searchB" name="button_input" onclick="search_click();">Search</button>
-               
+              <div class="col-sm-12 col-lg-12">
+                <div class="apply-div">
+                    <h1>Let's get started</h1>
+                    <br>
+                    <p> Upload your file and you will be notified once we've reviewed it. You can also<br>
+                    check you application status in the settings.</p>
+                    <br>
+                    <div class="choosefile">
+                       
+                    <input class="form-control form-control" id="formFile" type="file" name="profileImg" onchange="img_pathUrl(this)">
+                    </div>
+                    <br>
+                        <div class="col-sm-12"> 
+                            <button type="button" class="back-button">Back</button>
+                        </div>
+                        <div class="col-sm-12">
+                        <button type="button" class="submit-button">Submit </button>
+                        </div>
+                </div>
               </div>
             </div>
           </div>
-          
-          <div id="job-listIndex">
-            <div class="container">
-            <div class="row">
-            <?php
-              include 'include/showjobIndex.inc.php';?>
-            </div>
-            </div>
-          </div>
-           
-          
-    </div>
-    <!-- start modal view job index -->
-  <div class="modal fade" id="viewjobIndex" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
- <div class="modal-dialog modal-dialog-centered" role="document">
-     <div class="modal-content">
-     <div class="modal-header">
-         <h5 class="modal-title" id="exampleModalLongTitle"></h5>
-         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-         <span aria-hidden="true">&times;</span>
-         </button>
-     </div>
-     <div class="modal-body">
-         <div class="container-fluid p-0">
-         <div class="row">
-         <!-- <div class="col-12">
-         <input type="text" class="form-control" placeholder="ID"></div> -->
-         <div class="col-4 salary-min">
-           <p class="min"></p>
-         </div>
-         <div class="col-1 salary-min">
-           <p>-</p>
-         </div>
-         <div class="col-4 salary-max">
-           <p class="max"></p>
-         </div>
-         <div class="col-sm-12 col-lg-12 job-des">
-           <h6>Job Description</h6>
-           <p class="desc"></p>
-         </div>                                             
-         </div>
-         </div>
-     </div>
-     <div class="modal-footer">
-         <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-         <button type="button" class="btn btn-primary" onclick="addEmp()" style="width:100%">Apply Now</button>
-         <p style="width:100%;text-align:center" class="pdf">* You must sign in to upload your pdf resume *</p>
-         <div id="add"></div>
-     </div>
-     </div>
- </div>
-</div>
-    <!-- end modal view job index -->
-    
+    </div> 
+
 </section>
