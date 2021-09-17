@@ -122,7 +122,7 @@ include 'include/dbc.inc.php';
            <p class="max"></p>
          </div>
          <div class="col-sm-12 col-lg-12 job-des">
-           <h6>Job Description: </h6>
+           <h6>Job Description:.  </h6>
            <p class="desc"></p>
          </div>                                             
          </div>
