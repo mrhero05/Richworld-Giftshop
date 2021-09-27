@@ -45,7 +45,7 @@ include 'include/dbc.inc.php';
                           $prof_name = "img/account-profile/".$_SESSION["refreshpath"];?>
                           <img src="<?php echo $prof_name;?>" class="profile_img" alt="profile">
                           <?php
-                          echo '<p class="name">'.$_SESSION["profile-name"].'</p>';
+                          echo '<p class="name" style="color:black">'.$_SESSION["profile-name"].'</p>';
                       echo '<button type="button" style="background-color:#FD5757 !important" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
                           <span class="visually-hidden">Toggle Dropdown</span>
                       </button>

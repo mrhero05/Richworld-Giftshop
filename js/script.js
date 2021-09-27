@@ -153,6 +153,7 @@ function viewjobIndex(click_id){
     
     $(document).ready(function(){
         var parent = $(click_id).closest(".job-div2");
+        var id = parent.find('.indexjobid').val();
         var name = parent.find('.indexjobname').val();
         var min = parent.find('.indexjobmin').val();
         var max = parent.find('.indexjobmax').val();
@@ -161,7 +162,9 @@ function viewjobIndex(click_id){
         $('.min').text("₱ "+ min);
         $('.max').text("₱ "+ max);
         $('.desc').text(desc);
+        $('.job_id').val(id);
          console.log(name);
+         console.log(id);
         
     });
 }
@@ -278,4 +281,5 @@ function searchMeet(){
         });
     });
 }
+
 
