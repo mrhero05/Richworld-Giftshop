@@ -1,4 +1,10 @@
 <?php
+session_start();
+if(!isset($_POST["applyB"]) || !isset($_SESSION["profile-name"])){
+  header("location:job.php");
+  exit();
+}
+$job_id = $_POST["job_id"];
 include 'include/head.inc.php';
 include 'include/dbc.inc.php';
 ?>
@@ -72,6 +78,7 @@ include 'include/dbc.inc.php';
 </nav>
 
 <section id="apply-body">
+  <form action="include/applyresume.inc.php" method="POST" enctype="multipart/form-data">
     <div class="apply">
           <div class="container">
             <div class="row">
@@ -84,19 +91,28 @@ include 'include/dbc.inc.php';
                     <br>
                     <div class="choosefile">
                        
-                    <input class="form-control form-control" id="formFile" type="file" name="profileImg" onchange="img_pathUrl(this)">
+                    <input class="form-control form-control" id="formFile" type="file" name="resume">
                     </div>
                     <br>
-                        <div class="col-sm-12"> 
-                            <button type="button" class="back-button">Back</button>
-                        </div>
-                        <div class="col-sm-12">
-                        <button type="button" class="submit-button">Submit </button>
-                        </div>
+                    <input type="hidden" name="applyjob_id" value="<?php echo $job_id;?>">
+                    <input type="hidden" name="applyacc_id" value="<?php echo $accid;?>">
+                    
+                    <div class="container">
+                      <div class="row">
+                          <div class="col-sm-12 col-lg-6"> 
+                          <button type="button" class="back-button">Back</button>
+                          </div>
+                          <div class="col-sm-12 col-lg-6">
+                          <button type="submit" class="submit-button" name="applysubmit">Submit </button>
+                          
+                          </div>
+                      </div>
+                    </div>
+                       
                 </div>
               </div>
             </div>
           </div>
     </div> 
-
+  </form>
 </section>

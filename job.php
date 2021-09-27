@@ -1,6 +1,14 @@
 <?php
 include 'include/head.inc.php';
 include 'include/dbc.inc.php';
+if(isset($_GET["error"])){
+  echo '<script> alert("Invalid file type")</script>';
+}
+if(isset($_GET["success"])){
+  if($_GET["success"]=="successfully apply"){
+  echo '<script> alert("Send Application Form Successfully!")</script>';
+  }
+}
 ?>
 
 </body>
@@ -98,45 +106,48 @@ include 'include/dbc.inc.php';
           
     </div>
     <!-- start modal view job index -->
-  <div class="modal fade" id="viewjobIndex" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
- <div class="modal-dialog modal-dialog-centered" role="document">
-     <div class="modal-content">
-     <div class="modal-header">
-         <h5 class="modal-title" id="exampleModalLongTitle"></h5>
-         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-         <span aria-hidden="true">&times;</span>
-         </button>
-     </div>
-     <div class="modal-body">
-         <div class="container-fluid p-0">
-         <div class="row">
-         <!-- <div class="col-12">
-         <input type="text" class="form-control" placeholder="ID"></div> -->
-         <div class="col-4 salary-min">
-           <p class="min"></p>
-         </div>
-         <div class="col-1 salary-min">
-           <p>-</p>
-         </div>
-         <div class="col-4 salary-max">
-           <p class="max"></p>
-         </div>
-         <div class="col-sm-12 col-lg-12 job-des">
-           <h6>Job Description</h6>
-           <p class="desc"></p>
-         </div>                                             
-         </div>
-         </div>
-     </div>
-     <div class="modal-footer">
-         <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-         <button type="button" class="btn btn-primary" onclick="addEmp()" style="width:100%">Apply Now</button>
-         <p style="width:100%;text-align:center" class="pdf">* You must sign in to upload your pdf resume *</p>
-         <div id="add"></div>
-     </div>
-     </div>
- </div>
-</div>
+  <form action="applyindex.php" method="POST">
+          <div class="modal fade" id="viewjobIndex" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid p-0">
+                <div class="row">
+                <!-- <div class="col-12">
+                <input type="text" class="form-control" placeholder="ID"></div> -->
+                <div class="col-4 salary-min">
+                  <p class="min"></p>
+                  <input type="hidden" class="job_id" name="job_id">
+                </div>
+                <div class="col-1 salary-min">
+                  <p>-</p>
+                </div>
+                <div class="col-4 salary-max">
+                  <p class="max"></p>
+                </div>
+                <div class="col-sm-12 col-lg-12 job-des">
+                  <h6>Job Description</h6>
+                  <p class="desc"></p>
+                </div>                                             
+                </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                <button type="submit" class="btn btn-primary" style="width:100%" name="applyB">Apply Now</button>
+                <p style="width:100%;text-align:center" class="pdf">* You must sign in to upload your pdf resume *</p>
+                <div id="add"></div>
+            </div>
+            </div>
+        </div>
+        </div>
+  </form>
     <!-- end modal view job index -->
     
 </section>

@@ -39,8 +39,8 @@ include 'include/nav.inc.php';
                                                         '.$row["job_name"].'  
                                                     </h4>
                                                     <h6>$'.$row["job_salary_min"].' - $'.$row["job_salary_max"].'</h6>
-                                                    <p>'.$row["job_desc"].'</p>
-                                                    <span>no of submitted</span>
+                                                    
+                                                    <span>no of submitted <strong>'.$row["job_applied"].'</strong></span>
                                                     <br>
                                                     <button type="button" data-toggle="modal" data-target="#exampleModalCenter">Learn more</button>                         
                                             </div>

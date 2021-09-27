@@ -1730,25 +1730,38 @@ max-width: 80%;
     border: none;
     border-radius: 10px;
     color: #fff;
-    width: 18%;
+    width: 40%;
     height: 40px;
     margin: 1.2%;
+    float:right;
 }
+
 .submit-button{
     background-color: #ff3b3b;
     border: none;
     border-radius: 10px;
     color: #fff;
-    width: 18%;
+    width: 40%;
     height: 40px;
+    max-width: 100%;
     margin: 1.2%;
+    float:left;
+}
+
+@media screen and (max-width: 991px){
+    .submit-button{
+        float:none;
+    }
+    .back-button{
+        float: none;
+    }
 }
 
 .apply {
     text-align: center;
 }
 
-.apply-div h1, p{
+.apply-div h1, .apply-div p{
     color: #fff;
 }
 
