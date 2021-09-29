@@ -1768,3 +1768,40 @@ max-width: 80%;
 .apply-div h1{
     padding-top: 10%;
 }
+
+/* for messages */
+.message-left-top button{
+    
+    background-color: white;
+    color: gray;
+    border: none;
+    height: 30px;
+    width: 30px;
+    margin: 3%;
+    background-repeat: no-repeat;
+}
+.back{
+    background-image: url("img/arrow.svg");
+}
+.message-left-top{
+    display: flex;
+}
+.message-left-top h2{
+    margin-top: 2%;
+    margin-left: 12%;
+    margin-right: 12%;
+    color: black;
+}
+.searchM{
+    background-image: url("img/search.svg");
+    background-color: #ff3b3b !important;
+    padding: 3%;
+    border-radius: 20%;
+    
+}
+.message{
+    background-image: url("img/chat.svg");
+    background-color: #ff3b3b !important;
+    padding: 3%;
+    border-radius: 20%;
+}
