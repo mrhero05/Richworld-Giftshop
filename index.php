@@ -51,7 +51,7 @@ include 'include/dbc.inc.php';
                       </button>
                       <ul class="dropdown-menu">
                           <li><a class="dropdown-item" href="#">Settings</a></li>
-                          <li><a class="dropdown-item" href="#">TBD</a></li>
+                          <li><a class="dropdown-item" href="messages.php">Messages</a></li>
                           <li><a class="dropdown-item" href="#">TBD</a></li>
                           <li><a class="dropdown-item" href="#">TBD</a></li>
                           <li><a class="dropdown-item" href="#">TBD</a></li>

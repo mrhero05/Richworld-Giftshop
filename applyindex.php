@@ -89,7 +89,7 @@ include 'include/dbc.inc.php';
                     <p> Upload your file and you will be notified once we've reviewed it. You can also<br>
                     check you application status in the settings.</p>
                     <br>
-                    <div class="choosefile">
+                    <div class="choosefile" style="margin: 2%;">
                        
                     <input class="form-control form-control" id="formFile" type="file" name="resume">
                     </div>
