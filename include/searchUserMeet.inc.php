@@ -10,8 +10,8 @@ if(mysqli_num_rows($result)>0){
         
         echo '
     <br><div class="table-responsive" id="peopleTbl">
-    <table class="table table-hover">
-        <thead class="table-dark">
+    <table class="table table-sm table-borderless table-hover">
+        <thead class="table">
             <tr>
             <th scope="col">First Name</th>
             <th scope="col">Last Name</th>
@@ -27,7 +27,7 @@ if(mysqli_num_rows($result)>0){
               
                 <input type="hidden" class="msgUser_name" value="'.$row["firstname"].''." ".''.$row["lastname"].'">
                 <input type="hidden" class="msgUser_id" value="'.$row["acc_id"].'">
-                <td><button type="button" class="btn btn-primary" onclick="selectP(this)">Select</button></td>
+                <td><button type="button" class="btn-select" onclick="selectP(this)">Select</button></td>
                 </tr>
             </tbody>
             ';
