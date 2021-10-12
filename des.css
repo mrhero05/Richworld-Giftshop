@@ -1785,6 +1785,7 @@ max-width: 80%;
 }
 .message-left-top{
     display: flex;
+    margin-bottom: 3%;
 }
 .message-left-top h2{
     margin-top: 2%;
@@ -1804,4 +1805,102 @@ max-width: 80%;
     background-color: #ff3b3b !important;
     padding: 3%;
     border-radius: 20%;
+}
+
+.msg-div{
+    background-color: rgb(206, 206, 206);
+    border-radius: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.msg-div img{
+    width: 50px;
+    height: 50px;
+    
+}
+.msg-div h5{
+    margin-left: 4rem;
+    padding: 1%;
+    margin-top: -7%;
+}
+.msg-div span{
+    margin-left: 40%;
+    font-size: small;
+}
+.msg-div p{
+    padding: 1%;
+    padding-bottom: 2%;
+    margin-left: 4rem;
+    margin-top: -2%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.message-right-top{
+    background-color: #2F2E41;
+    padding-top: 15%;
+}
+.message-right-top h2{
+    color: white;
+    margin-left: 7rem;
+    padding: 1%;
+    margin-top: -10%;
+    padding-bottom: 2%;
+}
+.profile-right{
+    margin-left: 3%;
+   padding:1%;
+    width: 50px;
+    height: 50px;
+}
+.bell{
+    margin-left: 30%;
+}
+.option{
+    margin-left: 2%;
+}
+.right-bg{
+    height: 100vh;
+    max-height: 100%;
+    background-color: rgb(231, 231, 231);
+}
+.msg-right{
+    height: 550px;
+    /* background-color: red; */
+}
+.msg-right-div{
+    margin-left: 3%;
+    background-color: rgb(206, 206, 206);
+    border-radius: 10px;
+    width: 50%;
+}
+.msg-right-div p{
+   padding: 2%;
+   word-wrap: break-word;
+}
+.send-msg-parent{
+    text-align: center;
+}
+.send-msg{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+}
+.send-msg input{
+    width: 70%;
+    height: 50px;
+    border-radius: 10px;
+}
+#input-body{
+    text-align: center;
+}
+#searchP{
+    margin-top: -2%;
+    height: 35px;
+    border-radius: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }

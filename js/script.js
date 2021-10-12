@@ -149,26 +149,6 @@ function dataUpdateSearch(){
    
 }
 
-function viewjobIndex(click_id){
-    
-    $(document).ready(function(){
-        var parent = $(click_id).closest(".job-div2");
-        var id = parent.find('.indexjobid').val();
-        var name = parent.find('.indexjobname').val();
-        var min = parent.find('.indexjobmin').val();
-        var max = parent.find('.indexjobmax').val();
-        var desc = parent.find('.indexjobdesc').val();
-        $('#exampleModalLongTitle').text(name);
-        $('.min').text("₱ "+ min);
-        $('.max').text("₱ "+ max);
-        $('.desc').text(desc);
-        $('.job_id').val(id);
-         console.log(name);
-         console.log(id);
-        
-    });
-}
-
 
 //function to add new employee
 function updateEmp(){
@@ -274,12 +254,103 @@ function search_click(){
 function searchMeet(){
     $(document).ready(function(){
         var search = document.getElementById("searchMeet").value;
-        var try1= document.getElementById("searchMeet").value;
-        console.log(try1);
-        $('#searchOption').load('include/searchUserMeet.inc.php',{
+        //var try1= document.getElementById("searchMeet").value;
+        //console.log(try1);
+        $('#peopleS').load('include/searchUserMeet.inc.php',{
             searchUser:search
         });
     });
 }
 
+function selectP(click_id){
+    var parent = $(click_id).closest("tr");
+    var name = parent.find('.msgUser_name').val();
+    var id = parent.find('.msgUser_id').val();
+    $('.peopleSp').text(name);
+    $('.peopleSname').val(name);
+    $('.peopleSid').val(id);
+    document.getElementById('peopleTbl').style.display = 'none';
+    
+}
 
+function searchMessage(){
+    var input = document.getElementById("searchP").value;
+    console.log(input);
+    $(document).ready(function(){
+        $('#searchPerson').load('include/searchPerson.inc.php',{
+            input:input
+        });
+    });
+}
+
+function getmsgUser(click_id){
+    
+    $(document).ready(function(){
+        var parent = $(click_id).closest("tr");
+        var id = parent.find('.msgUser_id').val();
+        var name = parent.find('.msgUser_name').val();
+        $('.rName').text(name);
+        $('.rId').val(id);
+        console.log(name);
+        console.log(id);
+        var recieverId = document.getElementById("rId").value;
+        var senderId = document.getElementById("sId").value;
+       // var sMsg = document.getElementById("sMsg").value;
+        // console.log(senderId);
+        $('.msg-right-div-def').load('include/refresh.inc.php',{
+            recieverId:recieverId,
+            senderId:senderId
+        });
+    });
+}
+
+function viewmsg(){
+    $(document).ready(function(){
+        var recieverId = document.getElementById("rId").value;
+        var senderId = document.getElementById("sId").value;
+       // var sMsg = document.getElementById("sMsg").value;
+         console.log(senderId + 123);
+        $('.msg-right-div-def').load('include/refresh.inc.php',{
+            recieverId:recieverId,
+            senderId:senderId
+        });
+    });
+}
+function sendmsgUser(){
+    $(document).ready(function(){
+        var recieverId = document.getElementById("rId").value;
+        var senderId = document.getElementById("sId").value;
+        var sMsg = document.getElementById("sMsg").value;
+         //console.log(sMsg);
+        $('.msg-right-div-def').load('include/sendmsg.inc.php',{
+            recieverId:recieverId,
+            senderId:senderId,
+            sMsg,sMsg
+        });
+     document.getElementById("sMsg").value = "";
+    });
+}
+
+function viewjobIndex(click_id){
+    
+    $(document).ready(function(){
+        var parent = $(click_id).closest(".job-div2");
+        var id = parent.find('.indexjobid').val();
+        var name = parent.find('.indexjobname').val();
+        var min = parent.find('.indexjobmin').val();
+        var max = parent.find('.indexjobmax').val();
+        var desc = parent.find('.indexjobdesc').val();
+        $('#exampleModalLongTitle').text(name);
+        $('.min').text("₱ "+ min);
+        $('.max').text("₱ "+ max);
+        $('.desc').text(desc);
+        $('.job_id').val(id);
+         console.log(name);
+         console.log(id);
+        
+    });
+}
+
+function clearSearch(){
+     document.getElementById("searchP").value = "";
+}
