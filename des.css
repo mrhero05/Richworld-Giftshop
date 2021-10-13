@@ -1691,16 +1691,21 @@ max-width: 80%;
 }
 
 .addInterview{
-    background-color: #d6d6d6;
-    border: 1px solid #fd5757;
-    border-radius: 7px;
-    padding: 3%;
+    font-family: 'Rubik', sans-serif;
+    background-color: #EFEFEF;
+    color: #202020;
+    border-radius: 6px;
+    padding: .9rem;
+    margin:0;
+    width: 100%;
 }
 .addInterview p{
+    font-family: 'Rubik', sans-serif;
     background-color: #afafaf;
-    border-radius: 7px;
+    border-radius: 6px;
     display: inline-block;
-    padding: 1%;
+    padding: 4px 2px;
+    margin-bottom: 0;
 
 }
 .addInterview button{
@@ -1710,8 +1715,12 @@ max-width: 80%;
 
 .meetlink{
     border: none;
-    background-color: #d6d6d6;
-    padding: 2%;
+    font-family: 'Rubik', sans-serif;
+    background-color: #EFEFEF;
+    color: #202020;
+    padding:8px 6px;
+    margin: 0 0 0 0;
+    border-radius: 8px;
     width: 100%;
 }
 
@@ -1904,3 +1913,115 @@ max-width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
+
+/* meeting link body */
+
+.to-meet{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    margin-top: 0;
+    font-size: 1.1rem;
+}
+
+
+.modalinput{
+    font-family: 'Rubik', sans-serif;
+    border: none;
+    background-color: #EFEFEF;
+    color: #202020;
+    padding:10px 8px;
+    border-radius: 8px;
+    margin-top: 0;
+    margin-bottom: 14px;
+    width: 100%;
+}
+
+.meet-td{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.meet-td input{
+    margin-left: 10px;
+}
+
+.meet-td input:first-child{
+    margin-left: 2px;
+}
+
+.meet-td span{
+    font-size: 1rem;
+}
+
+.inter-close{
+    border-radius: 50%;
+    font-size: 1rem;
+    padding: 4px 10px;
+    border: none;
+    margin-left: 30px;
+    background-color: #EFEFEF;
+    color: black;
+}
+
+.meetl{
+    display: block;
+    margin: 10px 0 0 0;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.message-md{
+    margin: 10px 0;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+}
+
+.modal-titles{
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    color: #fd5757;
+}
+
+
+/* meeting link tables with custom scroll */
+
+.table-responsive{
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    max-height: 150px;
+    margin-bottom: 20px;
+}
+
+.table-responsive th{
+    color:#fd5757;
+}
+
+.btn-select{
+    background-color: #2F2E41;
+    padding: 6px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+}
+
+.table-responsive::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+.table-responsive::-webkit-scrollbar-track {
+background: #d6d6d6; 
+}
+   
+.table-responsive::-webkit-scrollbar-thumb {
+background:#2F2E41; 
+}
+  
+.table-responsive::-webkit-scrollbar-thumb:hover {
+background:#3d3b53; 
+} 
+
+

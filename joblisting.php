@@ -117,27 +117,26 @@ if(isset($_GET["success"])){
  <div class="modal-dialog modal-dialog-centered" role="document">
      <div class="modal-content">
      <div class="modal-header">
-         <h5 class="modal-title" id="exampleModalLongTitle">Set-up a meeting</h5>
+         <h5 class="modal-titles" id="exampleModalLongTitle">Set-up a meeting</h5>
          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
          <span aria-hidden="true">&times;</span>
          </button>
      </div>
      <div class="modal-body">
-         <h3 style="text-align: center;">Interview</h3>
-         <h5>To : <input type="search" id="searchMeet" oninput="searchMeet();"></h5>
+         <input type="search" placeholder="Type any name here..." class="modalinput" id="searchMeet" oninput="searchMeet();">
          <form action="include/setupmeet.inc.php" method="POST">
-        
         <div id="peopleS"></div>
         <div class="addInterview" id="addInterview">
             <p class="peopleSp"></p>
             <input type="hidden" class="peopleSname" value="" name="name">
             <input type="hidden" class="peopleSid" value="" name="id">
         </div>
-        <h5>Set Date/Time :</h5>
-        <input type="date" name="date"><input type="time" name="time"> <button type="button">Clear</button>
-        <h5>Meeting Link :</h5>
-            <input type="text" class="meetlink" placeholder="Paste here the meeting link" name="link">
-            <h5>Message :</h5>
+        
+        <h6 class="meet-td"> Time & Date:
+        <input type="date" name="date"><input type="time" name="time"> <button type="button" class="inter-close">x</button>
+        </h6>
+            <input type="text" class="meetlink" placeholder="Paste your meeting link here..." name="link">
+            <h6 class="message-md">Message:</h6>
             <textarea class="form-control" rows="3" name="meet_msg"></textarea>
 
      </div>
