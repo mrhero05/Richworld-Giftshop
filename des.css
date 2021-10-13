@@ -35,17 +35,35 @@ h1{
 
 
 .right{
+    font-family: 'Rubik', sans-serif;
     background: #fdfdfd;
-    padding: 4em 2em;
+    padding: 3.5em 2em;
     text-align: center;
     border-radius: 8px;
 }
 
+.wrongup{
+    color: white;
+    background-color: #fd5757;
+}
+
+.forgotpass{
+    text-align: right;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: #2F2E41;
+    font-size: 1rem;
+}
+
+.forgotpass:hover{
+    color: #fd5757;
+}
+
 .right input{
-    width: 80%;
-    padding:20px;
-    font-size: 15px;
-    font-weight: 500;
+    width: 90%;
+    padding:18px 8px;
+    font-size: 1rem;
     border-radius: 8px;
     border: 1px solid #ccc;
     margin: 10px 0;
@@ -55,18 +73,14 @@ h1{
 
 .right input:focus, textarea:focus, select:focus{
     outline-color: #fd5757;
-    padding:20px;
+    padding:18px 8px;
 }
 
-
-.right p{
-    font-weight: 500;
-}
 
 .right a{
-    font-weight: 500;
+    font-size: 1rem;
     text-decoration: none;
-    color: #fd5757;
+    color: black;
 }
 
 .right a:hover{
@@ -77,8 +91,7 @@ h1{
     background: #fd5757;
     padding: 8px;
     color: white;
-    font-weight: 600;
-    width: 80%;
+    width: 90%;
     margin-bottom: 20px;
     border-radius: 4px;
     border-style: none;
@@ -96,19 +109,33 @@ h1{
         display: none;
         align-items: center;
     }
+
     .right{
-        justify-content: center;
+        margin:0;
+        padding: 1.5em 1em;
+        width: 100%;
         
     }
     .right h1{
         color: #FD5757;
-        font-size: 40px;
+        font-size: 2rem;
     }
     .right p{
-        font-size: 19px;
+        font-size: 1rem;
         width: 100%;
     }
+
+    .right input{
+        width: 90%;
+    }
+
+    .forgotpass{
+        margin-left: -20px;
+    }
+
     .login-border{
+        width: 100%;
+        padding: 0;
         margin-bottom: 5%;
     }
 
@@ -146,6 +173,7 @@ h1{
 
 
 .right-register{
+    font-family: 'Rubik', sans-serif;
     height: 100%;
     color: rgb(0, 0, 0);
     padding: 4em 2em;
@@ -165,22 +193,22 @@ h1{
 .right-register input{
     margin: 10px 20px;
     width: 80%;
-    padding:18px;
+    padding:18px 6px;
     font-size: 15px;
-    font-weight: 500;
-    border-radius: 8px;
+    border-radius: 6px;
     border: 2px solid #ccc;
     height: 1.2rem;
 }
 /* margin only left and right for label */
 .right-register label{
+    color: black;
     margin: 0 20px;
 }       
 
 /* Register inputs when active/clicked */
 .right-register input:focus, textarea:focus, select:focus{
-    outline-color:rgb(0, 0, 0);
-    padding:18px;
+    outline-color:#fd5757;
+    padding:18px 6px;
 }
 
 .right-register button{
@@ -211,7 +239,8 @@ h1{
     .right-register{
         justify-content: center;
         align-items: center;
-        padding: 2.5em 2.5em;
+        overflow: hidden;
+        padding: 1.5rem;
         text-align: center;
     }
     
@@ -222,14 +251,20 @@ h1{
 
     .right-register h1{
         text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .right-register h6{
+        font-size: 1.2rem;
+        margin-bottom: 10px;
     }
 
     .right-register input{
-        width: 85%;
+        width: 90%;
     }
 
     .right-register button{
-        width: 85%;
+        width: 90%;
     }
     .left-register{
         display: none;
@@ -1129,6 +1164,11 @@ text-align: left !important;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: nowrap;
+}
+
+.job-listing {
+    margin: auto auto;
 }
 
 .job-title h3{
@@ -1152,10 +1192,9 @@ text-align: left !important;
 }
 
 .createjob{
-    margin-bottom: auto;
-    margin-left: auto;
+    margin: auto;
     border: dotted;
-    margin-top: 4%;
+    margin-top: 6.5%;
     width: 90%;
     /* height: 90%; */
     border-radius: 20px;
