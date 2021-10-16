@@ -15,7 +15,8 @@ if(isset($_POST["applysubmit"])){
  $allowed = array('docx','pdf','doc');
 
  if(in_array($fileActExt,$allowed)){
-    $sql = "INSERT INTO applyjob (account_id,job_id,apply_resume) values ('$acc_id','$job_id','$filename')";
+    $apply = "pending";
+    $sql = "INSERT INTO applyjob (account_id,job_id,apply_resume,apply_status) values ('$acc_id','$job_id','$filename','$apply')";
     $result = mysqli_query($conn,$sql);
     $sql1 = "UPDATE job set job_applied=job_applied+1 where job_id='$job_id'";
     $result2 = mysqli_query($conn,$sql1);
@@ -23,7 +24,7 @@ if(isset($_POST["applysubmit"])){
     exit();
  }else{
     // echo '<script>alert("File type not supported")</script>';
-    header("location:../job.php?error");
+    header("location:../job.php?error=file");
     exit();
  }
 

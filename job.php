@@ -2,7 +2,12 @@
 include 'include/head.inc.php';
 include 'include/dbc.inc.php';
 if(isset($_GET["error"])){
-  echo '<script> alert("Invalid file type")</script>';
+  if($_GET["error"]=="file"){
+    echo '<script> alert("Invalid file type")</script>';
+  }
+  if($_GET["error"]=="alreadyapply"){
+    echo '<script> alert("You can only apply once")</script>';
+  }
 }
 if(isset($_GET["success"])){
   if($_GET["success"]=="successfully apply"){

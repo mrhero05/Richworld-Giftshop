@@ -4,6 +4,14 @@ if(!isset($_POST["applyB"]) || !isset($_SESSION["profile-name"])){
   header("location:job.php");
   exit();
 }
+include "include/dbc.inc.php";
+$userid = $_SESSION["userId"];
+$sql = "SELECT * from applyjob where account_id = '$userid'";
+$result = mysqli_query($conn,$sql);
+if(mysqli_num_rows($result) > 0){
+  header("location:job.php?error=alreadyapply");
+  exit();
+}
 $job_id = $_POST["job_id"];
 include 'include/head.inc.php';
 include 'include/dbc.inc.php';
