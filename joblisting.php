@@ -16,15 +16,20 @@ if(isset($_GET["success"])){
     <div class="container">
         <div class="job-title">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                 <h3>Job Listings</h3>
                 </div>
-                <div class="col-lg-3">
-               
+                <div class="col-lg-2">
                     <button type="button" id="job-button" onclick="showjob();">Show All Job</button>
                 </div>
-                <div class="col-lg-3">
-                <button type="button" data-toggle="modal" data-target="#createmeet"><br>Setup a meeting</button>
+                <div class="col-lg-2">
+                    <button type="button" data-toggle="modal" data-target="#writtenApply" onclick="written();">Written</button>
+                </div>
+                <div class="col-lg-2">
+                    <button type="button" id="job-button" onclick="showjob();">Medical</button>
+                </div>
+                <div class="col-lg-2">
+                <button type="button" data-toggle="modal" data-target="#createmeet">Setup a meeting</button>
                 </div>
             </div>
         </div>
@@ -44,15 +49,16 @@ if(isset($_GET["success"])){
                                         while($row = mysqli_fetch_assoc($result)){
                                             echo '
                                             <div class="job-div2">
-                                            
+                                                    <input type="hidden" class="jobdetails_id" value="'.$row["job_id"].'">
                                                     <h4>
                                                         '.$row["job_name"].'  
                                                     </h4>
                                                     <h6>$'.$row["job_salary_min"].' - $'.$row["job_salary_max"].'</h6>
                                                     
                                                     <span>no of submitted <strong>'.$row["job_applied"].'</strong></span>
+                                                    <p>no of vacant '.$row["job_vacant"].'</p>
                                                     <br>
-                                                    <button type="button" data-toggle="modal" data-target="#exampleModalCenter">Learn more</button>                         
+                                                    <button type="button" data-toggle="modal" data-target="#acceptApply" onclick="jobdetails(this);">View Details</button>                         
                                             </div>
                                             ';
                                         }
@@ -149,6 +155,55 @@ if(isset($_GET["success"])){
 </div>
 </form>
     <!-- end modal create meet -->
+
+<!-- start modal accept applicant -->
+
+<div class="modal fade" id="acceptApply" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content">
+     <div class="modal-header">
+         <h5 class="modal-titles" id="exampleModalLongTitle">List of user applying for this job</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+         </button>
+     </div>
+     <div class="modal-body">
+     <div class="table-responsive" id="peopleTbl">       
+     </div>
+     </div>
+     <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+         <button type="submit" class="btn btn-primary" style="width:100%">Save Changes</button>
+     </div>  -->
+     </div>
+ </div>
+</div>
+</form>
+    <!-- end modal accept applicant -->
+
+<!-- start modal written exam -->
+
+<div class="modal fade" id="writtenApply" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content">
+     <div class="modal-header">
+         <h5 class="modal-titles" id="exampleModalLongTitle">List of user take written exam</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+         </button>
+     </div>
+     <div class="modal-body">
+     <div class="table-responsive" id="writtenTbl">       
+     </div>
+     <div class="modal-footer">
+         <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+         <button type="submit" class="btn btn-primary" style="width:100%">Save Changes</button>
+     </div>
+     </div>
+ </div>
+</div>
+</form>
+    <!-- end modal written exam -->    
 
 
 

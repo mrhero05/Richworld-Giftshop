@@ -354,3 +354,32 @@ function viewjobIndex(click_id){
 function clearSearch(){
      document.getElementById("searchP").value = "";
 }
+
+function jobdetails(click_id){
+    $(document).ready(function(){
+        var parent = $(click_id).closest(".job-div2");
+        var id = parent.find('.jobdetails_id').val();
+        console.log(id);
+        $('#peopleTbl').load('include/viewuserapply.inc.php',{
+            id:id
+        });
+    });
+}
+
+function written(){
+    $(document).ready(function(){
+
+        $('#writtenTbl').load('include/written.inc.php');
+    });
+}
+
+function acceptP(click_id){
+    $(document).ready(function(){
+        var parent = $(click_id).closest("tr");
+        var id = parent.find('.msgUser_id').val();
+        console.log(id);
+        $('#acceptdiv').load('include/acceptTowritten.inc.php',{
+            id:id
+        });
+    });
+}
