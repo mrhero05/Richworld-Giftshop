@@ -12,7 +12,10 @@ include 'include/head.inc.php';
     </div>
     <div class="row">
         <div class="step-progress">
-            <div class="col-sm-12 col-md-6 col-lg-6 p-0">
+            <div class="col-sm-12 col-md-0 col-lg-0 p-0">
+                <div class="shapes">
+                
+                </div>
                 <ul>
                     <li>
                         <h5><img src="img/index_icon/Circle.svg" alt="">Resume submitted</h5>
@@ -34,7 +37,12 @@ include 'include/head.inc.php';
                         <p>11:11PM</p>
                     </li>
                     <li>
-                        <h5><img src="img/index_icon/Circled.svg" alt="">Exam (Written/Medical)</h5>
+                        <h5><img src="img/index_icon/Circled.svg" alt="">Written Exam</h5>
+                        <p>12/21/12</p>
+                        <p>11:11PM</p>
+                    </li>
+                    <li>
+                        <h5><img src="img/index_icon/Circled.svg" alt="">Medical Exam</h5>
                         <p>12/21/12</p>
                         <p>11:11PM</p>
                     </li>

@@ -6,7 +6,7 @@ include 'include/dbc.inc.php';
 </body>
 </html>
 <nav class="navbar navbar-expand-lg navbar-light" id="nav_index">
-  <div class="container-fluid">
+  <div class="container-fluid navbar">
     <a class="navbar-brand" href="index.php"><p>R<span>G</span></p></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -46,7 +46,7 @@ include 'include/dbc.inc.php';
                           <img src="<?php echo $prof_name;?>" class="profile_img" alt="profile">
                           <?php
                           echo '<p class="name" style="color:black">'.$_SESSION["profile-name"].'</p>';
-                      echo '<button type="button" style="background-color:#FD5757 !important" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                      echo '<button type="button" style="background-color:#FD5757 !important" class="btn indexdropdown dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
                           <span class="visually-hidden">Toggle Dropdown</span>
                       </button>
                       <ul class="dropdown-menu">
@@ -73,21 +73,21 @@ include 'include/dbc.inc.php';
 <div class="container">
     <div class="row">
       <!-- for introduction part -->
-        <div class="col-lg-4">
-        <div data-aos="zoom-in"
+        <div class="col-lg-5">
+        <div data-aos="fade-up"
                   data-aos-delay="40"
                   data-aos-duration="1000"
                   data-aos-easing="ease-in-out"
               >
           <div class="title">
-            <h1>The easiest way to organize your employees</h1>
+            <h1>A simple way to organize your employees.</h1>
             <p>Your all-in-one hr solutions.</p>
             <button type="button">Get started</button>
           </div>
 </div>
         </div>
         <div class="col-lg-6 ms-auto">
-        <div data-aos="fade-right"
+        <div data-aos="fade-up"
                   data-aos-delay="60"
                   data-aos-duration="1100"
                   data-aos-easing="ease-in-out"
@@ -158,16 +158,15 @@ include 'include/dbc.inc.php';
   <div class="download">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-5">
-          <div class="d-img">
-          <div data-aos="slide-right"
-                data-aos-delay="40"
-                data-aos-duration="1100"
-                data-aos-easing="ease-in-out"
+        <div class="col-lg-5 align-self:center">
+          <!-- <div class="d-img">
+          <div data-aos="fade-up"
+                data-aos-delay="50"
+                data-aos-duration="900"
             >
           <img src="img/index_icon/mobile-mockup3.svg">
           </div>
-          </div>
+          </div> -->
         </div>
         <div class="col-lg-7">
         <div data-aos="fade-up"
@@ -177,7 +176,7 @@ include 'include/dbc.inc.php';
           >
           <div class="d-title">
           <h1>Richworld Giftshop App</h1>
-          <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet consectetur adipiscing elit pellentesque. Ultrices gravida dictum fusce ut placerat orci. Egestas sed sed risus pretium quam vulputate. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. </h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet consectetur adipiscing elit pellentesque. Ultrices gravida dictum fusce ut placerat orci. Egestas sed sed risus pretium quam vulputate. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. </p>
           <button type="button">Download App</button>
           </div>
         </div>
@@ -393,13 +392,15 @@ include 'include/dbc.inc.php';
           <p>Legal</p>
           <a href=""><h6>Terms</h6></a>
           <a href=""><h6>Privacy</h6></a>
+          <br>
+          <br>
+          <p class="arr">All Rights Reserved 2021-2022</p>
         </div>
 <!-- animations closing div -->
 </div> 
         </div>
       </div>
       <br>
-      <span style="color: white;">All rights reserved 2021-2022 </span>
       <br><br><br>
     </div>
   </div>
