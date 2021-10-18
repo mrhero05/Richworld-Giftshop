@@ -137,7 +137,12 @@ if(isset($_GET["success"])){
             <input type="hidden" class="peopleSname" value="" name="name">
             <input type="hidden" class="peopleSid" value="" name="id">
         </div>
-        
+        <br>
+        <div class="radioInterview">
+        <p><input type="radio" name="radioI" value="initial" id="1"> Initial Interview &nbsp;</p>
+        <p><input type="radio" name="radioI" value="final" id="2"> Final Interview </p>
+        </div>
+    
         <h6 class="meet-td"> Time & Date:
         <input type="date" name="date"><input type="time" name="time"> <button type="button" class="inter-close">x</button>
         </h6>
@@ -195,10 +200,7 @@ if(isset($_GET["success"])){
      <div class="modal-body">
      <div class="table-responsive" id="writtenTbl">       
      </div>
-     <div class="modal-footer">
-         <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-         <button type="submit" class="btn btn-primary" style="width:100%">Save Changes</button>
-     </div>
+     
      </div>
  </div>
 </div>

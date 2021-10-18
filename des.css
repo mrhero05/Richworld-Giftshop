@@ -2031,7 +2031,7 @@ max-width: 80%;
 .table-responsive{
     font-family: 'Rubik', sans-serif;
     text-align: center;
-    max-height: 150px;
+    /* max-height: 150px; */
     margin-bottom: 20px;
 }
 
@@ -2063,4 +2063,10 @@ background:#2F2E41;
 background:#3d3b53; 
 } 
 
-
+.radioInterview{
+    display: flex;
+    margin-left: 20%;    
+}
+.radioInterview input{
+    pointer-events:none;
+}
