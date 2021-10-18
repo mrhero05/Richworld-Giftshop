@@ -266,9 +266,17 @@ function selectP(click_id){
     var parent = $(click_id).closest("tr");
     var name = parent.find('.msgUser_name').val();
     var id = parent.find('.msgUser_id').val();
+    var interview = parent.find('.msgUser_interview').val();
     $('.peopleSp').text(name);
     $('.peopleSname').val(name);
     $('.peopleSid').val(id);
+    if(interview == "initial"){
+        var radiobtn = document.getElementById("1");
+        radiobtn.checked = true;
+    }else if(interview == "final"){
+        var radiobtn = document.getElementById("2");
+        radiobtn.checked = true;
+    }
     document.getElementById('peopleTbl').style.display = 'none';
     
 }
@@ -373,12 +381,56 @@ function written(){
     });
 }
 
+function interviewB(click_id){
+    $(document).ready(function(){
+        var parent = $(click_id).closest("tr");
+        var id = parent.find('.msgUser_id').val();
+        console.log(id);
+        $('#interviewdiv').load('include/createIniInterview.inc.php',{
+            id:id
+        });
+    });
+}
+
+function reviewResume(click_id){
+    $(document).ready(function(){
+        var parent = $(click_id).closest("tr");
+        var id = parent.find('.msgUser_id').val();
+        console.log(id);
+        $('#review').load('include/reviewResume.inc.php',{
+            id:id
+        });
+    });
+}
+
 function acceptP(click_id){
     $(document).ready(function(){
         var parent = $(click_id).closest("tr");
         var id = parent.find('.msgUser_id').val();
         console.log(id);
         $('#acceptdiv').load('include/acceptTowritten.inc.php',{
+            id:id
+        });
+    });
+}
+
+function declineP(click_id){
+    $(document).ready(function(){
+        var parent = $(click_id).closest("tr");
+        var id = parent.find('.msgUser_id').val();
+        console.log(id);
+        $('#decline').load('include/decline.inc.php',{
+            id:id
+        });
+    });
+}
+
+function downloadP(){
+    $(document).ready(function(){
+        var parent = $(click_id).closest("tr");
+        var id = parent.find('.msgUser_id').val();
+        console.log(id);
+        $('#downloaddiv').load('',{
             id:id
         });
     });

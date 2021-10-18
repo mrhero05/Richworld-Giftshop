@@ -3,7 +3,7 @@ if(!empty($_POST["searchUser"])){
 include "dbc.inc.php";
 $search = $_POST["searchUser"];
 
-$sql = "SELECT * from account where firstname like '%$search%'";
+$sql = "SELECT * FROM `interview` INNER JOIN account on interview.acc_id = account.acc_id WHERE account.firstname like '%$search%'";
 $result = mysqli_query($conn,$sql);
 
 if(mysqli_num_rows($result)>0){
@@ -24,17 +24,21 @@ if(mysqli_num_rows($result)>0){
                 <tr>                                
                 <td>'.$row["firstname"].'</td>
                 <td>'.$row["lastname"].'</td>
-              
+                
                 <input type="hidden" class="msgUser_name" value="'.$row["firstname"].''." ".''.$row["lastname"].'">
                 <input type="hidden" class="msgUser_id" value="'.$row["acc_id"].'">
+                <input type="hidden" class="msgUser_interview" value="'.$row["type_interview"].'">
                 <td><button type="button" class="btn-select" onclick="selectP(this)">Select</button></td>
                 </tr>
             </tbody>
-            ';
+            '
+            ;
     }
     echo '           
     </table>
     </div>';
+    
+
         // echo '
         // <div class="selectedClass">
         // <input type="hidden" value="'.$row["acc_id"].'" id="selectUserId" class="selectedId">
