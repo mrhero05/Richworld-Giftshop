@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
 .login-border{
@@ -35,7 +35,7 @@ h1{
 
 
 .right{
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background: #fdfdfd;
     padding: 3.5em 2em;
     text-align: center;
@@ -58,6 +58,11 @@ h1{
 
 .forgotpass:hover{
     color: #fd5757;
+}
+
+.right h1{
+    font-weight: 600;
+    font-size: 2rem;
 }
 
 .right input{
@@ -173,7 +178,7 @@ h1{
 
 
 .right-register{
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Roboto', sans-serif;
     height: 100%;
     color: rgb(0, 0, 0);
     padding: 4em 2em;
@@ -280,7 +285,7 @@ h1{
 
 .top-nav{
     background: #fd5757;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Roboto', sans-serif;
     display: block;
     justify-content: center;
     align-items: center;
@@ -359,7 +364,7 @@ h1{
 }
 
 .left-nav{
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background: #2F2E41 !important;
     height: 100%;
     margin: 0;
@@ -405,7 +410,7 @@ h1{
 }
 
 .employee-summary{
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Roboto', sans-serif;
     padding: 1.5em 1.5em;
     background: none;
     text-align: center;
@@ -413,14 +418,14 @@ h1{
 
 
 .emp-title{
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: left;
     font-size: 1.8em;
     font-weight: 600;
 }
 
 .emp-title span{
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: left;
     font-size: 1em;
     font-weight: 600;
@@ -435,19 +440,19 @@ h1{
 
 .body{
     background: #F1f1f1;
+    padding: 0;
+    margin: 0;
 }
 
 .bg-emp p{
     background: white;
     box-shadow: 0 0px 2px 0 rgba(0,0,0,0.2);
     border-radius: 8px;
+    border: .3px solid #acacac;
     padding:2em 0;
-    margin-right: 2px;
+    margin-right: 20px;
 }
 
-.bg-emp p:hover{
-    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
-}
 
 .bg-emp p:last-child{
     margin-right: 0;
@@ -457,14 +462,22 @@ h1{
     font-weight: 600;
 }
 
-@media screen and (max-width:960px) {
-    .border-sum p{
+
+/* dashboard mobile responsive */
+@media screen and (max-width:991px) {
+    /* .border-sum p{
         border: none;
         box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
-        width: 40%;
-        padding: 2%;
         border-radius: 10px;
         margin: 0 auto;
+    } */
+
+    .employee-summary p{
+        text-align: center;
+    }
+
+    .bg-emp {
+        max-width: 350px;
     }
 
     .emp-title{
@@ -475,8 +488,33 @@ h1{
         text-align: center;
     }
 
-    /* not-finished */
+    .announce-title p{
+        text-align: center;
+    }
+
+    .announcement{
+        margin: auto;
+        padding: .9em;
+        height: 900px;
+    }
+
+    .post-name span{
+        display: none;
+    }
+
+    .recent{
+        padding-top: 0;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .recentt{
+        padding: 0;
+    }
+
+
 }
+
 
 .emp-sum p{
     font-weight: 600;
@@ -484,27 +522,24 @@ h1{
 
 /* .recent cards */
 .recent{
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Roboto', sans-serif;
     box-shadow: 0 0px 2px 0 rgba(0,0,0,0.2);
-    margin: 7.3em 1.5em 0 1.1em;
-    margin-left: 5px; 
-    /* height will auto-resize if description is added */
+    margin-top: 7.3em;
+    border: .3px solid #acacac;
     height: 620px;
+    width: 90%;
     overflow-y: scroll;
     border-radius: 8px;
-    padding: 1.5em 2em; 
+    padding: 1.5em 1em; 
     background: white;
 }
 
-.recent:hover{
-    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
-}
 
 .recent-title{
     text-align:center;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
-    margin-bottom:60px ;
+    margin-bottom:30px ;
     font-weight: 600;
 }
 
@@ -519,7 +554,7 @@ h1{
 }
 
 .recent label{
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Roboto', sans-serif;
     float: right;
 }
 
@@ -527,19 +562,17 @@ h1{
 
 /* .announcement cards */
 .announcement{
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Roboto', sans-serif;
     box-shadow: 0 0px 2px 0 rgba(0,0,0,0.2);
     margin: 0 1.5em 2em 1.5em;
     padding: 2em 2em;
-    height: 350px;
+    height: 345px;
     overflow-y: scroll;
+    border: .3px solid #acacac;
     border-radius: 8px;
     background: white;
 }
 
-.announcement:hover{
-    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
-}
 
 .announce-title{
     margin-top: -10px;
@@ -551,7 +584,7 @@ h1{
 }
 /* .announcement post cards */
 .post{
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Roboto', sans-serif;
     padding: 1.3em 1.2em;
     background: #3d3b53;
     border-radius: 10px;
@@ -669,7 +702,7 @@ background:#3d3b53;
 }
 
 .com-title p{
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: left;
     font-size: 1.8em;
     padding: .7em;
@@ -705,7 +738,7 @@ background:#3d3b53;
 /* add department button */
 .add-trigger button{
     background: #fd5757;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Roboto', sans-serif;
     float: right;
     margin-right: 2em;
     width: 30%;
@@ -786,7 +819,7 @@ background:#3d3b53;
     float: right;
 }
 .emplo-title{
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: left;
     font-size: 1.8em;
     padding: 10px 0;
@@ -858,6 +891,7 @@ text-align: left !important;
     text-align: left;
 }
 .title button{
+    font-family: 'Roboto', sans-serif;
     background-color: #FD5757;
     border: none;
     width: 250px;
@@ -934,6 +968,7 @@ text-align: left !important;
     border-radius: 10px;
     background-color: whitesmoke;
     width: 80%;
+    height: 525px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2%;
@@ -1151,6 +1186,7 @@ text-align: left !important;
     text-align: center;
     font-family: 'Rubik', sans-serif;
     padding: 0.8em 1.1em; 
+    width: 100%;
     
 }
 
@@ -1171,11 +1207,17 @@ text-align: left !important;
     margin: auto auto;
 }
 
+.listings{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
 .job-title h3{
     color: white;
     text-align: left;
     font-weight: normal;
-    /* top and bottom set to 0, right to left is set to 0.4em */
+    font-size: 1rem;
     margin: 0 0.4em;
     padding: 0;
 }
@@ -1184,7 +1226,7 @@ text-align: left !important;
     background-color: transparent;
     border: none;
     margin: 0;
-    font-weight: 500;
+    font-size: .9rem;
 }
 
 .job-title button:hover{
@@ -1194,12 +1236,13 @@ text-align: left !important;
 .createjob{
     margin: auto;
     border: dotted;
-    margin-top: 6.5%;
+    margin-top: 10px;
     width: 90%;
     /* height: 90%; */
     border-radius: 20px;
     height: 13rem;
     max-height: 100%;
+    margin-bottom: 20px;
 }
 .createjob button{
     width: 100%;
@@ -1226,7 +1269,7 @@ text-align: left !important;
     padding: 1.2em;
     height: 13rem;
     max-height: 100%;
-    width: 240px;
+    width: 270px;
     font-size: 80%;
     float:left;
 }
@@ -1265,6 +1308,38 @@ text-align: left !important;
     height: 2rem;
     border-radius: 10px;
     border: none;
+}
+/* job listing mobile responsive */
+@media screen and (max-width: 991px){
+   
+    .title-job{
+        text-align: center;
+    }
+
+    .job-title h3{
+        display: none;
+    }
+
+    .listings{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+
+    #job-list {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-wrap: wrap;
+    }
+
+    .job-div2{
+        margin: 10px 20px;
+    }
+
+    .createjob{
+        width: 270px;
+    }
 }
 
 /* for register title */
