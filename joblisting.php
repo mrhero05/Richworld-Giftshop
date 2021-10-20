@@ -16,20 +16,22 @@ if(isset($_GET["success"])){
     <div class="container">
         <div class="job-title">
             <div class="row">
-                <div class="col-lg-4">
-                <h3>Job Listings</h3>
-                </div>
-                <div class="col-lg-2">
-                    <button type="button" id="job-button" onclick="showjob();">Show All Job</button>
-                </div>
-                <div class="col-lg-2">
-                    <button type="button" data-toggle="modal" data-target="#writtenApply" onclick="written();">Written</button>
-                </div>
-                <div class="col-lg-2">
-                    <button type="button" id="job-button" onclick="showjob();">Medical</button>
-                </div>
-                <div class="col-lg-2">
-                <button type="button" data-toggle="modal" data-target="#createmeet">Setup a meeting</button>
+                <div class="listings">
+                    <div class="col-lg-4">
+                    <h3>Job Listings</h3>
+                    </div>
+                    <div class="col-lg-2">
+                        <button type="button" id="job-button" onclick="showjob();">Show All Job</button>
+                    </div>
+                    <div class="col-lg-2">
+                        <button type="button" data-toggle="modal" data-target="#writtenApply" onclick="written();">Written</button>
+                    </div>
+                    <div class="col-lg-2">
+                        <button type="button" id="job-button" onclick="showjob();">Medical</button>
+                    </div>
+                    <div class="col-lg-2">
+                    <button type="button" data-toggle="modal" data-target="#createmeet">Setup a meeting</button>
+                    </div>
                 </div>
             </div>
         </div>

@@ -12,7 +12,7 @@ while($row = mysqli_fetch_assoc($result)){
 }
 }?>
 
-<div class="container-fluid body">
+<div class="container-fluid p-0 body">
     <div class="row top-nav"> 
             <div class="col-sm-12 col-lg-2">
                 <div class="icon">

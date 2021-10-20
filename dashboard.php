@@ -29,6 +29,7 @@ include 'include/nav.inc.php';
 
                     <div class="row">
                         <div class="col-lg-12">
+                        <div class="announce-div">
                         <div class="announce-title">
                                         <p>News/Announcements</p>
                                     </div>
@@ -67,11 +68,11 @@ include 'include/nav.inc.php';
                                 </div>
                                 </div>
                     </div>    
+                        </div>
                 </div>
                 <div class="col-lg-3 p-0">
-                    <div class="recent">
-                        <!-- added each <p> classes  -->
-                         <!-- added span for time   -->
+                        <div class="recentt">
+                        <div class="recent">
                         <p class="recent-title">Recent Activities</p>
                         <p class="recent-des">Description <span>Time</span></p>
                         <p>Employee Data<label>Time</label></p>
@@ -94,6 +95,7 @@ include 'include/nav.inc.php';
                         <p>Employee Data <label>Time</label></p>
                         <p>Employee Data <label>Time</label></p>
                     </div>
+                        </div>
                 </div>
             </div>
         </div>
