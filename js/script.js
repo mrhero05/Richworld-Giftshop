@@ -381,6 +381,18 @@ function written(){
     });
 }
 
+function medical(){
+    $(document).ready(function(){
+        $('#medicalTbl').load('include/medical.inc.php');
+    });
+}
+
+function subreq(){
+    $(document).ready(function(){
+        $('#subreqTbl').load('include/subreq.inc.php');
+    });
+}
+
 function interviewB(click_id){
     $(document).ready(function(){
         var parent = $(click_id).closest("tr");
@@ -425,13 +437,79 @@ function declineP(click_id){
     });
 }
 
-function downloadP(){
+function retakeP(click_id){
     $(document).ready(function(){
         var parent = $(click_id).closest("tr");
         var id = parent.find('.msgUser_id').val();
         console.log(id);
-        $('#downloaddiv').load('',{
+        $('#retake').load('include/retake.inc.php',{
             id:id
+        });
+    });
+}
+
+function passedWritten(click_id){
+    $(document).ready(function(){
+        var parent = $(click_id).closest("tr");
+        var id = parent.find('.msgUser_id').val();
+        console.log(id);
+        $('#acceptTofin').load('include/createFinInterview.inc.php',{
+            id:id
+        });
+    });
+}
+
+function proceedP(click_id){
+    $(document).ready(function(){
+        var parent = $(click_id).closest("tr");
+        var id = parent.find('.msgUser_id').val();
+        console.log(id);
+        $('#acceptTomed').load('include/acceptTomedical.inc.php',{
+            id:id
+        });
+    });
+}
+
+function proceedsubreq(click_id){
+    $(document).ready(function(){
+        var parent = $(click_id).closest("tr");
+        var id = parent.find('.msgUser_id').val();
+        console.log(id);
+        $('#acceptTosubreq').load('include/acceptTosubreq.inc.php',{
+            id:id
+        });
+    });
+}
+
+function proceedcon(click_id){
+    $(document).ready(function(){
+        var parent = $(click_id).closest("tr");
+        var id = parent.find('.msgUser_id').val();
+        console.log(id);
+        $('#acceptTosubreq').load('include/acceptTosubreq.inc.php',{
+            id:id
+        });
+    });
+}
+
+function expandmsg(click_id){
+    $(document).ready(function(){
+        var parent = $(click_id).closest(".msg-div");
+        var id = parent.find('.admin_id').val();
+        var name = parent.find('.admin_name').val();
+        $('.rName').text(name);
+        $('.rId').val(id);
+        // console.log(name);
+        // console.log(id);
+        var recieverId = document.getElementById("rId").value;
+        var senderId = document.getElementById("sId").value;
+        console.log(recieverId);
+        console.log(senderId);
+       // var sMsg = document.getElementById("sMsg").value;
+        // console.log(senderId);
+        $('.msg-right-div-def').load('include/refresh.inc.php',{
+            recieverId:recieverId,
+            senderId:senderId
         });
     });
 }

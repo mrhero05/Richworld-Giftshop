@@ -7,8 +7,10 @@ $status = "User Decline";
 $count = 0;
 
 
-// $sql1 = "DELETE from applyjob where account_id = '$id'";
-// mysqli_query($conn,$sql1);
-
-$sql1 = "UPDATE applyjob set apply_status='$status',submit_resume='$count',make_interview='$count',initial_interview='$count',make_written='$count' where account_id = '$id'";
+$sql = "DELETE from applyjob where account_id = '$id'";
+mysqli_query($conn,$sql);
+$sql1 = "INSERT INTO user_decline (acc_id,admin_id) values ('$id','$admin')";
 mysqli_query($conn,$sql1);
+
+// $sql1 = "UPDATE applyjob set apply_status='$status' where account_id = '$id'";
+// mysqli_query($conn,$sql1);

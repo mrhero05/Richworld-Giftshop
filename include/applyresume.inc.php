@@ -20,7 +20,7 @@ if(isset($_POST["applysubmit"])){
    move_uploaded_file($fileTmpname,$fileDestination);
 
     $apply = "pending";
-    $sql = "INSERT INTO applyjob (account_id,job_id,apply_resume,apply_status,submit_resume,make_interview,initial_interview,make_written,written_exam,final_interview,medical_exam,sub_req,contract_sign) values ('$acc_id','$job_id','$newname','$apply',0,0,0,0,0,0,0,0,0)";
+    $sql = "INSERT INTO applyjob (account_id,job_id,apply_resume,apply_status,submit_resume,make_interview,initial_interview,make_written,written_exam,make_final,final_interview,medical_exam,sub_req,contract_sign) values ('$acc_id','$job_id','$newname','$apply',0,0,0,0,0,0,0,0,0,0)";
     $result = mysqli_query($conn,$sql);
     $sql1 = "UPDATE job set job_applied=job_applied+1 where job_id='$job_id'";
     $result2 = mysqli_query($conn,$sql1);

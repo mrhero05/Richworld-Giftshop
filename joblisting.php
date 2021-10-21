@@ -17,7 +17,7 @@ if(isset($_GET["success"])){
         <div class="job-title">
             <div class="row">
                 <div class="listings">
-                    <div class="col-lg-4">
+                    <div class="col-lg-2">
                     <h3>Job Listings</h3>
                     </div>
                     <div class="col-lg-2">
@@ -27,7 +27,10 @@ if(isset($_GET["success"])){
                         <button type="button" data-toggle="modal" data-target="#writtenApply" onclick="written();">Written</button>
                     </div>
                     <div class="col-lg-2">
-                        <button type="button" id="job-button" onclick="showjob();">Medical</button>
+                        <button type="button" data-toggle="modal" data-target="#medicalApply" onclick="medical();">Medical</button>
+                    </div>
+                    <div class="col-lg-2">
+                        <button type="button" data-toggle="modal" data-target="#subreqApply" onclick="subreq();">Requirements</button>
                     </div>
                     <div class="col-lg-2">
                     <button type="button" data-toggle="modal" data-target="#createmeet">Setup a meeting</button>
@@ -118,7 +121,6 @@ if(isset($_GET["success"])){
     </div>
 </div>
 
-
 <!-- start modal create meet -->
 
 <div class="modal fade" id="createmeet" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -161,7 +163,7 @@ if(isset($_GET["success"])){
  </div>
 </div>
 </form>
-    <!-- end modal create meet -->
+<!-- end modal create meet -->
 
 <!-- start modal accept applicant -->
 
@@ -185,8 +187,55 @@ if(isset($_GET["success"])){
      </div>
  </div>
 </div>
-</form>
     <!-- end modal accept applicant -->
+
+ <!-- start modal submission requirements -->
+
+ <div class="modal fade" id="subreqApply" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content">
+     <div class="modal-header">
+         <h5 class="modal-titles" id="exampleModalLongTitle">List of user submission of requirements</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+         </button>
+     </div>
+     <div class="modal-body">
+     <div class="table-responsive" id="subreqTbl">       
+     </div>
+     </div>
+     <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+         <button type="submit" class="btn btn-primary" style="width:100%">Save Changes</button>
+     </div>  -->
+     </div>
+ </div>
+</div>
+    <!-- end modal submission requirements -->
+
+    <!-- start modal medical exam -->
+
+<div class="modal fade" id="medicalApply" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content">
+     <div class="modal-header">
+         <h5 class="modal-titles" id="exampleModalLongTitle">List of user take medical exam</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+         </button>
+     </div>
+     <div class="modal-body">
+     <div class="table-responsive" id="medicalTbl">       
+     </div>
+     </div>
+     <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+         <button type="submit" class="btn btn-primary" style="width:100%">Save Changes</button>
+     </div>  -->
+     </div>
+ </div>
+</div>
+    <!-- end modal medical exam -->
 
 <!-- start modal written exam -->
 
@@ -206,10 +255,7 @@ if(isset($_GET["success"])){
      </div>
  </div>
 </div>
-</form>
     <!-- end modal written exam -->    
-
-
 
 
     <script src="js/script.js?v=<?php echo time(); ?>"></script>

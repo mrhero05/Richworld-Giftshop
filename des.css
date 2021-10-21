@@ -1453,10 +1453,12 @@ margin-top: 1.3em;
 
 .step-progress{
     margin: auto auto;
-    padding: 2em 0;
+    padding: 6%;
+    margin-bottom: 10%;
+    padding-left: 5% !important;
     background: #2F2E41;
     color: white;
-    width: 150px;
+    width: 60% !important;
     border-radius: 8px;
 }
 
@@ -2144,4 +2146,13 @@ background:#3d3b53;
 }
 .radioInterview input{
     pointer-events:none;
+}
+
+.status-parent{
+   margin: auto;
+}
+.child-status{
+    width: 100%;
+    margin: auto;
+ 
 }

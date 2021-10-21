@@ -12,7 +12,7 @@ echo '<table class="table table-sm table-borderless table-hover">
     <th scope="col">Status</th>
     <th scope="col">Resume</th>
     <th scope="col">Option</th>
-    <th scope="col">Option</th>
+    <th scope="col" colspan="2">Interview</th>
     
     </tr>
 </thead>
