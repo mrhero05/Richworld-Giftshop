@@ -23,19 +23,46 @@ if(!isset($_SESSION["userId"])){
                 <?php 
                 include "include/dbc.inc.php";
                 $id = $_SESSION["userId"];
-                //$sql = "SELECT * from messages where msg_id in (select max(msg_id) from messages group by sender_id)";
-                $sql = "SELECT account.acc_user,meet_date,meet_time,meet_link,meet_msg FROM `meeting` INNER JOIN account on meeting.acc_id = account.acc_id WHERE reciever_id = '$id'";
-                $result = mysqli_query($conn,$sql);
-
-                if(mysqli_num_rows($result) > 0){
-                    while($row = mysqli_fetch_assoc($result)){
-                        echo '<div class="msg-div">
-                        <img src="img/active-emp.svg">
-                        <h5> '.$row["acc_user"].'<span>'.$row["meet_time"].'</span></h5>
-                        <p>'.$row["meet_msg"].'</p>
-                        </div>';
+                $acctype = $_SESSION["acc_type"];
+                if($acctype == "admin"){
+                    $sql = "SELECT account.acc_user,meeting.acc_id,meet_date,meet_time,meet_link,meet_msg,reciever_id FROM `meeting` INNER JOIN account on meeting.acc_id = account.acc_id WHERE meeting.acc_id = '$id'";
+                    $result = mysqli_query($conn,$sql);
+                    if(mysqli_num_rows($result) > 0){
+                        while($row = mysqli_fetch_assoc($result)){
+                            $rid = $row["reciever_id"];
+                            $sql1 = "SELECT acc_user from account where acc_id = '$rid'";
+                            $result1 = mysqli_query($conn,$sql1);
+                            $row1= mysqli_fetch_assoc($result1);
+                            echo '<div class="msg-div" style="cursor:pointer" onclick="expandmsg(this);">
+                            <input type="hidden" class="rUser_id" value="'.$row["acc_id"].'">
+                            <input type="hidden" class="admin_id" value="'.$row["reciever_id"].'">
+                            <input type="hidden" class="admin_name" value="'.$row1["acc_user"].'">
+                            <img src="img/active-emp.svg">
+                            <h5> '.$row1["acc_user"].'<span>'.$row["meet_time"].'</span></h5>
+                            <p>'.$row["meet_msg"].'</p>
+                         
+                            </div>';
+                            }
                         }
-                    }
+                }else if($acctype == "user"){
+                    $sql = "SELECT account.acc_user,meeting.acc_id,meet_date,meet_time,meet_link,meet_msg,reciever_id FROM `meeting` INNER JOIN account on meeting.acc_id = account.acc_id WHERE reciever_id = '$id'";
+                    $result = mysqli_query($conn,$sql);  
+                    if(mysqli_num_rows($result) > 0){
+                        while($row = mysqli_fetch_assoc($result)){
+                            echo '<div class="msg-div" style="cursor:pointer" onclick="expandmsg(this);">
+                            <input type="hidden" class="rUser_id" value="'.$row["reciever_id"].'">
+                            <input type="hidden" class="admin_id" value="'.$row["acc_id"].'">
+                            <input type="hidden" class="admin_name" value="'.$row["acc_user"].'">
+                            <img src="img/active-emp.svg">
+                            <h5> '.$row["acc_user"].'<span>'.$row["meet_time"].'</span></h5>
+                            <p>'.$row["meet_msg"].'</p>
+                         
+                            </div>';
+                            }
+                        }  
+                }
+                
+                //$sql = "SELECT * from messages where msg_id in (select max(msg_id) from messages group by sender_id)";
                 ?>
             </div>
             
@@ -45,7 +72,7 @@ if(!isset($_SESSION["userId"])){
                 <img src="img/active-emp.svg" class="profile-right">
                 <input type="hidden" class="rId" id="rId">
                 <input type="hidden" id="sId" value="<?php echo $_SESSION["userId"];?>">
-                <h2 class="rName">Ogie Sanchez <span><img src="img/active-emp.svg" class="bell"></span><span><img src="img/active-emp.svg" class="option"></span></h2>
+                <h2 class="rName"> <span><img src="img/active-emp.svg" class="bell"></span><span><img src="img/active-emp.svg" class="option"></span></h2>
                 </div>
                 <div class="msg-right">
                     <div class="msg-right-div-def">

@@ -52,7 +52,7 @@ include 'include/dbc.inc.php';
                       <ul class="dropdown-menu">
                           <li><a class="dropdown-item" href="#">Settings</a></li>
                           <li><a class="dropdown-item" href="messages.php">Messages</a></li>
-                          <li><a class="dropdown-item" href="#">TBD</a></li>
+                          <li><a class="dropdown-item" href="status.php">Status</a></li>
                           <li><a class="dropdown-item" href="#">TBD</a></li>
                           <li><a class="dropdown-item" href="#">TBD</a></li>
                           <li><a class="dropdown-item" href="#">TBD</a></li>

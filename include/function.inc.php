@@ -20,6 +20,7 @@ function login($conn,$user,$pass){
             $_SESSION["usertype"] = $row["user_status"];
             $_SESSION["userId"]=$row["acc_id"];
             $_SESSION["profPath"]=$row["prof_path"];
+            $_SESSION["acc_type"]=$row["acc_type"];
             
             if($_SESSION["usertype"] == 0){
             header("location: ../compProf.inc.php");

@@ -10,5 +10,6 @@ $type = "initial";
 $sql = "INSERT INTO interview (acc_id,admin_id,type_interview) values ('$id','$admin','$type')";
 mysqli_query($conn,$sql);
 
+
 $sql1 = "UPDATE applyjob set apply_status='$status',make_interview='$count' where account_id = '$id'";
 mysqli_query($conn,$sql1);
