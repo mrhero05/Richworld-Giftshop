@@ -13,19 +13,23 @@ include 'include/nav.inc.php';
                         <div class="employee-container">
                                 <script src="js/script.js?v=<?php echo time(); ?>"></script>
                                 <input type="text" placeholder="Type something here..." class="searchbtn" id="searchInp">
-                                <div class="form-check form-check-inline">
-                                <input class="form-check-input searchR" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="emp_id">
-                                <label class="form-check-label" for="inlineRadio1">ID</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                <input class="form-check-input searchR" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="emp_fname">
-                                <label class="form-check-label" for="inlineRadio2">First name</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                <input class="form-check-input searchR" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="emp_lname">
-                                <label class="form-check-label" for="inlineRadio2">Last name</label>
-                                </div>
+                                <figcaption class="figure-caption text-right">*Select one of the options first to search*</figcaption>
+                                    <div class="emp-ri">
+                                        <div class="form-check form-check-inline">
+                                        <input class="form-check-input searchR" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="emp_id">
+                                        <label class="form-check-label" for="inlineRadio1">ID</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                        <input class="form-check-input searchR" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="emp_fname">
+                                        <label class="form-check-label" for="inlineRadio2">First name</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                        <input class="form-check-input searchR" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="emp_lname">
+                                        <label class="form-check-label" for="inlineRadio2">Last name</label>
+                                        </div>
+                                    </div>
                                 
+                                <div class="emp-button">
                                 <button type="button" class="searchGo" name="search" onclick="search()">Search</button>
                                 <button type="button" class="addGo" data-toggle="modal" data-target="#exampleModalCenter">Add</button>
                             <!-- modal for add employee -->
@@ -139,6 +143,7 @@ include 'include/nav.inc.php';
                                 <button type="button" class="viewGo" onclick="viewAll()">View All</button>
                           
                         </div>
+                                </div>
                     <!-- for table employee -->
                         <div class="table-responsive resultTbl" id="viewSearch">
                             <table class="table table-hover">
