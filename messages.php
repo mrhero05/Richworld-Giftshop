@@ -9,16 +9,15 @@ if(!isset($_SESSION["userId"])){
 <body>
 <section id="messages">
 <script src="js/script.js?v=<?php echo time(); ?>"></script>
-    <div class="container-fluid">
+    <div class="container-fluid m-0">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-5">
             <br>
                 <div class="message-left-top">
                     
-                <button type="button" class="back" onclick="javascript:history.back()"></button>
+                <button type="button" class="back" style="margin-left:20px;" onclick="javascript:history.back()"></button>
                 <h2><strong>Messages</strong></h2>
-                <button type="button" class="searchM" data-toggle="modal" data-target="#searchMessage" onclick="clearSearch();"></button>
-                <button type="button" class="message"></button>
+                <button type="button" data-toggle="modal" data-target="#searchMessage" onclick="clearSearch();"><img src="img/searchbutton.svg" alt="" style="margin-top:-5px;margin-left:-20px;"></button>
                 </div>
                 <?php 
                 include "include/dbc.inc.php";
@@ -37,7 +36,7 @@ if(!isset($_SESSION["userId"])){
                             <input type="hidden" class="rUser_id" value="'.$row["acc_id"].'">
                             <input type="hidden" class="admin_id" value="'.$row["reciever_id"].'">
                             <input type="hidden" class="admin_name" value="'.$row1["acc_user"].'">
-                            <img src="img/active-emp.svg">
+                            <img src="img/default-avatar.svg">
                             <h5> '.$row1["acc_user"].'<span>'.$row["meet_time"].'</span></h5>
                             <p>'.$row["meet_msg"].'</p>
                          
@@ -53,7 +52,7 @@ if(!isset($_SESSION["userId"])){
                             <input type="hidden" class="rUser_id" value="'.$row["reciever_id"].'">
                             <input type="hidden" class="admin_id" value="'.$row["acc_id"].'">
                             <input type="hidden" class="admin_name" value="'.$row["acc_user"].'">
-                            <img src="img/active-emp.svg">
+                            <img src="img/default-avatar.svg">
                             <h5> '.$row["acc_user"].'<span>'.$row["meet_time"].'</span></h5>
                             <p>'.$row["meet_msg"].'</p>
                          
@@ -66,13 +65,17 @@ if(!isset($_SESSION["userId"])){
                 ?>
             </div>
             
-            <div class="col-lg-6 p-0 right-bg">
+            <div class="col-lg-7 p-0 right-bg">
           
                 <div class="message-right-top">
-                <img src="img/active-emp.svg" class="profile-right">
+                <img src="img/default-avatar.svg" class="profile-right">
                 <input type="hidden" class="rId" id="rId">
                 <input type="hidden" id="sId" value="<?php echo $_SESSION["userId"];?>">
-                <h2 class="rName"> <span><img src="img/active-emp.svg" class="bell"></span><span><img src="img/active-emp.svg" class="option"></span></h2>
+                <h2 class="rName">
+                     <span><img src="img/three-dot.svg" class="option"></span> 
+                    <span><img src="img/bell.svg" class="bell"></span>
+                    
+                </h2>
                 </div>
                 <div class="msg-right">
                     <div class="msg-right-div-def">
@@ -83,7 +86,7 @@ if(!isset($_SESSION["userId"])){
                 <div class="send-msg-parent">
                 <div class="send-msg">
                     
-                <input type="text" id="sMsg"><button type="button" onclick="sendmsgUser();"><img src="img/active-emp.svg"></button>
+                <input type="text" placeholder="Aa" id="sMsg"><button type="button" onclick="sendmsgUser();"><img src="img/send.svg"></button>
                 </div>
                 </div>
               

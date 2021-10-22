@@ -773,6 +773,7 @@ background:#3d3b53;
     width: 20rem;
     height: 2rem;
     margin: 20px 5px;
+    margin-bottom: 10px;
 }
 .searchGo{
     background-color: #FD5757;
@@ -831,6 +832,86 @@ background:#3d3b53;
     margin-top: 4%;
 
 }
+
+.emp-button{
+    float: right;
+    margin-top: -3rem;
+   
+}
+
+.figure-caption{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.emp-ri{
+    margin-left: 8px;
+}
+
+.employee-container label{
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.employee-container button{
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Employee mobile/tablet responsive */
+@media screen and (max-width: 991px){
+
+    .emplo-title{
+        text-align: center;
+        margin-top: 8px;
+        margin-bottom: 0;
+    }
+
+    .figure-caption{
+        text-align: center;
+    }
+
+    .table-responsive{
+        flex-wrap: wrap;
+    }
+
+    .searchbtn{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 8px;
+        padding: 18px 8px;
+        width: 75%;
+      
+    }
+
+    .emp-button > *{
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+
+    .emp-ri{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
+
+    .emp-button{
+        margin-top: .5rem;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        float: none;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+}
+
 
 /* for index page (landing page) */
 
@@ -1184,7 +1265,7 @@ text-align: left !important;
     background-color: #2F2E41;
     border-radius: 8px;
     text-align: center;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Roboto', sans-serif;
     padding: 0.8em 1.1em; 
     width: 100%;
     
@@ -1211,12 +1292,13 @@ text-align: left !important;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    flex-wrap: wrap;
 }
 
 .job-title h3{
     color: white;
     text-align: left;
-    font-weight: normal;
+    font-weight: 500;
     font-size: 1rem;
     margin: 0 0.4em;
     padding: 0;
@@ -1224,6 +1306,7 @@ text-align: left !important;
 .job-title button{
     color: white;
     background-color: transparent;
+    font-weight: 500;
     border: none;
     margin: 0;
     font-size: .9rem;
@@ -1260,16 +1343,18 @@ text-align: left !important;
     
     position: relative;
     color: white;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Roboto', sans-serif;
     overflow: hidden;
     background-color: #2f2e41;
     border: none;
     border-radius: 10px;
-    margin: 2%;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
     padding: 1.2em;
     height: 13rem;
     max-height: 100%;
-    width: 270px;
+    width: 260px;
     font-size: 80%;
     float:left;
 }
@@ -1286,11 +1371,11 @@ text-align: left !important;
 
 .job-div2 p{
     margin-bottom: 1.2rem;
-    font-size: 1rem;
+    font-size: .9rem;
 }
 
 .job-div2 button{
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Roboto', sans-serif;
     bottom: 0;
     right: 0;
     background-color: #45445e;
@@ -1309,6 +1394,12 @@ text-align: left !important;
     border-radius: 10px;
     border: none;
 }
+
+#job-list{
+    height: 480px;
+    justify-content: flex-start;
+    overflow-y: auto;
+}
 /* job listing mobile responsive */
 @media screen and (max-width: 991px){
    
@@ -1322,15 +1413,17 @@ text-align: left !important;
 
     .listings{
         display:flex;
-        justify-content:space-between;
+        justify-content:center;
         align-items:center;
+        flex-wrap: wrap;
     }
 
     #job-list {
         display:flex;
-        justify-content:center;
+        justify-content: center;
         align-items:center;
         flex-wrap: wrap;
+        margin-bottom: 10px;
     }
 
     .job-div2{
@@ -1910,54 +2003,78 @@ max-width: 80%;
 }
 .message-left-top{
     display: flex;
-    margin-bottom: 3%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 .message-left-top h2{
-    margin-top: 2%;
     margin-left: 12%;
     margin-right: 12%;
     color: black;
+    font-size: 1.6rem;
 }
-.searchM{
-    background-image: url("img/search.svg");
-    background-color: #ff3b3b !important;
-    padding: 3%;
-    border-radius: 20%;
-    
-}
-.message{
+
+/* .message{
     background-image: url("img/chat.svg");
     background-color: #ff3b3b !important;
     padding: 3%;
-    border-radius: 20%;
-}
+} */
 
 .msg-div{
-    background-color: rgb(206, 206, 206);
-    border-radius: 10px;
-    width: 80%;
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 0;
+    height: 90px;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
+    font-family: 'Roboto', sans-serif;
 }
+
+.msg-div:hover{
+    background-color: #F1F1F1;
+}
+
+.msg-div:active{
+    background-color: #F1F1F1;
+}
+
+.msg-div:focus{
+    background-color: #F1F1F1;
+}
+
 .msg-div img{
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    border-radius: 50%;
+    height: 60px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    margin-left: 20px;
     
 }
 .msg-div h5{
-    margin-left: 4rem;
+    margin-left: 5.2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
     padding: 1%;
-    margin-top: -7%;
+    margin-top: -5rem;
 }
 .msg-div span{
     margin-left: 40%;
-    font-size: small;
+    float: right;
+    color: #707070;
+    font-size: .9rem;
+    margin-right: 16px;
 }
 .msg-div p{
     padding: 1%;
     padding-bottom: 2%;
-    margin-left: 4rem;
-    margin-top: -2%;
+    margin-left: 5.2rem;
+    margin-top: -15px;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #707070;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -1965,59 +2082,119 @@ max-width: 80%;
 
 .message-right-top{
     background-color: #2F2E41;
-    padding-top: 15%;
+    padding-top: 2em 1.5rem;
+    height: 80px;
 }
 .message-right-top h2{
     color: white;
-    margin-left: 7rem;
-    padding: 1%;
-    margin-top: -10%;
+    margin-left: 5rem;
+    margin-top: -40px;
     padding-bottom: 2%;
 }
 .profile-right{
-    margin-left: 3%;
-   padding:1%;
-    width: 50px;
-    height: 50px;
+    margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
 }
 .bell{
-    margin-left: 30%;
+    /* margin-top: 20px; */
+    border-radius: 50%;
+    margin-left:15px;
+    width: 30px;
+    height: 30px;
+    float: right;
 }
 .option{
+    /* margin-top: 20px; */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
     margin-left: 2%;
+    float: right;
 }
+
+.rName{
+    margin-top: -40px;
+    margin-left: 10px;
+}
+
 .right-bg{
     height: 100vh;
     max-height: 100%;
-    background-color: rgb(231, 231, 231);
+    background: #F1F1F1;
 }
 .msg-right{
-    height: 550px;
-    /* background-color: red; */
+    height: 77vh;
+    padding: 2em 1em;
+    overflow-y: auto;
 }
+
+.msg-right::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+.msg-right::-webkit-scrollbar-track {
+background: #d6d6d6; 
+}
+   
+.msg-right::-webkit-scrollbar-thumb {
+background:#2F2E41; 
+}
+  
+.msg-right::-webkit-scrollbar-thumb:hover {
+background:#3d3b53; 
+}
+
+
 .msg-right-div{
+    font-family: 'Roboto', sans-serif;
     margin-left: 3%;
-    background-color: rgb(206, 206, 206);
+    background: #E6E6E6;
+    font-weight: 500;
     border-radius: 10px;
+    height: fit-content;
+    margin-bottom: 10px;
     width: 50%;
 }
 .msg-right-div p{
-   padding: 2%;
+   padding: 8px;
    word-wrap: break-word;
 }
 .send-msg-parent{
     text-align: center;
 }
+
 .send-msg{
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2%;
 }
+
+
 .send-msg input{
-    width: 70%;
-    height: 50px;
-    border-radius: 10px;
+    width: 80%;
+    border: none;
+    margin-right: 10px;
+    margin-left: -10px;
+    margin-top: 10px;
+    padding: 10px 14px;
+    border-radius: 20px;
 }
+
+.send-msg input > *{
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.send-msg button{
+    border: none;
+    padding: 10px;
+    border-radius: 16px;
+    width: 80px;
+    background: #fd5757;
+}
+
 #input-body{
     text-align: center;
 }
@@ -2106,14 +2283,9 @@ max-width: 80%;
 /* meeting link tables with custom scroll */
 
 .table-responsive{
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
-    /* max-height: 150px; */
     margin-bottom: 20px;
-}
-
-.table-responsive th{
-    color:#fd5757;
 }
 
 .btn-select{
