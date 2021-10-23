@@ -2,7 +2,7 @@
 include "dbc.inc.php";
 // $id = $_POST["id"];
 
-$sql = "SELECT account.firstname,account.lastname,sub_req.acc_id,admin_id,apply_status,medical_exam,sub_req FROM `sub_req` inner join account on account.acc_id = sub_req.acc_id INNER JOIN applyjob on applyjob.account_id = sub_req.acc_id";
+$sql = "SELECT account.firstname,account.lastname,contracts.acc_id,admin_id,apply_status,sub_req,final_interview,contract_sign FROM `contracts` inner join account on account.acc_id = contracts.acc_id INNER JOIN applyjob on applyjob.account_id = contracts.acc_id";
 $result = mysqli_query($conn,$sql);
 echo '<table class="table table-sm table-borderless table-hover">
 <thead class="table">
@@ -22,14 +22,14 @@ if(mysqli_num_rows($result) > 0){
         <td>'.$row["lastname"].'</td>
         <td style="color:red">'.$row["apply_status"].'</td>
 
-        <div id="acceptTosubreq"></div>
+        <div id="acceptTodep"></div>
         <input type="hidden" class="msgUser_name" value="">
         <input type="hidden" class="msgUser_id" value="'.$row["acc_id"].'">';
        
-        if($row["medical_exam"] == 1 && $row["sub_req"] == 0){
-            echo '<td><button type="button" class="btn-select" onclick="proceedcon(this)" data-dismiss="modal">Done</button></td>';
+        if($row["sub_req"] == 1 && $row["contract_sign"] == 0){
+            echo '<td><button type="button" class="btn-select" onclick="proceeddep(this)" data-dismiss="modal">Finish</button></td>';
         }else{
-            echo '<td><button type="button" class="btn-select" style="background-color:gray" disabled="true" data-dismiss="modal">Done</button></td>';
+            echo '<td><button type="button" class="btn-select" style="background-color:gray" disabled="true" data-dismiss="modal">Finish</button></td>';
         }
         echo '
         </tr>';

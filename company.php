@@ -1,4 +1,9 @@
 <?php
+session_start();
+if($_SESSION["acc_type"] == "user"){
+  header("location:index.php");
+  exit();
+}
 include 'include/head.inc.php';
 include 'include/nav.inc.php';
 ?>

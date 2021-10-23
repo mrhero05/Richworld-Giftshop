@@ -1,6 +1,7 @@
 <?php
 include 'include/head.inc.php';
 include 'include/dbc.inc.php';
+session_start();
 if(isset($_GET["error"])){
   if($_GET["error"]=="file"){
     echo '<script> alert("Invalid file type")</script>';
@@ -14,6 +15,10 @@ if(isset($_GET["success"])){
   echo '<script> alert("Send Application Form Successfully!")</script>';
   }
 }
+if($_SESSION["acc_type"] == "admin"){
+  header("location:dashboard.php");
+  exit();
+  }
 ?>
 
 </body>
@@ -42,7 +47,6 @@ if(isset($_GET["success"])){
             </li>   
       <li class="nav-item">
             <?php
-            session_start();
             if(isset($_SESSION["profile-name"])){
               $accid = $_SESSION["userId"];
               $sql = "SELECT * from account where acc_id = '$accid'";
