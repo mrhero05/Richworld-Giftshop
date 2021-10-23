@@ -97,6 +97,8 @@ include 'include/dbc.inc.php';
                     $finalInt = 0;
                     $medical = 0;
                     $subreq = 0;
+                    $contract = 0;
+                    $deploy = 0;
 
                     if(mysqli_num_rows($result) > 0){
                         while($row = mysqli_fetch_assoc($result)){
@@ -107,6 +109,8 @@ include 'include/dbc.inc.php';
                         $finalInt = $row["final_interview"];
                         $medical = $row["medical_exam"];
                         $subreq = $row["sub_req"];
+                        $contract = $row["contract_sign"];
+                        $deploy = $row["deployment"];
                         }
                     }
                 ?>
@@ -218,14 +222,34 @@ include 'include/dbc.inc.php';
                             
                         </li>
                         <li>
-                            <h5><img src="img/index_icon/Circled.svg" alt="">Contract Signing</h5>
+                            <?php 
+                            if($contract == 1){
+                                echo '<h5><img src="img/index_icon/Circle.svg" alt="">Contract Signing</h5>
+                                <p>12/21/12</p>
+                                <p>11:11PM</p>';
+                            }else{
+                                echo '
+                                <h5><img src="img/index_icon/Circled.svg" alt="">Contract Signing</h5>
                             <p>12/21/12</p>
-                            <p>11:11PM</p>
+                            <p>11:11PM</p>';
+                            } 
+                            ?>
+                            
                         </li>
                         <li>
-                            <h5><img src="img/index_icon/Circled.svg" alt="">Deployment</h5>
+                            <?php 
+                            if($deploy == 1){
+                                echo '<h5><img src="img/index_icon/Circle.svg" alt="">Deployment</h5>
+                                <p>12/21/12</p>
+                                <p>11:11PM</p>';
+                            }else{
+                                echo '
+                                <h5><img src="img/index_icon/Circled.svg" alt="">Deployment</h5>
                             <p>12/21/12</p>
-                            <p>11:11PM</p>
+                            <p>11:11PM</p>';
+                            } 
+                            ?>
+                            
                         </li>
                     </ul>
                 </div>

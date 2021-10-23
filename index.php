@@ -1,6 +1,11 @@
 <?php
 include 'include/head.inc.php';
 include 'include/dbc.inc.php';
+session_start();
+if($_SESSION["acc_type"] == "admin"){
+  header("location:dashboard.php");
+  exit();
+  }
 ?>
 
 </body>
@@ -28,7 +33,6 @@ include 'include/dbc.inc.php';
             </li>
             <li class="nav-item">
             <?php
-            session_start();
             if(isset($_SESSION["profile-name"])){
               $accid = $_SESSION["userId"];
               $sql = "SELECT * from account where acc_id = '$accid'";

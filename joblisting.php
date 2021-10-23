@@ -1,4 +1,9 @@
 <?php
+session_start();
+if($_SESSION["acc_type"] == "user"){
+  header("location:index.php");
+  exit();
+}
 include 'include/head.inc.php';
 include 'include/nav.inc.php';
 if(isset($_GET["error"])){
@@ -18,9 +23,6 @@ if(isset($_GET["success"])){
             <div class="row">
                 <div class="listings">
                     <div class="col-lg-2">
-                    <h3>Job Listings</h3>
-                    </div>
-                    <div class="col-lg-2">
                         <button type="button" id="job-button" onclick="showjob();">Show All Job</button>
                     </div>
                     <div class="col-lg-2">
@@ -31,6 +33,9 @@ if(isset($_GET["success"])){
                     </div>
                     <div class="col-lg-2">
                         <button type="button" data-toggle="modal" data-target="#subreqApply" onclick="subreq();">Requirements</button>
+                    </div>
+                    <div class="col-lg-2">
+                        <button type="button" data-toggle="modal" data-target="#contractApply" onclick="contract();">Contract</button>
                     </div>
                     <div class="col-lg-2">
                     <button type="button" data-toggle="modal" data-target="#createmeet">Setup a meeting</button>
@@ -236,6 +241,30 @@ if(isset($_GET["success"])){
  </div>
 </div>
     <!-- end modal medical exam -->
+
+<!-- start modal contract -->
+
+<div class="modal fade" id="contractApply" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-titles" id="exampleModalLongTitle">List of user in contract signing</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+        <div class="table-responsive" id="contractTbl">       
+        </div>
+        </div>
+        <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" style="width:100%">Save Changes</button>
+        </div>  -->
+        </div>
+    </div>
+</div>
+<!-- end modal contract exam -->
 
 <!-- start modal written exam -->
 

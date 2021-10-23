@@ -393,6 +393,12 @@ function subreq(){
     });
 }
 
+function contract(){
+    $(document).ready(function(){
+        $('#contractTbl').load('include/contract.inc.php');
+    });
+}
+
 function interviewB(click_id){
     $(document).ready(function(){
         var parent = $(click_id).closest("tr");
@@ -486,7 +492,18 @@ function proceedcon(click_id){
         var parent = $(click_id).closest("tr");
         var id = parent.find('.msgUser_id').val();
         console.log(id);
-        $('#acceptTosubreq').load('include/acceptTosubreq.inc.php',{
+        $('#acceptTosubreq').load('include/acceptTocon.inc.php',{
+            id:id
+        });
+    });
+}
+
+function proceeddep(click_id){
+    $(document).ready(function(){
+        var parent = $(click_id).closest("tr");
+        var id = parent.find('.msgUser_id').val();
+        console.log(id);
+        $('#acceptTodep').load('include/acceptTodep.inc.php',{
             id:id
         });
     });
