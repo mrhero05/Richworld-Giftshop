@@ -530,3 +530,40 @@ function expandmsg(click_id){
         });
     });
 }
+
+function otpbtn(){
+    var email = document.getElementById("emailver").value;
+    $(document).ready(function(){
+        $('#otpmodal').load('include/otp.inc.php',{
+            email:email
+        });
+    });
+}
+
+function verifyotp(){
+    var otpinput = document.getElementById("otpCode").value;
+    
+    $(document).ready(function(){
+        $('#otpmsg').load('include/verifyotp.inc.php',{
+            otpinput:otpinput
+        });
+    }); 
+}
+
+// function verifyotpforgot(){
+//     var otpinput = document.getElementById("otpCode").value;
+//     $(document).ready(function(){
+//         $('#otpviaemail').load('include/changepassotp.inc.php',{
+//             otpinput:otpinput
+//         });
+//     }); 
+// }
+
+function forotpbtn(){
+    var email = document.getElementById("emailver").value;
+    $(document).ready(function(){
+        $('#forotpmodal').load('include/securityotp.inc.php',{
+            email:email
+        });
+    });
+}

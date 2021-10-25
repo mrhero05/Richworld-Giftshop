@@ -1,2 +1,0 @@
-# Richworld Giftshop
- CAPSTONE PROJECT

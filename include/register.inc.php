@@ -8,7 +8,7 @@ if(isset($_POST["submit"])){
     $uname = $_POST["uname"];
     $pass = $_POST["pass"];
     $pass2 = $_POST["pass2"];
-    $email = $_POST["email"];
+    $email = "0";
     
     // pag aadd ng connection at file ng function
     require_once 'dbc.inc.php';

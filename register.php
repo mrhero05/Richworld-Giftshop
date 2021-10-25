@@ -8,7 +8,7 @@ include 'include/head.inc.php';
             <!-- column for the left side with 2 witdth -->
             
             <div class="left-register">
-            <a class="navbar-brand" style="font-size:18px;"><p style="margin-top:20%;text-align:center">R<span>G</span></p></a>
+            <a class="navbar-brand" style="font-size:18px;"><p style="padding-top:20%;text-align:center">R<span>G</span></p></a>
             <div class="register-title">
             <p>Richworld <span>Giftshop</span></p></div>
             <img src="img/register.svg" class="left-img">
@@ -68,7 +68,7 @@ include 'include/head.inc.php';
                         <input type="text" name="uname" id="username" onchange="checkuser(this.value);">
                         <div id="cuser" style="padding-left: 7%;"><p style="color: cornflowerblue;">Check username availability</p>
                         </div>
-                        <br>
+                        
                         <label for="password">Password</label>
                         <br>
                         <input type="password"  name="pass" id="password">
@@ -77,10 +77,10 @@ include 'include/head.inc.php';
                         <br>
                         <input type="password"  name="pass2" id="retype">
                         <br>
-                        <label for="email">Email Address</label>
+                        <!-- <label for="email">Email Address</label>
                         <br>
                         <input type="text"  name="email" id="email">
-                        <br>
+                        <br> -->
                         <button type="submit" name="submit">Register</button>  
                        
                         <p style="color:#000;text-align:center">Already have an account?<a style="text-decoration:none;color:#FD5757" href="login.php" class="login-here"> Login here</a> </p>               
