@@ -1,4 +1,6 @@
 <?php
+session_start();
+$userid = $_SESSION["userId"];
 include "dbc.inc.php";
 
 if(isset($_POST["finishSubmit"])){
@@ -8,8 +10,15 @@ if(isset($_POST["finishSubmit"])){
         $qnumber = $_POST["qnumber"];
         if(isset($_POST["qanswer"])){
             $qanswer = $_POST["qanswer"];
-                if(isset($_POST["tanswer"])){
-                    $tanswer = $_POST["tanswer"];
+                $sql5 ="SELECT * from account where acc_id = '$userid'";
+                $result = mysqli_query($conn,$sql5);
+                $verify=0;
+                if(mysqli_num_rows($result) > 0){
+                    $row = mysqli_fetch_assoc($result);
+                    $verify = $row["verify"];
+                }
+                if($verify == 1){
+                    $tanswer = "user";
     
                         $file = $_FILES["profileImg"];
                         
@@ -65,10 +74,10 @@ if(isset($_POST["finishSubmit"])){
                             echo '<script>alert("file not allowed")</script>';
                             header("location:../compProf.inc.php?error");
                             exit();
-                    exit();
+                            exit();
                         }
                 }else{
-                    header("location:../compProf.inc.php?error=select-type");
+                    header("location:../compProf.inc.php?error=emailnotverified");
                     exit();
                 }
             }else{

@@ -1,6 +1,9 @@
 <?php
 include "include/head.inc.php";
 include "include/dbc.inc.php";
+// use PHPMailer\PHPMailer\PHPMailer;
+// use PHPMailer\PHPMailer\SMTP;
+// use PHPMailer\PHPMailer\Exception;
 ?>
 <section id="complete-profile">
 <form action="include/finishAcc.inc.php" method="POST" enctype="multipart/form-data">
@@ -43,14 +46,20 @@ include "include/dbc.inc.php";
                         <br>
                         <input type="text" placeholder="Your answer..." name="qanswer">
                         <br><br>
-                        <div class="form-floating comp_select">
+                        <input type="text" placeholder="Enter your email..." name="email" id="emailver">
+                        <br><br>
+                        <div class="comp_submit">
+                        <button type="button" data-toggle="modal" data-target="#vercode" onclick="otpbtn();">Send OTP</button>
+                        </div>
+                        
+                        <!-- <div class="form-floating comp_select">
                         <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="tanswer">
                             <option selected disabled>Click to select</option>
                             <option value="user">User</option>
                             <option value="admin">Admin</option>
                         </select>
                         <label for="floatingSelect">Account Type</label>
-                        </div>    
+                        </div>     -->
                     </div>
                     <br>
                     <div class="comp_submit">
@@ -62,3 +71,26 @@ include "include/dbc.inc.php";
     </div>
 </form>
 </section>
+
+<!-- start verification code -->
+
+<div class="modal fade" id="vercode" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-titles" id="exampleModalLongTitle">Please Input your OTP code send via email.</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body otp" id="otpmodal">
+        
+        </div>
+        <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" style="width:100%">Save Changes</button>
+        </div>  -->
+        </div>
+    </div>
+</div>
+<!-- end modal verification code -->

@@ -2,19 +2,21 @@
 //function para sa login
 function login($conn,$user,$pass){
     // select if username match anyone
-    $sql = "SELECT * from account where acc_user=? and acc_pass=?";
+    $sql = "SELECT * from account where acc_user=?";
     // initializing the statement 
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt,$sql)) {
         header("location: ../login.php?error=stmt-failed");
         exit();
     }
-    mysqli_stmt_bind_param($stmt,"ss",$user,$pass);
+    // mysqli_stmt_bind_param($stmt,"ss",$user,$pass);
+    mysqli_stmt_bind_param($stmt,"s",$user);
     mysqli_stmt_execute($stmt);
     $result = mysqli_stmt_get_result($stmt);
     if($row = mysqli_fetch_assoc($result)){
         $userGranted = $row["acc_pass"];
-        if($userGranted == $pass){
+        
+        if(password_verify($pass,$userGranted)){
             session_start();
             $_SESSION["profile-name"]= $row["firstname"]." ".$row["lastname"];
             $_SESSION["usertype"] = $row["user_status"];
@@ -59,9 +61,9 @@ function retypePass($pass,$pass2){
 }
 
 //function to check empty input in register
-function emptyInputRegister($fname,$lname,$contact,$uname,$pass,$pass2,$email){
+function emptyInputRegister($fname,$lname,$contact,$uname,$pass,$pass2){
     $result = true;
-    if(empty($fname) || empty($lname) || empty($contact) || empty($uname) || empty($pass) || empty($pass2) || empty($email)){
+    if(empty($fname) || empty($lname) || empty($contact) || empty($uname) || empty($pass) || empty($pass2)){
         $result = true;
     }else{
         $result = false;
@@ -94,16 +96,16 @@ function register($conn,$uname,$pass,$fname,$lname,$contact,$email){
       
       
     $type = "0";
-    $sql = "INSERT into account (acc_user,acc_pass,firstname,lastname,contact,email,user_status,prof_path,q_number,q_answer,acc_type) values (?,?,?,?,?,?,?,?,?,?,?);";
+    $sql = "INSERT into account (acc_user,acc_pass,firstname,lastname,contact,email,user_status,prof_path,q_number,q_answer,acc_type,otp,verify) values (?,?,?,?,?,?,?,?,?,?,?,?,?);";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt,$sql)) {
         header("location: ../register.php?error=stmt-failed");
         exit();
     }
-    //to hash the password to make it more secure
-    //$hashpass = password_hash($pass,PASSWORD_DEFAULT);
+    // to hash the password to make it more secure
+    $hashpass = password_hash($pass,PASSWORD_DEFAULT);
     
-    mysqli_stmt_bind_param($stmt,"ssssisssiss",$uname,$pass,$fname,$lname,$contact,$email,$type,$type,$type,$type,$type);
+    mysqli_stmt_bind_param($stmt,"ssssisssisssi",$uname,$hashpass,$fname,$lname,$contact,$email,$type,$type,$type,$type,$type,$type,$type);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     echo "<script>alert('123')</script>";
