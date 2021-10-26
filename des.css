@@ -1229,6 +1229,18 @@ text-align: left !important;
 }
 
 /* for job listing */
+/* .job-body{
+    text-align: center;
+} */
+
+#job-body{
+    text-align: center;
+}
+
+.job{
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .job h1{
     text-align: left;
@@ -1355,6 +1367,7 @@ text-align: left !important;
     height: 13rem;
     max-height: 100%;
     width: 260px;
+    max-width: 80%;
     font-size: 80%;
     float:left;
 }
@@ -1425,9 +1438,14 @@ text-align: left !important;
         flex-wrap: wrap;
         margin-bottom: 10px;
     }
+    /* .job-body{
+        text-align: center;
+    } */
 
     .job-div2{
-        margin: 10px 20px;
+        /* margin: 10px 20px; */
+        margin-left: 14%;
+        margin-right: 15%;
     }
 
     .createjob{
@@ -2337,3 +2355,109 @@ background:#3d3b53;
     margin-right: auto;
     height: 40px;
 }
+
+/* .changepass{
+    text-align: center;
+
+} */
+
+.changebody{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10%;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 60%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 7%;
+}
+.changebody label{
+    margin-bottom: 2%;
+    text-align: left !important;
+}
+.changeimg{
+    text-align: center;
+}
+.changebody img{
+    margin-left: auto;
+    margin-right: auto;
+}
+.changebody input{
+    border: 1px solid gray !important;
+    margin-bottom: 4%;
+    width: 500px;
+    max-width: 100%;
+    height: 40px;
+    border-radius: 8px;
+}
+.changebody input:focus{
+    outline: none;
+    border: 2px solid #fd5757 !important;
+    border: none;
+}
+.changebtn{
+    text-align: center;
+}
+.changebody button{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #2F2E41;
+    color: white;
+}
+.changebody button:hover{
+    background-color: #45445f;
+    border: 2px solid #232230;
+}
+
+@media screen and (max-width: 992px){
+    .changebody{
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 10%;
+        /* background-color: blue; */
+        border-radius: 10px;
+        border: 1px solid black;
+        width: 100%;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 10%;
+    }
+    .changebody label{
+        margin-bottom: 2%;
+        
+    }
+    
+    .changebody input{
+        border: 1px solid gray !important;
+        margin-bottom: 4%;
+        width: 600px;
+        max-width: 100%;
+        height: 40px;
+        border-radius: 8px;
+    }
+    .changebody input:focus{
+        outline: none;
+        border: 2px solid #fd5757 !important;
+        border: none;
+    }
+    .changebody button{
+        margin-top: 10%;
+        width: 200px;
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+        background-color: #2F2E41;
+        color: white;
+    }
+    .changebody button:hover{
+        background-color: #45445f;
+    }
+
+}
+
