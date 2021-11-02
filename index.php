@@ -54,6 +54,7 @@ if($_SESSION["acc_type"] == "admin"){
                           <span class="visually-hidden">Toggle Dropdown</span>
                       </button>
                       <ul class="dropdown-menu">
+                          <li><p class="dropdown-item" style="color:red">Account : <span style="color:green">'.$_SESSION["acc_type"].'<span></p></li>
                           <li><a class="dropdown-item" href="#">Settings</a></li>
                           <li><a class="dropdown-item" href="messages.php">Messages</a></li>
                           <li><a class="dropdown-item" href="status.php">Status</a></li>

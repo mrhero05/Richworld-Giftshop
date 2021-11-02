@@ -11,15 +11,14 @@ echo '<table class="table table-sm table-borderless table-hover">
     <th scope="col">Last Name</th>
     <th scope="col">Status</th>
     <th scope="col">Resume</th>
-    <th scope="col">Option</th>
-    <th scope="col" colspan="2">Interview</th>
+    <th scope="col" colspan="2">Job</th>
     
     </tr>
 </thead>
 <tbody>'; 
 if(mysqli_num_rows($result) > 0){
     while($row = mysqli_fetch_assoc($result)){
-       echo '<tr>                                
+       echo '<tr>                           
         <td>'.$row["firstname"].'</td>
         <td>'.$row["lastname"].'</td>
         <td style="color:red">'.$row["apply_status"].'</td>
@@ -30,19 +29,20 @@ if(mysqli_num_rows($result) > 0){
         <div id="interviewdiv"></div>
         <input type="hidden" class="msgUser_name" value="">
         <input type="hidden" class="msgUser_id" value="'.$row["account_id"].'">
+        <input type="hidden" class="jobid" value="'.$id.'">
         <td><a href="resume/'.$row["apply_resume"].'"><button type="button" class="btn-select" onclick="reviewResume(this)">Download</button></a></td>
         ';
-        if($row["submit_resume"] == 1 && $row["make_interview"] == 0){
-            echo '<td><button type="button" class="btn-select" onclick="interviewB(this)" data-dismiss="modal">Interview</button></td>
-            ';
-        }else{
-            echo '<td><button type="button" class="btn-select" style="background-color:gray" onclick="interviewB(this)" data-dismiss="modal" disabled="true">Interview</button></td>
-        ';
-        }
+        // if($row["submit_resume"] == 1 && $row["make_interview"] == 0){
+        //     echo '<td><button type="button" class="btn-select" onclick="interviewB(this)" data-dismiss="modal">Interview</button></td>
+        //     ';
+        // }else{
+        //     echo '<td><button type="button" class="btn-select" style="background-color:gray" onclick="interviewB(this)" data-dismiss="modal" disabled="true">Interview</button></td>
+        // ';
+        // }
         
         echo '<td><button type="button" class="btn-select" onclick="declineP(this)" data-dismiss="modal">Decline</button></td>
         ';
-        if($row["initial_interview"] == 1 && $row["make_written"] == 0){
+        if($row["submit_resume"] == 1 && $row["make_interview"] == 0){
         echo '<td><button type="button" class="btn-select" onclick="acceptP(this)" data-dismiss="modal">Accept</button></td>';
         }else{
         echo '<td><button type="button" class="btn-select" style="background-color:gray" onclick="acceptP(this)" disabled="true">Accept</button></td>';  

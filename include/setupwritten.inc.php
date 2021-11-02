@@ -15,12 +15,12 @@ $row = mysqli_fetch_assoc($resultmanager);
 
 $hrmanager = $row["acc_id"];
 
-$sql = "INSERT into initial_sched (inisched_acc_id,inisched_admin_id,inisched_date,inisched_time,meet_link) values ('$id',$admin,'$date','$time','$link')";
+$sql = "INSERT into written_sched (wsched_accid,wsched_adminid,wsched_date,wsched_time,wsched_link) values ('$id',$admin,'$date','$time','$link')";
 mysqli_query($conn,$sql);
 
-$sqlmsg = "INSERT into messages (sender_id,reciever_id,msg,useracc_id,msg_type) values ('$admin','$hrmanager','$msg','$id','initial')";
+$sqlmsg = "INSERT into messages (sender_id,reciever_id,msg,useracc_id,msg_type) values ('$admin','$hrmanager','$msg','$id','written')";
 mysqli_query($conn,$sqlmsg);
 
 
-header("location:../joblisting.php?success=sendsuccess");
+header("location:../joblisting.php?success=sendsuccesswritten");
 exit();

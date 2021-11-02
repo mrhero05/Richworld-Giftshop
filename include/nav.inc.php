@@ -13,7 +13,7 @@ while($row = mysqli_fetch_assoc($result)){
 }?>
 
 <div class="container-fluid p-0 body">
-    <div class="row top-nav"> 
+    <div class="row top-nav m-0"> 
             <div class="col-sm-12 col-lg-2">
                 <div class="icon">
                     <!-- for icon -->
@@ -50,14 +50,20 @@ while($row = mysqli_fetch_assoc($result)){
                             <span class="visually-hidden">Toggle Dropdown</span>
                         </button>
                         <ul class="dropdown-menu">
+                            <?php echo '<li><p class="dropdown-item" style="color:red;margin-left:3%">Account : <span style="color:green">'.$_SESSION["acc_type"].'<span></p></li>';?>
                             <li><a class="dropdown-item" href="#">Settings</a></li>
                             <li><a class="dropdown-item" href="messages.php">Messages</a></li>
-                            <li><a class="dropdown-item" href="#">TBD</a></li>
+                            <?php
+                            if($_SESSION["acc_type"] == "hrmanager"){
+                                echo '
+                            <li><a class="dropdown-item" href="notification.php">Notification</a></li>';
+                            }
+                            ?>
                             <li><a class="dropdown-item" href="#">TBD</a></li>
                             <li><a class="dropdown-item" href="#">TBD</a></li>
                             <li><a class="dropdown-item" href="#">TBD</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><form action="include/logout.inc.php" method="POST"><a class="dropdown-item"><button type="submit" name="logout">Log out</button></a></form></li>
+                            <li><form action="include/logout.inc.php" method="POST"><a class="dropdown-item"><button type="submit" name="logout" style="color:red">Log out</button></a></form></li>
                         </ul>
                         </div>
                 </div>     
@@ -81,8 +87,11 @@ while($row = mysqli_fetch_assoc($result)){
                                 <button type="button" style="margin-top:45px;"><img src="img/dashboard.svg" alt="dashboard icon"> Dashboard</button><br></a>
                                 </li>   
                                 <li class="nav-item">
-                                <a href="company.php" style="text-decoration:none;">
-                                    <button type="button"><img src="img/structure.svg" alt="dashboard icon"> Company</button><br></a>
+                                <a href="hrmanager.php" style="text-decoration:none;">
+                                    <button type="button"><img src="img/structure.svg" alt="dashboard icon"> HR Manager</button><br></a>
+                                </li>
+                                <a href="depmanager.php" style="text-decoration:none;">
+                                    <button type="button"><img src="img/structure.svg" alt="dashboard icon"> Department Manager</button><br></a>
                                 </li>
                                 <li class="nav-item">
                                 <a href="employee.php" style="text-decoration:none;">
