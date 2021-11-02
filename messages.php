@@ -23,38 +23,37 @@ if(!isset($_SESSION["userId"])){
                 include "include/dbc.inc.php";
                 $id = $_SESSION["userId"];
                 $acctype = $_SESSION["acc_type"];
-                if($acctype == "admin"){
-                    $sql = "SELECT account.acc_user,meeting.acc_id,meet_date,meet_time,meet_link,meet_msg,reciever_id FROM `meeting` INNER JOIN account on meeting.acc_id = account.acc_id WHERE meeting.acc_id = '$id'";
-                    $result = mysqli_query($conn,$sql);
-                    if(mysqli_num_rows($result) > 0){
-                        while($row = mysqli_fetch_assoc($result)){
-                            $rid = $row["reciever_id"];
-                            $sql1 = "SELECT acc_user from account where acc_id = '$rid'";
-                            $result1 = mysqli_query($conn,$sql1);
-                            $row1= mysqli_fetch_assoc($result1);
-                            echo '<div class="msg-div" style="cursor:pointer" onclick="expandmsg(this);">
-                            <input type="hidden" class="rUser_id" value="'.$row["acc_id"].'">
-                            <input type="hidden" class="admin_id" value="'.$row["reciever_id"].'">
-                            <input type="hidden" class="admin_name" value="'.$row1["acc_user"].'">
-                            <img src="img/default-avatar.svg">
-                            <h5> '.$row1["acc_user"].'<span>'.$row["meet_time"].'</span></h5>
-                            <p>'.$row["meet_msg"].'</p>
+                // if(){
+                //     $sql = "SELECT * from messages where reciever_id = '$id'";
+                //     $result = mysqli_query($conn,$sql);
+                //     if(mysqli_num_rows($result) > 0){
+                //         while($row = mysqli_fetch_assoc($result)){
+                //             $rid = $row["reciever_id"];
+                //             $sql1 = "SELECT acc_user from account where acc_id = '$rid'";
+                //             $result1 = mysqli_query($conn,$sql1);
+                //             $row1= mysqli_fetch_assoc($result1);
+                //             echo '<div class="msg-div" style="cursor:pointer" onclick="expandmsg(this);">
+                //             <input type="hidden" class="rUser_id" value="'.$row["acc_id"].'">
+                //             <input type="hidden" class="admin_id" value="'.$row["reciever_id"].'">
+                //             <input type="hidden" class="admin_name" value="'.$row1["acc_user"].'">
+                //             <img src="img/default-avatar.svg">
+                //             <h5> '.$row1["acc_user"].'<span>'.$row["meet_time"].'</span></h5>
+                //             <p>'.$row["msg"].'</p>
                          
-                            </div>';
-                            }
-                        }
-                }else if($acctype == "user"){
-                    $sql = "SELECT account.acc_user,meeting.acc_id,meet_date,meet_time,meet_link,meet_msg,reciever_id FROM `meeting` INNER JOIN account on meeting.acc_id = account.acc_id WHERE reciever_id = '$id'";
+                //             </div>';
+                //             }  
+                //     }
+                if($acctype == "user"){
+                    $sql = "SELECT inisched_date,inisched_time,meet_link,messages.msg from initial_sched INNER join messages on messages.useracc_id = initial_sched.inisched_acc_id where messages.useracc_id = '$id'";
                     $result = mysqli_query($conn,$sql);  
                     if(mysqli_num_rows($result) > 0){
                         while($row = mysqli_fetch_assoc($result)){
-                            echo '<div class="msg-div" style="cursor:pointer" onclick="expandmsg(this);">
-                            <input type="hidden" class="rUser_id" value="'.$row["reciever_id"].'">
-                            <input type="hidden" class="admin_id" value="'.$row["acc_id"].'">
-                            <input type="hidden" class="admin_name" value="'.$row["acc_user"].'">
+                            echo '<div class="msg-div" style="cursor:pointer" onclick="expandmsgUser(this);">
+                            <input type ="hidden" value="" id="senderId">
+                            <input type ="hidden" value="'.$id.'" class="recieverId">
                             <img src="img/default-avatar.svg">
-                            <h5> '.$row["acc_user"].'<span>'.$row["meet_time"].'</span></h5>
-                            <p>'.$row["meet_msg"].'</p>
+                            <h5> Hr Recruiter <span></span></h5>
+                            <p>'.$row["msg"].'</p>
                          
                             </div>';
                             }
@@ -78,7 +77,7 @@ if(!isset($_SESSION["userId"])){
                 </h2>
                 </div>
                 <div class="msg-right">
-                    <div class="msg-right-div-def">
+                    <div class="msg-right-div-def" id="msg-right-div-def">
                         
                     </div>
                 </div>

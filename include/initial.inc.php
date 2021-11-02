@@ -2,7 +2,7 @@
 include "dbc.inc.php";
 // $id = $_POST["id"];
 
-$sql = "SELECT account.firstname,account.lastname,written_exam.acc_id,admin_id,apply_status,written_exam,make_written FROM `written_exam` inner join account on account.acc_id = written_exam.acc_id INNER JOIN applyjob on applyjob.account_id = written_exam.acc_id";
+$sql = "SELECT account.firstname,account.lastname,applyjob.apply_status,initial_interview.acc_id,applyjob.make_interview,applyjob.initial_interview from initial_interview INNER JOIN account on initial_interview.acc_id = account.acc_id INNER JOIN applyjob on initial_interview.acc_id = applyjob.account_id";
 $result = mysqli_query($conn,$sql);
 echo '<table class="table table-sm table-borderless table-hover">
 <thead class="table">
@@ -31,8 +31,8 @@ if(mysqli_num_rows($result) > 0){
         <input type="hidden" class="msgUser_id" value="'.$row["acc_id"].'">';
         
         
-        if($row["make_written"] == 0){
-            echo '<td><button type="button" class="btn-select" onclick="proceedwrittensched(this)" data-dismiss="modal" data-toggle="modal" data-target="#createwritten">Schedule</button></td>';
+        if($row["make_interview"] == 1 && $row["initial_interview"] == 0){
+            echo '<td><button type="button" class="btn-select" onclick="proceedinitialsched(this)" data-dismiss="modal" data-toggle="modal" data-target="#createmeet">Schedule</button></td>';
         }else{
             echo '<td><button type="button" class="btn-select" style="background-color:gray" disabled="true" data-dismiss="modal" >Schedule</button></td>';
         }
@@ -44,3 +44,4 @@ echo '
 </tbody>
 </table>';
         
+    

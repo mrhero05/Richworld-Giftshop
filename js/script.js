@@ -425,9 +425,11 @@ function acceptP(click_id){
     $(document).ready(function(){
         var parent = $(click_id).closest("tr");
         var id = parent.find('.msgUser_id').val();
-        console.log(id);
-        $('#acceptdiv').load('include/acceptTowritten.inc.php',{
-            id:id
+        var jobid = parent.find('.jobid').val();
+        console.log(jobid);
+        $('#acceptdiv').load('include/acceptToinit.inc.php',{
+            id:id,
+            jobid:jobid
         });
     });
 }
@@ -531,6 +533,46 @@ function expandmsg(click_id){
     });
 }
 
+function expandmsgInitial(){
+    $(document).ready(function(){
+        $('#msg-right-div-def').load('include/expandInitial.inc.php');
+    });
+}
+
+function expandmsgWritten(){
+    $(document).ready(function(){
+        $('#msg-right-div-def').load('include/expandWritten.inc.php');
+    });
+}
+
+function expandmsgFinal(){
+    $(document).ready(function(){
+        $('#msg-right-div-def').load('include/expandFinal.inc.php');
+    });
+}
+
+function expandmsgUser(click_id){
+        var parent = $(click_id).closest(".msg-div");
+        var id = parent.find('.recieverId').val();
+        console.log(id);
+    $(document).ready(function(){
+        $('#msg-right-div-def').load('include/expandmsguser.inc.php',{
+            id:id
+        });
+    });
+}
+
+function viewSubreq(click_id){
+    var parent = $(click_id).closest("tr");
+    var id = parent.find('.msgUser_id').val();
+    console.log(id);
+$(document).ready(function(){
+    $('#req1Tbl').load('include/subreqcheck.inc.php',{
+        id:id
+    });
+});
+}
+
 function otpbtn(){
     var email = document.getElementById("emailver").value;
     $(document).ready(function(){
@@ -566,4 +608,135 @@ function forotpbtn(){
             email:email
         });
     });
+}
+
+function initialInt(){
+    $(document).ready(function(){
+        $('#initialTbl').load('include/initial.inc.php');
+    });
+}
+
+function writtenExam(){
+    $(document).ready(function(){
+        $('#writtenTbl').load('include/written.inc.php');
+    });
+}
+
+function finalInt(){
+    $(document).ready(function(){
+        $('#finalTbl').load('include/final.inc.php');
+    });
+}
+
+function proceedinitialsched(click_id){
+    $(document).ready(function(){
+        var parent = $(click_id).closest("tr");
+        var id = parent.find('.msgUser_id').val();
+        var fullname = parent.find('.msgUser_name').val();
+        $('.peopleSp').text(fullname);
+        $('.peopleSname').val(fullname);
+        $('.peopleSid').val(id);
+        $('#checkdate').load('include/checkDateSched.inc.php'),{
+            id:id
+        };
+        console.log(fullname);
+       
+    });
+}
+
+function proceedwrittensched(click_id){
+    $(document).ready(function(){
+        var parent = $(click_id).closest("tr");
+        var id = parent.find('.msgUser_id').val();
+        var fullname = parent.find('.msgUser_name').val();
+        $('.peopleSp').text(fullname);
+        $('.peopleSname').val(fullname);
+        $('.peopleSid').val(id);
+        $('#checkdatewritten').load('include/checkdateschedwritten.inc.php'),{
+            id:id
+        };
+        console.log(fullname);
+       
+    });
+}
+
+function proceedfinalsched(click_id){
+    $(document).ready(function(){
+        var parent = $(click_id).closest("tr");
+        var id = parent.find('.msgUser_id').val();
+        var fullname = parent.find('.msgUser_name').val();
+        $('.peopleSp').text(fullname);
+        $('.peopleSname').val(fullname);
+        $('.peopleSid').val(id);
+        $('#checkdatefinal').load('include/checkDateSchedFinal.inc.php'),{
+            id:id
+        };
+        console.log(fullname);
+       
+    });
+}
+
+
+function init_remarks(){
+    $(document).ready(function(){
+        $('#tablecontent').load('include/initremarks.inc.php');
+    });
+}
+
+function writ_remarks(){
+    $(document).ready(function(){
+        $('#tablecontent').load('include/writremarks.inc.php');
+    });
+}
+
+function fin_remarks(){
+    $(document).ready(function(){
+        $('#tablecontent').load('include/finremarks.inc.php');
+    });
+}
+
+
+function inimodremarks(click_id){
+    var parent = $(click_id).closest("tr");
+        var id = parent.find('.id').val();
+        var fullname = parent.find('.fullname').val();
+        var job = parent.find('.job').val();
+        
+        $('.initname').text(fullname);
+        $('.initjob').text(job);
+        $('.init_id').val(id);
+        // $('#checkdate').load('include/checkDateSched.inc.php'),{
+        //     id:id
+        // };
+        // console.log(fullname);
+}
+
+function writmodremarks(click_id){
+    var parent = $(click_id).closest("tr");
+        var id = parent.find('.id').val();
+        var fullname = parent.find('.fullname').val();
+        var job = parent.find('.job').val();
+        
+        $('.writname').text(fullname);
+        $('.writjob').text(job);
+        $('.writ_id').val(id);
+        // $('#checkdate').load('include/checkDateSched.inc.php'),{
+        //     id:id
+        // };
+        // console.log(fullname);
+}
+
+function finmodremarks(click_id){
+    var parent = $(click_id).closest("tr");
+        var id = parent.find('.id').val();
+        var fullname = parent.find('.fullname').val();
+        var job = parent.find('.job').val();
+        
+        $('.finname').text(fullname);
+        $('.finjob').text(job);
+        $('.fin_id').val(id);
+        // $('#checkdate').load('include/checkDateSched.inc.php'),{
+        //     id:id
+        // };
+        // console.log(fullname);
 }

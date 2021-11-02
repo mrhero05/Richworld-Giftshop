@@ -438,6 +438,12 @@ h1{
     margin-top: -5px;
 }
 
+html,body{
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow-x:hidden;
+}
+
 .body{
     background: #F1f1f1;
     padding: 0;
@@ -1488,6 +1494,9 @@ text-align: left !important;
     max-width: 300px;
     margin:auto auto;
 }
+.choosefile label{
+    color: #FD5757;
+}
 
 
 .comp_dropdown button{
@@ -1958,7 +1967,7 @@ max-width: 80%;
     width:80%;
     margin-left: auto;
     margin-right: auto; 
-    padding-bottom: 10%;
+    padding-bottom: 5%;
 }
 
 .back-button{
@@ -2330,9 +2339,15 @@ background:#2F2E41;
 background:#3d3b53; 
 } 
 
+.jobfix{
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x:hidden;
+}
+
 .radioInterview{
     display: flex;
-    margin-left: 20%;    
+    margin-left: 10%;    
 }
 .radioInterview input{
     pointer-events:none;
@@ -2459,5 +2474,48 @@ background:#3d3b53;
         background-color: #45445f;
     }
 
+}
+
+/* for hr manager */
+.hrmanager-title{
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.hr-manager{
+    float:right;
+    margin-top: 25px;
+}
+
+.searchb {
+    border: none;
+    padding: 8px 12px;
+    background-color: #2F2E41;
+    color:white;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.init{
+    border: none;
+    padding: 8px 12px;
+    background-color: #2F2E41;
+    color:white;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.written {
+    border: none;
+    padding: 8px 12px;
+    background-color: #2F2E41;
+    color:white;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+.table-manager{
+    overflow:auto;
 }
 

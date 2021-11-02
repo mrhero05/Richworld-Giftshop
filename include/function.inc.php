@@ -34,7 +34,7 @@ function login($conn,$user,$pass){
                 if($_SESSION["acc_type"]=="user"){
                     header("location: ../index.php");
                     exit();
-                }else if($_SESSION["acc_type"]=="admin"){
+                }else if($_SESSION["acc_type"]=="admin" || $_SESSION["acc_type"]=="hrmanager" || $_SESSION["acc_type"]=="hrrecruiter"){
                     header("location: ../dashboard.php");
                     exit();
                 }

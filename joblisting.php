@@ -17,8 +17,23 @@ if(isset($_GET["success"])){
     }
 }
 ?>
-<div class="col-lg-10">
+<div class="col-lg-10 jobfix">
     <div class="container">
+        <div class="job-title">
+            <div class="listing">
+                <h3 style="color: #FD5757;">Scheduling</h3>
+                <div class="col-lg-2">
+                        <button type="button" data-toggle="modal" data-target="#initialApply" onclick="initialInt();">Initial Interview</button>
+                </div>
+                <div class="col-lg-2">
+                        <button type="button" data-toggle="modal" data-target="#writtenApply" onclick="writtenExam();">Written Exam</button>
+                </div>
+                <div class="col-lg-2">
+                        <button type="button" data-toggle="modal" data-target="#finalApply" onclick="finalInt();">Final Interview</button>
+                </div>
+            </div>
+        </div> 
+
         <div class="job-title">
             <div class="row">
                 <div class="listings">
@@ -26,23 +41,20 @@ if(isset($_GET["success"])){
                         <button type="button" id="job-button" onclick="showjob();">Show All Job</button>
                     </div>
                     <div class="col-lg-2">
-                        <button type="button" data-toggle="modal" data-target="#writtenApply" onclick="written();">Written</button>
-                    </div>
-                    <div class="col-lg-2">
-                        <button type="button" data-toggle="modal" data-target="#medicalApply" onclick="medical();">Medical</button>
-                    </div>
-                    <div class="col-lg-2">
                         <button type="button" data-toggle="modal" data-target="#subreqApply" onclick="subreq();">Requirements</button>
                     </div>
                     <div class="col-lg-2">
                         <button type="button" data-toggle="modal" data-target="#contractApply" onclick="contract();">Contract</button>
                     </div>
-                    <div class="col-lg-2">
+                    <!-- <div class="col-lg-2">
                     <button type="button" data-toggle="modal" data-target="#createmeet">Setup a meeting</button>
-                    </div>
+                    </div> -->
                 </div>
+                
+                
             </div>
         </div>
+        
             <div class="row">
                 <div class="title-job" id="jobcount">
                 <h2>Showing 3 Jobs</h2>
@@ -138,7 +150,7 @@ if(isset($_GET["success"])){
          </button>
      </div>
      <div class="modal-body">
-         <input type="search" placeholder="Type any name here..." class="modalinput" id="searchMeet" oninput="searchMeet();">
+         <!-- <input type="search" placeholder="Type any name here..." class="modalinput" id="searchMeet" oninput="searchMeet();"> -->
          <form action="include/setupmeet.inc.php" method="POST">
         <div id="peopleS"></div>
         <div class="addInterview" id="addInterview">
@@ -147,14 +159,14 @@ if(isset($_GET["success"])){
             <input type="hidden" class="peopleSid" value="" name="id">
         </div>
         <br>
-        <div class="radioInterview">
+        <!-- <div class="radioInterview">
         <p><input type="radio" name="radioI" value="initial" id="1"> Initial Interview &nbsp;</p>
-        <p><input type="radio" name="radioI" value="final" id="2"> Final Interview </p>
+        <p><input type="radio" name="radioI" value="written" id="2"> Written Exam &nbsp;</p>
+        <p><input type="radio" name="radioI" value="final" id="3"> Final Interview </p>
+        </div> -->
+        <div id="checkdate">
+            
         </div>
-    
-        <h6 class="meet-td"> Time & Date:
-        <input type="date" name="date"><input type="time" name="time"> <button type="button" class="inter-close">x</button>
-        </h6>
             <input type="text" class="meetlink" placeholder="Paste your meeting link here..." name="link">
             <h6 class="message-md">Message:</h6>
             <textarea class="form-control" rows="3" name="meet_msg"></textarea>
@@ -169,6 +181,95 @@ if(isset($_GET["success"])){
 </div>
 </form>
 <!-- end modal create meet -->
+
+
+<!-- start modal create written sched -->
+
+<div class="modal fade" id="createwritten" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content">
+     <div class="modal-header">
+         <h5 class="modal-titles" id="exampleModalLongTitle">Set-up a written schedule</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+         </button>
+     </div>
+     <div class="modal-body">
+         <!-- <input type="search" placeholder="Type any name here..." class="modalinput" id="searchMeet" oninput="searchMeet();"> -->
+         <form action="include/setupwritten.inc.php" method="POST">
+        <div id="peopleS"></div>
+        <div class="addInterview" id="addInterview">
+            <p class="peopleSp"></p>
+            <input type="hidden" class="peopleSname" value="" name="name">
+            <input type="hidden" class="peopleSid" value="" name="id">
+        </div>
+        <br>
+        <!-- <div class="radioInterview">
+        <p><input type="radio" name="radioI" value="initial" id="1"> Initial Interview &nbsp;</p>
+        <p><input type="radio" name="radioI" value="written" id="2"> Written Exam &nbsp;</p>
+        <p><input type="radio" name="radioI" value="final" id="3"> Final Interview </p>
+        </div> -->
+        <div id="checkdatewritten">
+            
+        </div>
+            <input type="text" class="meetlink" placeholder="Paste your written exam form here..." name="link">
+            <h6 class="message-md">Message:</h6>
+            <textarea class="form-control" rows="3" name="meet_msg"></textarea>
+
+     </div>
+     <div class="modal-footer">
+         <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+         <button type="submit" class="btn btn-primary" style="width:100%">Send Invite</button>
+     </div>
+     </div>
+ </div>
+</div>
+</form>
+<!-- end modal create written sched -->
+
+<!-- start modal final meet -->
+
+<div class="modal fade" id="createfinal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content">
+     <div class="modal-header">
+         <h5 class="modal-titles" id="exampleModalLongTitle">Set-up a meeting for final interview</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+         </button>
+     </div>
+     <div class="modal-body">
+         <!-- <input type="search" placeholder="Type any name here..." class="modalinput" id="searchMeet" oninput="searchMeet();"> -->
+         <form action="include/setupfinal.inc.php" method="POST">
+        <div id="peopleS"></div>
+        <div class="addInterview" id="addInterview">
+            <p class="peopleSp"></p>
+            <input type="hidden" class="peopleSname" value="" name="name">
+            <input type="hidden" class="peopleSid" value="" name="id">
+        </div>
+        <br>
+        <!-- <div class="radioInterview">
+        <p><input type="radio" name="radioI" value="initial" id="1"> Initial Interview &nbsp;</p>
+        <p><input type="radio" name="radioI" value="written" id="2"> Written Exam &nbsp;</p>
+        <p><input type="radio" name="radioI" value="final" id="3"> Final Interview </p>
+        </div> -->
+        <div id="checkdatefinal">
+            
+        </div>
+            <input type="text" class="meetlink" placeholder="Paste your meeting link here..." name="link">
+            <h6 class="message-md">Message:</h6>
+            <textarea class="form-control" rows="3" name="meet_msg"></textarea>
+
+     </div>
+     <div class="modal-footer">
+         <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+         <button type="submit" class="btn btn-primary" style="width:100%">Send Invite</button>
+     </div>
+     </div>
+ </div>
+</div>
+</form>
+<!-- end modal final meet -->
 
 <!-- start modal accept applicant -->
 
@@ -218,20 +319,19 @@ if(isset($_GET["success"])){
 </div>
     <!-- end modal submission requirements -->
 
-    <!-- start modal medical exam -->
+    <!-- start initial interview -->
 
-<div class="modal fade" id="medicalApply" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="initialApply" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
  <div class="modal-dialog modal-dialog-centered" role="document">
      <div class="modal-content">
      <div class="modal-header">
-         <h5 class="modal-titles" id="exampleModalLongTitle">List of user take medical exam</h5>
+         <h5 class="modal-titles" id="exampleModalLongTitle">List of user accept to initial interview</h5>
          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
          <span aria-hidden="true">&times;</span>
          </button>
      </div>
      <div class="modal-body">
-     <div class="table-responsive" id="medicalTbl">       
-     </div>
+     <div class="table-responsive" id="initialTbl"></div>
      </div>
      <!-- <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -240,7 +340,31 @@ if(isset($_GET["success"])){
      </div>
  </div>
 </div>
-    <!-- end modal medical exam -->
+    <!-- end modal initial interview-->
+
+      <!-- start final interview -->
+
+<div class="modal fade" id="finalApply" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content">
+     <div class="modal-header">
+         <h5 class="modal-titles" id="exampleModalLongTitle">List of user accept to Final interview</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+         </button>
+     </div>
+     <div class="modal-body">
+     <div class="table-responsive" id="finalTbl"></div>
+     </div>
+     <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+         <button type="submit" class="btn btn-primary" style="width:100%">Save Changes</button>
+     </div>  -->
+     </div>
+ </div>
+</div>
+    <!-- end modal final interview-->
+
 
 <!-- start modal contract -->
 
@@ -265,6 +389,30 @@ if(isset($_GET["success"])){
     </div>
 </div>
 <!-- end modal contract exam -->
+
+<!-- start modal subrec check -->
+
+<div class="modal fade" id="subreq1Apply" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content">
+     <div class="modal-header">
+         <h5 class="modal-titles" id="exampleModalLongTitle">Overview of requirements</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+         </button>
+     </div>
+     <div class="modal-body">
+         <form action="include/subreqChanges.inc.php" method="POST">
+     <div class="table-responsive" id="req1Tbl">       
+     </div>
+     <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" style="width:100%">Save Changes</button>
+        </div> 
+         </form>
+     </div>
+ </div>
+</div>
+    <!-- end modal subrec check -->    
 
 <!-- start modal written exam -->
 

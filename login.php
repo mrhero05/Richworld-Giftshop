@@ -1,5 +1,15 @@
 <?php
+session_start();
 include 'include/head.inc.php';
+if(isset($_SESSION["userId"])){
+    if($_SESSION["acc_type"] == "user"){
+        header("location:index.php");
+        exit();
+    }else{
+        header("location:dashboard.php");
+        exit();
+    }
+}
 ?>
 <div class="container">
     <div class="row">

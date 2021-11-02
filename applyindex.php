@@ -5,14 +5,14 @@ if(!isset($_POST["applyB"]) || !isset($_SESSION["profile-name"])){
   exit();
 }
 include "include/dbc.inc.php";
+$job_id = $_POST["job_id"];
 $userid = $_SESSION["userId"];
-$sql = "SELECT * from applyjob where account_id = '$userid'";
+$sql = "SELECT * from applyjob where job_id = '$job_id' and account_id ='$userid'";
 $result = mysqli_query($conn,$sql);
 if(mysqli_num_rows($result) > 0){
   header("location:job.php?error=alreadyapply");
   exit();
 }
-$job_id = $_POST["job_id"];
 include 'include/head.inc.php';
 include 'include/dbc.inc.php';
 ?>
@@ -93,12 +93,18 @@ include 'include/dbc.inc.php';
                 <div class="apply-div">
                     <h1>Let's get started</h1>
                     <br>
-                    <p> Upload your file and you will be notified once we've reviewed it. You can also<br>
+                    <p> Upload your resume, application letter and tor then you will be notified once we've reviewed it. You can also<br>
                     check you application status in the settings.</p>
-                    <br>
+                    
                     <div class="choosefile" style="margin: 2%;">
-                       
-                    <input class="form-control form-control" id="formFile" type="file" name="resume">
+                    <label>Resume</label>   
+                    <input class="form-control form-control" id="formFile1" type="file" name="resume">
+                    <br>
+                    <label>Application Letter</label> 
+                    <input class="form-control form-control" id="formFile2" type="file" name="appletter">
+                    <br>
+                    <label>Tor</label> 
+                    <input class="form-control form-control" id="formFile3" type="file" name="tor">
                     </div>
                     <br>
                     <input type="hidden" name="applyjob_id" value="<?php echo $job_id;?>">
