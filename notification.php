@@ -21,24 +21,34 @@ if(!isset($_SESSION["userId"])){
                 </div>
                 <?php 
                 include "include/dbc.inc.php";
-                $id = $_SESSION["userId"];?>
-                <div class="msg-div" style="cursor:pointer" onclick="expandmsgInitial();">
-                <img src="img/default-avatar.svg">
-                <h5>Initial Interview <span></span></h5>
-                <p></p>
-                </div>
-
-                <div class="msg-div" style="cursor:pointer" onclick="expandmsgWritten();">
-                <img src="img/default-avatar.svg">
-                <h5>Written Exam <span></span></h5>
-                <p></p>
-                </div>
-
-                <div class="msg-div" style="cursor:pointer" onclick="expandmsgFinal();">
-                <img src="img/default-avatar.svg">
-                <h5>Final Interview <span></span></h5>
-                <p></p>
-                </div>
+                $id = $_SESSION["userId"];
+                $sql = "SELECT * from account where acc_id = '$id'";
+                $result = mysqli_query($conn,$sql);
+                $acctype = "";
+                if(mysqli_num_rows($result) > 0){
+                    $row = mysqli_fetch_assoc($result);
+                    $acctype = $row["acc_type"];
+                }
+                if($acctype == "hrmanager"){
+                    echo '<div class="msg-div" style="cursor:pointer" onclick="expandmsgInitial();">
+                    <img src="img/default-avatar.svg">
+                    <h5>Initial Interview <span></span></h5>
+                    <p></p>
+                    </div>
+    
+                    <div class="msg-div" style="cursor:pointer" onclick="expandmsgWritten();">
+                    <img src="img/default-avatar.svg">
+                    <h5>Written Exam <span></span></h5>
+                    <p></p>
+                    </div>';
+                }else if($acctype == "department"){
+                    echo '<div class="msg-div" style="cursor:pointer" onclick="expandmsgFinal();">
+                    <img src="img/default-avatar.svg">
+                    <h5>Final Interview <span></span></h5>
+                    <p></p>
+                    </div>';
+                }
+                ?>
             </div>
             
             <div class="col-lg-7 p-0 right-bg">

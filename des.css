@@ -2519,3 +2519,55 @@ background:#3d3b53;
     overflow:auto;
 }
 
+
+ /* Create account modal (admin side) */ */
+
+.account-info{
+    margin: auto auto;
+    overflow-y: scroll;
+    height: 50vh;
+    padding: 1.5rem 1rem;
+}
+
+.account-info::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+.account-info::-webkit-scrollbar-track {
+background: #d6d6d6; 
+}
+   
+.account-info::-webkit-scrollbar-thumb {
+background:#2F2E41; 
+}
+  
+.account-info::-webkit-scrollbar-thumb:hover {
+background:#3d3b53; 
+} 
+
+.account-info input{
+    margin: 8px auto;
+}
+
+
+.account-info select{
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+
+.account-info label{
+    float: left;
+    margin-bottom: 5px;
+}
+
+.accountph{
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}

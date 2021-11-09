@@ -9,6 +9,7 @@ if(isset($_POST["submit"])){
     $pass = $_POST["pass"];
     $pass2 = $_POST["pass2"];
     $email = "0";
+    $acctype = $_POST["type"];
     
     // pag aadd ng connection at file ng function
     require_once 'dbc.inc.php';
@@ -27,7 +28,7 @@ if(isset($_POST["submit"])){
                     header("location: ../register.php?error=user-exist");
                     exit();
                 }else{        
-                   register($conn,$uname,$pass,$fname,$lname,$contact,$email);
+                   register($conn,$uname,$pass,$fname,$lname,$contact,$email,$acctype);
                 }
                    
             }else{

@@ -31,7 +31,7 @@ if(mysqli_num_rows($result) > 0){
         <input type="hidden" class="msgUser_id" value="'.$row["acc_id"].'">';
         
         
-        if($row["make_written"] == 0){
+        if($row["make_written"] == 1 && $row["written_exam"] == 0){
             echo '<td><button type="button" class="btn-select" onclick="proceedwrittensched(this)" data-dismiss="modal" data-toggle="modal" data-target="#createwritten">Schedule</button></td>';
         }else{
             echo '<td><button type="button" class="btn-select" style="background-color:gray" disabled="true" data-dismiss="modal" >Schedule</button></td>';

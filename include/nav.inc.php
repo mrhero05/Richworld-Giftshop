@@ -54,12 +54,14 @@ while($row = mysqli_fetch_assoc($result)){
                             <li><a class="dropdown-item" href="#">Settings</a></li>
                             <li><a class="dropdown-item" href="messages.php">Messages</a></li>
                             <?php
-                            if($_SESSION["acc_type"] == "hrmanager"){
+                            if($_SESSION["acc_type"] == "hrmanager" || $_SESSION["acc_type"] == "department"){
                                 echo '
                             <li><a class="dropdown-item" href="notification.php">Notification</a></li>';
                             }
+                            if($_SESSION["acc_type"] == "admin"){
+                                echo '<li><a class="dropdown-item" style="cursor:pointer" data-toggle="modal" data-target="#createmodal">Create Account</a></li>';
+                            }
                             ?>
-                            <li><a class="dropdown-item" href="#">TBD</a></li>
                             <li><a class="dropdown-item" href="#">TBD</a></li>
                             <li><a class="dropdown-item" href="#">TBD</a></li>
                             <li><hr class="dropdown-divider"></li>
@@ -69,6 +71,58 @@ while($row = mysqli_fetch_assoc($result)){
                 </div>     
             </div>
         </div>
+
+
+        <!-- start modal create new account admin side -->
+    <form action="include/register.inc.php" method="POST">
+    <div class="modal fade" id="createmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-titles" id="exampleModalLongTitle">Create New Account</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body account-body">
+            <div class="account-info">
+            <select class="form-select" aria-label="Default select example" name="type">
+                    <option>Account type</option>
+                    <option value="hrmanager">HR Manager</option>
+                    <option value="hrrecruiter">HR Recruiter</option>
+                    <option value="department">Department Manager</option>
+            </select>
+                <label for="firstname">First Name</label>
+                <input class="form-control" type="text" id="firstname" name="fname" required>
+                
+
+                <label for="lastname">Last Name</label>
+                <input class="form-control" type="text" id="lastname" name="lname" required>
+                
+                <label for="lastname">Contact</label>
+                <input class="form-control" type="text" id="lastname" name="contact" required>
+
+                <label for="username">Username</label>
+                <script src="js/script.js?v=<?php echo time(); ?>"></script>
+                <input class="form-control" type="text" name="uname" id="username" onchange="checkuser(this.value);" required>
+                <div id="cuser" style="padding-left: 7%;"><p style="color: cornflowerblue;">Check username availability</p>
+                </div>
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" name="pass" required>
+                
+                <label for="retype">Retype Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" name="pass2" required>
+            </div>
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" name="submit">Create Account</button>
+        </div> 
+        </div>
+    </div>
+    </div>
+    </form>
+        <!-- end modal create new account admin side -->
         
     </div>
     <div class="row">
@@ -85,34 +139,76 @@ while($row = mysqli_fetch_assoc($result)){
                                 <li class="nav-item">
                                 <a href="dashboard.php" style="text-decoration:none;">
                                 <button type="button" style="margin-top:45px;"><img src="img/dashboard.svg" alt="dashboard icon"> Dashboard</button><br></a>
-                                </li>   
-                                <li class="nav-item">
-                                <a href="hrmanager.php" style="text-decoration:none;">
-                                    <button type="button"><img src="img/structure.svg" alt="dashboard icon"> HR Manager</button><br></a>
                                 </li>
-                                <a href="depmanager.php" style="text-decoration:none;">
-                                    <button type="button"><img src="img/structure.svg" alt="dashboard icon"> Department Manager</button><br></a>
-                                </li>
-                                <li class="nav-item">
-                                <a href="employee.php" style="text-decoration:none;">
-                                    <button type="button"><img src="img/employee.svg" alt="dashboard icon"> Employees</button><br></a>
-                                </li>
-                                <li class="nav-item">
-                                <a href="joblisting.php" style="text-decoration:none;">
-                                    <button type="button"><img src="img/job.svg" alt="dashboard icon"> Job Listings</button><br></a>
-                                </li>
-                                <li class="nav-item">
-                                <a href="#project" style="text-decoration:none;">
-                                    <button type="button"><img src="img/recent.svg" alt="dashboard icon"> Recent Activities</button><br></a>
-                                </li>
-                                <li class="nav-item">
-                                <a href="announcement.php" style="text-decoration:none;">
-                                    <button type="button"><img src="img/announcement.svg" alt="dashboard icon">Announcements</button><br></a>
-                                </li>
-                                <li class="nav-item">
-                                <a href="requestleave.php" style="text-decoration:none;">
-                                    <button type="button"><img src="img/leave.svg" alt="dashboard icon"> Request leave</button><br></a>
-                                </li>
+                                <?php
+                                $type = $_SESSION["acc_type"];
+                                if($type == "hrmanager"){
+                                    echo ' 
+                                    <li class="nav-item">
+                                    <a href="hrmanager.php" style="text-decoration:none;">
+                                        <button type="button"><img src="img/structure.svg" alt="dashboard icon">HR Manager</button><br></a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a href="announcement.php" style="text-decoration:none;">
+                                        <button type="button"><img src="img/announcement.svg" alt="dashboard icon">Announcements</button><br></a>
+                                    </li>
+                                    ';
+                                }else if ($type == "department"){
+                                    echo '
+                                    <li class="nav-item"> 
+                                    <a href="depmanager.php" style="text-decoration:none;">
+                                        <button type="button"><img src="img/structure.svg" alt="dashboard icon"> Department Manager</button><br></a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a href="employee.php" style="text-decoration:none;">
+                                        <button type="button"><img src="img/employee.svg" alt="dashboard icon"> Employees</button><br></a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a href="announcement.php" style="text-decoration:none;">
+                                        <button type="button"><img src="img/announcement.svg" alt="dashboard icon">Announcements</button><br></a>
+                                    </li>
+                                    '
+                                    ;
+                                }else if($type == "hrrecruiter"){
+                                    echo '<li class="nav-item">
+                                    <a href="joblisting.php" style="text-decoration:none;">
+                                        <button type="button"><img src="img/job.svg" alt="dashboard icon"> Job Listings</button><br></a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a href="announcement.php" style="text-decoration:none;">
+                                        <button type="button"><img src="img/announcement.svg" alt="dashboard icon">Announcements</button><br></a>
+                                    </li>
+                                    '
+                                    
+                                    ;
+                                }else if($type == "admin"){
+                                    echo '
+                                    <li class="nav-item">
+                                    <a href="hrmanager.php" style="text-decoration:none;">
+                                        <button type="button"><img src="img/structure.svg" alt="dashboard icon">HR Manager</button><br></a>
+                                    </li>
+                                    <li class="nav-item"> 
+                                    <a href="depmanager.php" style="text-decoration:none;">
+                                        <button type="button"><img src="img/structure.svg" alt="dashboard icon"> Department Manager</button><br></a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a href="employee.php" style="text-decoration:none;">
+                                        <button type="button"><img src="img/employee.svg" alt="dashboard icon"> Employees</button><br></a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a href="joblisting.php" style="text-decoration:none;">
+                                        <button type="button"><img src="img/job.svg" alt="dashboard icon"> Job Listings</button><br></a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a href="announcement.php" style="text-decoration:none;">
+                                        <button type="button"><img src="img/announcement.svg" alt="dashboard icon">Announcements</button><br></a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a href="activitylog.php" style="text-decoration:none;">
+                                        <button type="button"><img src="img/announcement.svg" alt="dashboard icon">Activity Log</button><br></a>
+                                    </li>';
+                                }      
+                                ?> 
                           </ul>
                         </div>
                       </div>

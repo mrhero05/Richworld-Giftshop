@@ -76,6 +76,7 @@ include 'include/head.inc.php';
                         <label for="retype">Re-type Password</label>
                         <br>
                         <input type="password"  name="pass2" id="retype">
+                        <input type="hidden" name="type" value="user">
                         <br>
                         <!-- <label for="email">Email Address</label>
                         <br>
