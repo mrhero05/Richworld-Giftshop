@@ -37,6 +37,11 @@ $sql2 = "INSERT into messages (sender_id,reciever_id,msg,useracc_id,msg_type) va
 mysqli_query($conn,$sql2);
 
 
+$fulldate = date('m/d/Y');
+$currentDateTime = date('m/d/Y H:i:s');
+$time = date('h:i A', strtotime($currentDateTime));
+$sqllog = "INSERT INTO activitylog (admin_id,log_date,log_time,log_desc) values ('$admin','$fulldate','$time','Accept user to submition of requirements')";
+mysqli_query($conn,$sqllog);
 
 header("location:../depmanager.php?success");
 exit();

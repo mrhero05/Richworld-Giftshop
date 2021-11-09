@@ -21,6 +21,11 @@ mysqli_query($conn,$sql);
 $sqlmsg = "INSERT into messages (sender_id,reciever_id,msg,useracc_id,msg_type) values ('$admin','$hrmanager','$msg','$id','written')";
 mysqli_query($conn,$sqlmsg);
 
+$fulldate = date('m/d/Y');
+$currentDateTime = date('m/d/Y H:i:s');
+$time1 = date('h:i A', strtotime($currentDateTime));
+$sqllog = "INSERT INTO activitylog (admin_id,log_date,log_time,log_desc) values ('$admin','$fulldate','$time1','Schedule user to written exam')";
+mysqli_query($conn,$sqllog);
 
 header("location:../joblisting.php?success=sendsuccesswritten");
 exit();

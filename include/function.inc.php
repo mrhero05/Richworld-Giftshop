@@ -84,7 +84,7 @@ function uexist($conn,$uname){
     exit();
 }
 //function para sa register
-function register($conn,$uname,$pass,$fname,$lname,$contact,$email){
+function register($conn,$uname,$pass,$fname,$lname,$contact,$email,$acctype){
     // $result = uexist($conn,$uname);
   
     //  if($result == 1){
@@ -105,7 +105,7 @@ function register($conn,$uname,$pass,$fname,$lname,$contact,$email){
     // to hash the password to make it more secure
     $hashpass = password_hash($pass,PASSWORD_DEFAULT);
     
-    mysqli_stmt_bind_param($stmt,"ssssisssisssi",$uname,$hashpass,$fname,$lname,$contact,$email,$type,$type,$type,$type,$type,$type,$type);
+    mysqli_stmt_bind_param($stmt,"ssssisssisssi",$uname,$hashpass,$fname,$lname,$contact,$email,$type,$type,$type,$type,$acctype,$type,$type);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     echo "<script>alert('123')</script>";

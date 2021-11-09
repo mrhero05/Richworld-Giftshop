@@ -34,7 +34,7 @@ if(mysqli_num_rows($result) > 0){
     <input type="hidden" class="fullname" value="'.$fullname.'">
     <input type="hidden" class="job" value="'.$row["job_name"].'">
     
-    <td><button type="button" class="btn btn-primary" onclick="inimodremarks(this)"  data-toggle="modal" data-target="#writmodal">Remarks</button></td>
+    <td><button type="button" class="btn btn-primary" onclick="inimodremarks(this)" data-toggle="modal" data-target="#initmodal">Remarks</button></td>
 
     </tr>
         

@@ -4,7 +4,6 @@ $userid = $_SESSION["userId"];
 include "dbc.inc.php";
 
 if(isset($_POST["finishSubmit"])){
-    session_start();
 
     if(isset($_POST["qnumber"])){
         $qnumber = $_POST["qnumber"];
@@ -18,7 +17,6 @@ if(isset($_POST["finishSubmit"])){
                     $verify = $row["verify"];
                 }
                 if($verify == 1){
-                    $tanswer = "user";
     
                         $file = $_FILES["profileImg"];
                         
@@ -44,15 +42,16 @@ if(isset($_POST["finishSubmit"])){
                                     // echo $qnumber;
                                     // echo $qanswer;
                                     // echo $tanswer;
-                                    $sql = "UPDATE account SET user_status ='1',prof_path ='$newname',q_number='$qnumber',q_answer='$qanswer',acc_type='$tanswer' where acc_id ='$userId'";
+                                    $sql = "UPDATE account SET user_status ='1',prof_path ='$newname',q_number='$qnumber',q_answer='$qanswer' where acc_id ='$userId'";
                                     mysqli_query($conn,$sql);
-                                    
+                                    $tanswer = $_SESSION["acc_type"];
                                     if($tanswer == "user"){
                                        
                                         echo '<script>alert("Successfully Finish Account")</script>';
                                         header("location:../index.php");
                                         exit();
-                                    }else if($tanswer == "admin"){
+                                    }
+                                    else if($tanswer == "admin" || $tanswer == "hrmanager" || $tanswer == "department" || $tanswer == "hrrecruiter"){
                                     
                                         echo '<script>alert("Successfully Finish Account")</script>';
                                         header("location:../dashboard.php");
