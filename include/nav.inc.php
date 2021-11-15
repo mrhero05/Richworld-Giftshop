@@ -157,7 +157,7 @@ while($row = mysqli_fetch_assoc($result)){
                                     echo '
                                     <li class="nav-item"> 
                                     <a href="depmanager.php" style="text-decoration:none;">
-                                        <button type="button"><img src="img/structure.svg" alt="dashboard icon"> Department Manager</button><br></a>
+                                        <button type="button"><img src="img/dept.svg" alt="dashboard icon"> Department Manager</button><br></a>
                                     </li>
                                     <li class="nav-item">
                                     <a href="employee.php" style="text-decoration:none;">
@@ -189,7 +189,7 @@ while($row = mysqli_fetch_assoc($result)){
                                     </li>
                                     <li class="nav-item"> 
                                     <a href="depmanager.php" style="text-decoration:none;">
-                                        <button type="button"><img src="img/structure.svg" alt="dashboard icon"> Department Manager</button><br></a>
+                                        <button type="button"><img src="img/dept.svg" alt="dashboard icon"> Department Manager</button><br></a>
                                     </li>
                                     <li class="nav-item">
                                     <a href="employee.php" style="text-decoration:none;">
@@ -205,7 +205,7 @@ while($row = mysqli_fetch_assoc($result)){
                                     </li>
                                     <li class="nav-item">
                                     <a href="activitylog.php" style="text-decoration:none;">
-                                        <button type="button"><img src="img/announcement.svg" alt="dashboard icon">Activity Log</button><br></a>
+                                        <button type="button"><img src="img/actlog.svg" alt="dashboard icon">Activity Log</button><br></a>
                                     </li>';
                                 }      
                                 ?> 

@@ -4,6 +4,7 @@ $sql = "SELECT * from job";
 $result = mysqli_query($conn,$sql);
 if(mysqli_num_rows($result) > 0){
     while($row = mysqli_fetch_assoc($result)){
+        if($row["job_hired"] < $row["job_vacant"]){
         echo '
         
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
@@ -28,5 +29,6 @@ if(mysqli_num_rows($result) > 0){
             </div>
         </div>
         ';
+        }
     }
 }

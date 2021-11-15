@@ -6,6 +6,7 @@ if($_SESSION["acc_type"] == "user"){
 }
 include 'include/head.inc.php';
 include 'include/nav.inc.php';
+include 'include/dbc.inc.php';
 ?>
 
         <div class="col-lg-10">
@@ -21,13 +22,57 @@ include 'include/nav.inc.php';
                       
                             <div class="row">
                             <div class="col-sm-12 col-lg-4 bg-emp">
-                            <p class="border-sum"><img src="img/act-emp.svg" alt="sample"><br><br> 15 Active Employees</p>
+                            <?php 
+                            $acc_type = $_SESSION["acc_type"];
+                            if($acc_type == "admin"){
+                                echo ' <a href="employee.php" style="text-decoration: none;color:black">';
+                            }
+                            ?>
+                           
+                            <p class="border-sum"><img src="img/act-emp.svg" alt="sample"><br><br> 
+                            <?php 
+                            $sql = "SELECT count(*) as empc from employee";
+                            $result = mysqli_query($conn,$sql);
+                            if(mysqli_num_rows($result) > 0){
+                                $row = mysqli_fetch_assoc($result);
+                                echo $row["empc"];
+                            }
+                            ?> Active Employees</p></a>
                             </div>
                             <div class="col-sm-12 col-lg-4 bg-emp">
-                            <p class="border-sum"><img src="img/departments.svg" alt="sample"><br><br> 4 Departments</p>
+                            <?php 
+                            if($acc_type == "admin"){
+                                echo '<a href="joblisting.php" style="text-decoration: none;color:black">';
+                            }
+                            ?>
+                            <p class="border-sum"><img src="img/departments.svg" alt="sample"><br><br>
+                            <?php 
+                            $sql2 = "SELECT count(*) as jobd from job";
+                            $result2 = mysqli_query($conn,$sql2);
+                            if(mysqli_num_rows($result2) > 0){
+                                $row = mysqli_fetch_assoc($result2);
+                                echo $row["jobd"];
+                            }
+                            ?>
+                            Available Job</p></a>
                             </div>
                             <div class="col-sm-12 col-lg-4 bg-emp">
-                            <p class="border-sum"><img src="img/notif.svg" alt="sample"><br><br> 8 New Request Leave</p>
+                            <?php 
+                            if($acc_type == "admin"){
+                                echo '<a href="joblisting.php" style="text-decoration: none;color:black">';
+                            }
+                            ?>
+                            
+                            <p class="border-sum"><img src="img/notif.svg" alt="sample"><br><br>
+                            <?php 
+                            $sql1 = "SELECT count(*) as jobc from applyjob";
+                            $result1 = mysqli_query($conn,$sql1);
+                            if(mysqli_num_rows($result1) > 0){
+                                $row1 = mysqli_fetch_assoc($result1);
+                                echo $row1["jobc"];
+                            }
+                            ?>
+                            New Application Request</p></a>
                             </div>
                             </div>
                     </div>
@@ -41,35 +86,22 @@ include 'include/nav.inc.php';
                                 <div class="announcement">
 
                                     <!-- /* post cards like twitter w/ hover */ -->
-                                    <div class="post">
-                                           <p class="post-name"><img src="img/daryl.svg" alt="sadboi">Mark Angelo Reynante<span>Date/time</span></p>
-                                            <p class="post-title">Title</p>
-                                            <p class="post-des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus molestiae excepturi, quia debitis placeat, quidem quibusdam id quaerat commodi, dolorem aperiam. Nobis adipisci at totam non quod fuga, ratione beatae!</p>
-                                        </div>
-                                        <!-- /* post cards like twitter w/ hover */ -->
-                                        <div class="post">
-                                           <p class="post-name"><img src="img/daryl.svg" alt="sadboi">Mark Angelo Reynante <span>Date/time</span></p>
-                                            <p class="post-title">Title</p>
-                                            <p class="post-des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus molestiae excepturi, quia debitis placeat, quidem quibusdam id quaerat commodi, dolorem aperiam. Nobis adipisci at totam non quod fuga, ratione beatae!</p>
-                                        </div>
+                                    <?php 
+                                    $sqlnews = "SELECT account.prof_path,account.acc_type,fullname,title,ann_description,ann_time,ann_date from announcement INNER JOIN account on account.acc_id = announcement.admin_id";
+                                    $resultn = mysqli_query($conn,$sqlnews);
+                                    if(mysqli_num_rows($resultn) > 0){
+                                        while($row = mysqli_fetch_assoc($resultn)){
+                                            echo '<div class="post">
+                                            <p class="post-name"><img src="img/account-profile/'.$row["prof_path"].'" alt="sadboi" width="50px">'.$row["fullname"].'<span>'.$row["ann_date"].'/'.$row["ann_time"].'</span></p>
+                                             <p class="post-title">'.$row["title"].'</p>
+                                             <p class="post-des">'.$row["ann_description"].'</p>
+                                         </div>';
+                                        }
 
-                                        <div class="post">
-                                           <p class="post-name"><img src="img/daryl.svg" alt="sadboi">Mark Angelo Reynante <span>Date/time</span></p>
-                                            <p class="post-title">Title</p>
-                                            <p class="post-des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus molestiae excepturi, quia debitis placeat, quidem quibusdam id quaerat commodi, dolorem aperiam. Nobis adipisci at totam non quod fuga, ratione beatae!</p>
-                                        </div>
-
-                                        <div class="post">
-                                           <p class="post-name"><img src="img/daryl.svg" alt="sadboi">Mark Angelo Reynante <span>Date/time</span></p>
-                                            <p class="post-title">Title</p>
-                                            <p class="post-des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus molestiae excepturi, quia debitis placeat, quidem quibusdam id quaerat commodi, dolorem aperiam. Nobis adipisci at totam non quod fuga, ratione beatae!</p>
-                                        </div>
-
-                                        <div class="post">
-                                           <p class="post-name"><img src="img/daryl.svg" alt="sadboi">Mark Angelo Reynante <span>Date/time</span></p>
-                                            <p class="post-title">Title</p>
-                                            <p class="post-des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus molestiae excepturi, quia debitis placeat, quidem quibusdam id quaerat commodi, dolorem aperiam. Nobis adipisci at totam non quod fuga, ratione beatae!</p>
-                                        </div>
+                                    }
+                                    ?>
+                                        
+                                        
                                 </div>
                                 </div>
                     </div>    
@@ -80,25 +112,21 @@ include 'include/nav.inc.php';
                         <div class="recent">
                         <p class="recent-title">Recent Activities</p>
                         <p class="recent-des">Description <span>Time</span></p>
-                        <p>Employee Data<label>Time</label></p>
-                        <p>Employee Data <label>Time</label></p>
-                        <p>Employee Data <label>Time</label></p>
-                        <p>Employee Data <label>Time</label></p>
-                        <p>Employee Data <label>Time</label></p>
-                        <p>Employee Data <label>Time</label></p>
-                        <p>Employee Data <label>Time</label></p>
-                        <p>Employee Data <label>Time</label></p>
-                        <p>Employee Data <label>Time</label></p>
-                        <p>Employee Data <label>Time</label></p>
-                        <p>Employee Data <label>Time</label></p>
-                        <p>Employee Data <label>Time</label></p>
-                        <p>Employee Data <label>Time</label></p>
-                        <p>Employee Data <label>Time</label></p>
-                        <p>Employee Data <label>Time</label></p>
-                        <p>Employee Data <label>Time</label></p>
-                        <p>Employee Data <label>Time</label></p>
-                        <p>Employee Data <label>Time</label></p>
-                        <p>Employee Data <label>Time</label></p>
+                        <table class="table table-hover">
+                        <tbody>
+                            <?php
+                            $sqlrecent = "SELECT * from activitylog";
+                            $resultr = mysqli_query($conn,$sqlrecent);
+                            if(mysqli_num_rows($resultr) > 0){
+                                while($row = mysqli_fetch_assoc($resultr)){
+                                    echo '<tr><td><p style="float:left;width:50%">'.$row["log_desc"].'</p>
+                                    <span style="float:right">'.$row["log_time"].'</span></td></tr>';
+                                }
+                            }
+                            ?>
+                        </tbody>
+                        </table>
+                        
                     </div>
                         </div>
                 </div>

@@ -56,7 +56,7 @@ include 'include/nav.inc.php';
      <input type="hidden" class="init_id" value="" name="initid">
      </div>
      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Decline</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="declineIni(this)">Decline</button>
          <button type="submit" class="btn btn-primary">Passed</button>
      </div> 
      </form>

@@ -44,6 +44,8 @@ if(isset($_POST["finishSubmit"])){
                                     // echo $tanswer;
                                     $sql = "UPDATE account SET user_status ='1',prof_path ='$newname',q_number='$qnumber',q_answer='$qanswer' where acc_id ='$userId'";
                                     mysqli_query($conn,$sql);
+                                    $sql3 = "INSERT INTO account_complete (acc_id,age,birthday,civilstatus,caddress,gender) values ('$userId','none','none','none','none','none')";
+                                    mysqli_query($conn,$sql3);   
                                     $tanswer = $_SESSION["acc_type"];
                                     if($tanswer == "user"){
                                        

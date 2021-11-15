@@ -95,7 +95,6 @@ include 'include/dbc.inc.php';
                     $iniInt = 0;
                     $written = 0;
                     $finalInt = 0;
-                    $medical = 0;
                     $subreq = 0;
                     $contract = 0;
                     $deploy = 0;
@@ -105,9 +104,10 @@ include 'include/dbc.inc.php';
                         $rsub = $row["submit_resume"];
                         $makeInt = $row["make_interview"];
                         $iniInt = $row["initial_interview"];
+                        $makeWrit = $row["make_written"];
                         $written = $row["written_exam"];
+                        $makeFin = $row["make_final"];
                         $finalInt = $row["final_interview"];
-                        $medical = $row["medical_exam"];
                         $subreq = $row["sub_req"];
                         $contract = $row["contract_sign"];
                         $deploy = $row["deployment"];
@@ -117,15 +117,13 @@ include 'include/dbc.inc.php';
                     <ul>
                         <li>
                             <h5><img src="img/index_icon/Circle.svg" alt="">Resume submitted</h5>
-                                <p>12/21/12</p>
-                                <p>11:11PM</p>
+                                
                         </li>
                         <li>
                             <?php 
                             if($rsub == 1){
                                 echo '<h5><img src="img/index_icon/Circle.svg" alt="">Resume reviewed</h5>
-                                <p>12/21/12</p>
-                                <p>11:11PM</p>';
+                                ';
                             }else{
                                 echo '
                                 <h5><img src="img/index_icon/Circled.svg" alt="">Resume reviewed</h5>
@@ -162,6 +160,19 @@ include 'include/dbc.inc.php';
                             ?>
                         </li>
                         <li>
+                        <?php 
+                            if($makeWrit == 1){
+                                echo '<h5><img src="img/index_icon/Circle.svg" alt="">Schedule for written exam</h5>
+                                <p>Wait for HR officer to schedule your written. You will notified via email or messages</p>';
+                            }else{
+                                echo '
+                                <h5><img src="img/index_icon/Circled.svg" alt="">Schedule for written exam</h5>
+                            <p>Wait for HR officer to schedule your written. You will notified via email or messages</p>';
+                            } 
+                            ?>
+                            
+                        </li>
+                        <li>
                             <?php 
                             if($written == 1){
                                 echo '<h5><img src="img/index_icon/Circle.svg" alt="">Written Exam</h5>
@@ -177,6 +188,19 @@ include 'include/dbc.inc.php';
                             
                         </li>
                         <li>
+                        <?php 
+                            if($makeFin == 1){
+                                echo '<h5><img src="img/index_icon/Circle.svg" alt="">Schedule for final interview</h5>
+                                <p>Wait for HR officer to schedule your final interview. You will notified via email or messages</p>';
+                            }else{
+                                echo '
+                                <h5><img src="img/index_icon/Circled.svg" alt="">Schedule for final interview</h5>
+                            <p>Wait for HR officer to schedule your final interview. You will notified via email or messages</p>';
+                            } 
+                            ?>
+                            
+                        </li>
+                        <li>
                             <?php 
                             if($finalInt == 1){
                                 echo '<h5><img src="img/index_icon/Circle.svg" alt="">Final interview</h5>
@@ -187,21 +211,6 @@ include 'include/dbc.inc.php';
                                 <h5><img src="img/index_icon/Circled.svg" alt="">Final interview</h5>
                                 <p>12/21/12</p>
                                 <p>11:11PM</p>';
-                            } 
-                            ?>
-                            
-                        </li>
-                        <li>
-                            <?php 
-                            if($medical == 1){
-                                echo '<h5><img src="img/index_icon/Circle.svg" alt="">Medical Exam</h5>
-                                <p>12/21/12</p>
-                                <p>11:11PM</p>';
-                            }else{
-                                echo '
-                                <h5><img src="img/index_icon/Circled.svg" alt="">Medical Exam</h5>
-                            <p>12/21/12</p>
-                            <p>11:11PM</p>';
                             } 
                             ?>
                             

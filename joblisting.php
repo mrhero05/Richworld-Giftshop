@@ -17,6 +17,7 @@ if(isset($_GET["success"])){
     }
 }
 ?>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <div class="col-lg-10 jobfix">
     <div class="container">
         <div class="job-title">
@@ -78,7 +79,7 @@ if(isset($_GET["success"])){
                                                     <h6>$'.$row["job_salary_min"].' - $'.$row["job_salary_max"].'</h6>
                                                     
                                                     <span>no of submitted <strong>'.$row["job_applied"].'</strong></span>
-                                                    <p>no of vacant '.$row["job_vacant"].'</p>
+                                                    <p>no of hired/vacant '.$row["job_hired"].''."/".''.$row["job_vacant"].'</p>
                                                     <br>
                                                     <button type="button" data-toggle="modal" data-target="#acceptApply" onclick="jobdetails(this);">View Details</button>                         
                                             </div>

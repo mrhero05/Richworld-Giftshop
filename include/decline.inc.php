@@ -9,6 +9,7 @@ $count = 0;
 
 $sql = "DELETE from applyjob where account_id = '$id'";
 mysqli_query($conn,$sql);
+
 $sql1 = "INSERT INTO user_decline (acc_id,admin_id) values ('$id','$admin')";
 mysqli_query($conn,$sql1);
 
