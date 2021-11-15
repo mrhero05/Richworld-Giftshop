@@ -6,7 +6,9 @@ if($_SESSION["acc_type"] == "user"){
 }
 include 'include/head.inc.php';
 include 'include/nav.inc.php';
+include 'include/dbc.inc.php';
 ?>
+ 
 <div class="col-sm-12 col-lg-10">
     <div class="employee">
         <div class="row">
@@ -16,6 +18,7 @@ include 'include/nav.inc.php';
                     <!-- for employee view  -->
                     <div class="col-lg-12">
                         <div class="employee-container">
+                      
                                 <script src="js/script.js?v=<?php echo time(); ?>"></script>
                                 <input type="text" placeholder="Type something here..." class="searchbtn" id="searchInp">
                                 <figcaption class="figure-caption text-right">*Select one of the options first to search*</figcaption>
@@ -68,7 +71,20 @@ include 'include/nav.inc.php';
                                         <div class="col-sm-12 col-lg-6">
                                         <input type="text" class="form-control" placeholder="Contact" id="contact"></div>
                                         <div class="col-sm-12 col-lg-6">
-                                        <input type="text" class="form-control" placeholder="Job title" id="jobtitle"></div>
+                                        <select class="form-select jobselect" aria-label="Default select example">
+                                        <option selected>Please select a job</option>
+                                        <?php 
+                                        $sql = "SELECT * from job";
+                                        $result = mysqli_query($conn,$sql);
+                                        if(mysqli_num_rows($result) > 0){
+                                            while($row = mysqli_fetch_assoc($result)){
+                                               echo '<option value="'.$row["job_id"].'">'.$row["job_name"].'</option>';
+                                            }
+                                        }
+                                        ?>
+                                        </select>
+                                        <!-- <input type="text" class="form-control" placeholder="Job title" id="jobtitle"> -->
+                                        </div>
                                         <div class="col-sm-12 col-lg-6">
                                         <input type="text" class="form-control" placeholder="Employment type" id="emptype"></div>
                                         <div class="col-12">

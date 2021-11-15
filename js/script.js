@@ -200,14 +200,17 @@ function addjob(){
         var jvacant = document.getElementById("jvacant").value;
         var jdesc = document.getElementById("jobdesc").value;
         var bjob = true;
-      $('#addjob-div').load('include/addjob.inc.php',{
-        title:jtitle,
-        salarymin:jsalarymin,
-        salarymax:jsalarymax,
-        vacant:jvacant,
-        desc:jdesc,
-        jobb:bjob
-      });
+        if(jsalarymax < jsalarymin){
+            swal("Salary Error", "Please check salary", "error");
+        }else{
+        $('#addjob-div').load('include/addjob.inc.php',{
+            title:jtitle,
+            salarymin:jsalarymin,
+            salarymax:jsalarymax,
+            vacant:jvacant,
+            desc:jdesc,
+            jobb:bjob
+        });}
     });
 }
 //for showing job
@@ -438,6 +441,17 @@ function declineP(click_id){
     $(document).ready(function(){
         var parent = $(click_id).closest("tr");
         var id = parent.find('.msgUser_id').val();
+        console.log(id);
+        $('#decline').load('include/decline.inc.php',{
+            id:id
+        });
+    });
+}
+
+function declineIni(click_id){
+    $(document).ready(function(){
+        var parent = $(click_id).closest("#initmodal");
+        var id = parent.find('.init_id').val();
         console.log(id);
         $('#decline').load('include/decline.inc.php',{
             id:id
@@ -739,4 +753,22 @@ function finmodremarks(click_id){
         //     id:id
         // };
         // console.log(fullname);
+}
+
+function calculate_age() { 
+    var userDateinput = document.getElementById("bday").value;  
+	 console.log(userDateinput);
+	 
+     // convert user input value into date object
+	 var birthDate = new Date(userDateinput);
+	  console.log(" birthDate"+ birthDate);
+	 
+	 // get difference from current date;
+	 var difference=Date.now() - birthDate.getTime(); 
+	 	 
+	 var  ageDate = new Date(difference); 
+	 var calculatedAge=Math.abs(ageDate.getUTCFullYear() - 1970);
+     console.log(calculatedAge);
+	document.getElementById("age").value = calculatedAge;
+     
 }

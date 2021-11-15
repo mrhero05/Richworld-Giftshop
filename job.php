@@ -19,6 +19,17 @@ if($_SESSION["acc_type"] == "admin"){
   header("location:dashboard.php");
   exit();
   }
+$accid = $_SESSION["userId"];
+$sqlcheck = "SELECT * from account_complete where acc_id = '$accid'";
+$resultcheck = mysqli_query($conn,$sqlcheck);
+if(mysqli_num_rows($resultcheck) > 0){
+  while($row = mysqli_fetch_assoc($resultcheck)){
+    if($row["age"] == "none" || $row["birthday"] == "none" || $row["civilstatus"] == "none" || $row["caddress"] == "none" || $row["gender"] == "none"){
+      header("location:index.php?error=complete-your-info");
+      exit();
+    }
+  } 
+}
 ?>
 
 </body>
@@ -69,12 +80,9 @@ if($_SESSION["acc_type"] == "admin"){
                       </button>
                       <ul class="dropdown-menu">
                       <li><p class="dropdown-item" style="color:red">Account : <span style="color:green">'.$_SESSION["acc_type"].'<span></p></li>
-                          <li><a class="dropdown-item" href="#">Settings</a></li>
+                      <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#viewprofile">View Profile</a></li>
                           <li><a class="dropdown-item" href="messages.php">Messages</a></li>
                           <li><a class="dropdown-item" href="status.php">Status</a></li>
-                          <li><a class="dropdown-item" href="#">TBD</a></li>
-                          <li><a class="dropdown-item" href="#">TBD</a></li>
-                          <li><a class="dropdown-item" href="#">TBD</a></li>
                           <li><hr class="dropdown-divider"></li>
                           <li><form action="include/logout.inc.php" method="POST"><a class="dropdown-item"><button type="submit" name="logout" style="color:red">Log out</button></a></form></li>
                       </ul>
@@ -88,6 +96,107 @@ if($_SESSION["acc_type"] == "admin"){
     </div>
   </div>
 </nav>
+
+<!-- start modal create profile -->
+
+<div class="modal fade" id="viewprofile" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content">
+     <div class="modal-header">
+         <h5 class="modal-titles" id="exampleModalLongTitle">Your Profile</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+         </button>
+     </div>
+     <div class="modal-body">
+      <div class="profileall">
+        <?php
+        include "include/dbc.inc.php";
+        $accid = $_SESSION["userId"];
+        $sql = "SELECT * from account where acc_id = '$accid'";
+        $result = mysqli_query($conn,$sql);
+        $name = "";
+        $pic = "";
+        if(mysqli_num_rows($result) > 0){
+          while($row = mysqli_fetch_assoc($result)){
+            $name = $row["firstname"]." ".$row["lastname"];
+            $pic = $row["prof_path"];
+          }
+        }
+        echo '<img src="img/account-profile/'.$pic.'">';
+        echo '<span>'.$name.'</span>';
+        ?>
+              <br><br>
+        <form action="include/profile_complete.inc.php" method="POST">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+            <?php
+            $accid = $_SESSION["userId"];
+            $sqlshow = "SELECT * from account_complete where acc_id = '$accid'";
+            $result2 = mysqli_query($conn,$sqlshow);
+            $age = "";
+            $bday = "";
+            $status = "";
+            $address = "";
+            $gender = "";
+            if(mysqli_num_rows($result2) > 0){
+              while($row = mysqli_fetch_assoc($result2)){
+                $age = $row["age"];
+                $bday = $row["birthday"];
+                $status = $row["civilstatus"];
+                $address = $row["caddress"];
+                $gender = $row["gender"];
+              }
+            }
+            echo '<label for="age">Age</label>
+            <input class="form-control" type="text" id="age" name="age" class="currentage" style="pointer-events: none;" value="'.$age.'">
+            </div>
+            <div class="col-lg-6">
+            <label for="bday">Birthday</label>
+            <input class="form-control" type="date" id="bday" name="bday" onchange="calculate_age();" value="'.$bday.'" required>
+            </div>
+            <div class="col-lg-6">
+            <label for="civil" style="padding-bottom: 4%;">Civil Status</label>
+            <br>
+            <select class="form-select" aria-label="Default select example" name="type" id="civil">
+                  <option>'.$status.'</option>
+                    <option value="Single">Single</option>
+                    <option value="Married">Married</option>
+                    <option value="Widowed">Widowed</option>
+                    <option value="Seperated">Seperated</option>
+                    <option value="Divorce">Divorce</option>
+            </select>
+            </div>
+            <div class="col-lg-6">
+            <label for="address">Address</label>
+            <input class="form-control" type="text" id="address" name="address" value="'.$address.'" required>
+            </div>
+            <div class="col-lg-6">
+            <label for="gender" style="padding-bottom: 4%;">Gender</label>
+            <br>
+            <select class="form-select" aria-label="Default select example" name="gender" id="gender">
+                  <option>'.$gender.'</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+            </select>
+            </div>
+            ';
+            ?> 
+          </div>
+       
+        </div>
+      </div>
+     </div>
+     <div class="modal-footer">
+         <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+         <button type="submit" class="btn btn-primary" style="width:100%">Save Changes</button>
+     </div>
+     </div>
+     </form>
+ </div>
+</div>
+<!-- end modal create profile -->
 
 <section id="job-body">
     <div class="job">

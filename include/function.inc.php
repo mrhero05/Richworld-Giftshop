@@ -108,8 +108,16 @@ function register($conn,$uname,$pass,$fname,$lname,$contact,$email,$acctype){
     mysqli_stmt_bind_param($stmt,"ssssisssisssi",$uname,$hashpass,$fname,$lname,$contact,$email,$type,$type,$type,$type,$acctype,$type,$type);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    echo "<script>alert('123')</script>";
+    echo "<script>alert(' ')</script>";
+    session_start();
+    $acc = $_SESSION["acc_type"];
+    if($acc == "admin"){
+        header("location: ../register.php?success=account-create-successfully");
+        return true;
+        exit();
+    }
     header("location: ../register.php?success=account-create-successfully");
+    
     return true;
     exit();
 
