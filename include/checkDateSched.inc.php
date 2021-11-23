@@ -2,13 +2,6 @@
 include 'dbc.inc.php';
 date_default_timezone_set('Asia/Manila');
 $accid = $_POST["id"];
-// $month = date("n");
-// $day = date("j");
-// $yr = date("Y");
-// $fulldate = $month ."/". $day ."/". $yr;
-
-// $fulldate = date('m/d/Y',strtotime("+1 day"));
-// $fulldate = date('m/d/Y',strtotime("+2 day"));
 
 $t1 = "8:00 am - 10:00am";
 $t2 = "10:00 am - 12:00pm";
@@ -41,7 +34,7 @@ if($timepick == 1){
 }
 
 
-echo '<h6>Date : <span>'.$fulldate.'</span> </h6> <h6>Time : <span>'.$truetime.'</span> </h6>';
-echo '<input type="hidden" value="'.$fulldate.'" name="date">
+echo 'Time : <span>'.$truetime.'</span> </h6>';
+echo '
         <input type="hidden" value="'.$truetime.'" name="time">
 ';

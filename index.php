@@ -186,7 +186,7 @@ if($_SESSION["acc_type"] == "admin"){
           <div class="title">
             <h1>The easiest way to organize your employees</h1>
             <p>Your all-in-one hr solutions.</p>
-            <button type="button">Get started</button>
+            <a href="register.php"><button type="button">Get started</button></a>
           </div>
 </div>
         </div>
@@ -485,7 +485,7 @@ Your sensitive unstructured data remains secure no matter where it is in the eve
                   data-aos-easing="ease-in-out">
           <div class="flink">
           <p>Support</p>
-            <a href=""><h6>Contact Us</h6></a>
+            <a href="mailto: richworldgiftshop@gmail.com"><h6>Contact Us</h6></a>
             <a href=""><h6>FAQ</h6></a>
             <a href=""><h6>Downloads</h6></a>
         </div>
@@ -499,9 +499,9 @@ Your sensitive unstructured data remains secure no matter where it is in the eve
                   data-aos-easing="ease-in-out">
           <div class="flink">
           <p>Follow</p>
-          <a href=""><h6>Facebook</h6></a>
-          <a href=""><h6>Twitter</h6></a>
-          <a href=""><h6>Linkedin</h6></a>
+          <a href="https://www.facebook.com" target="_blank"><h6>Facebook</h6></a>
+          <a href="https://www.twitter.com" target="_blank"><h6>Twitter</h6></a>
+          <a href="https://www.linkedin.com" target="_blank"><h6>Linkedin</h6></a>
         </div>
 <!-- animations closing div -->
 </div>
