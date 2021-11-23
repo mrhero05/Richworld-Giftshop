@@ -41,7 +41,7 @@ if($timepick == 1){
 }
 
 
-echo '<h6>Date : <span>'.$fulldate.'</span> </h6> <h6>Time : <span>'.$truetime.'</span> </h6>';
-echo '<input type="hidden" value="'.$fulldate.'" name="date">
+echo ' <h6>Time : <span>'.$truetime.'</span> </h6>';
+echo '
         <input type="hidden" value="'.$truetime.'" name="time">
 ';

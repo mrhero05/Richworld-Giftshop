@@ -162,13 +162,14 @@ if(isset($_GET["success"])){
             <input type="hidden" class="peopleSid" value="" name="id">
         </div>
         <br>
-        <!-- <div class="radioInterview">
-        <p><input type="radio" name="radioI" value="initial" id="1"> Initial Interview &nbsp;</p>
-        <p><input type="radio" name="radioI" value="written" id="2"> Written Exam &nbsp;</p>
-        <p><input type="radio" name="radioI" value="final" id="3"> Final Interview </p>
-        </div> -->
+       
+        <div id="datemeet" style="float: right;">
+        <button type="button" onclick="showdate()" style="border-radius:4px;border:none;background-color:#fd5757;color:white;" data-toggle="modal" data-target="#calendar1" data-dismiss="modal">Set date</button>
+        </div>
+        
         <div id="checkdate">
-            
+        </div>
+        <div id="checkdate1">
         </div>
             <input type="text" class="meetlink" placeholder="Paste your meeting link here..." name="link">
             <h6 class="message-md">Message:</h6>
@@ -184,6 +185,55 @@ if(isset($_GET["success"])){
 </div>
 </form>
 <!-- end modal create meet -->
+
+
+<div class="modal fade" id="calendar1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content">
+     <div class="modal-header">
+         <h5 class="modal-titles" id="exampleModalLongTitle">Schedule Calendar</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+         </button>
+     </div>
+     <div class="modal-body">
+     <div id="calendarbody"></div>
+     </div>
+     </div>
+ </div>
+</div>
+
+<div class="modal fade" id="calendar2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content">
+     <div class="modal-header">
+         <h5 class="modal-titles" id="exampleModalLongTitle">Schedule Calendar</h5>
+         <button type="button" class="close" data-dismiss="modal" data-toggle="modal" data-target="#createwritten"  aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+         </button>
+     </div>
+     <div class="modal-body">
+     <div id="calendarbody2"></div>
+     </div>
+     </div>
+ </div>
+</div>
+
+<div class="modal fade" id="calendar3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content">
+     <div class="modal-header">
+         <h5 class="modal-titles" id="exampleModalLongTitle">Schedule Calendar</h5>
+         <button type="button" class="close" data-dismiss="modal" data-toggle="modal" data-target="#createfinal"  aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+         </button>
+     </div>
+     <div class="modal-body">
+     <div id="calendarbody3"></div>
+     </div>
+     </div>
+ </div>
+</div>
 
 <!-- start modal create written sched -->
 
@@ -206,14 +256,13 @@ if(isset($_GET["success"])){
             <input type="hidden" class="peopleSid" value="" name="id">
         </div>
         <br>
-        <!-- <div class="radioInterview">
-        <p><input type="radio" name="radioI" value="initial" id="1"> Initial Interview &nbsp;</p>
-        <p><input type="radio" name="radioI" value="written" id="2"> Written Exam &nbsp;</p>
-        <p><input type="radio" name="radioI" value="final" id="3"> Final Interview </p>
-        </div> -->
-        <div id="checkdatewritten">
-            
+        <div id="datemeet" style="float: right;">
+        <button type="button" onclick="showdatewritten()" style="border-radius:4px;border:none;background-color:#fd5757;color:white;" data-toggle="modal" data-target="#calendar2" data-dismiss="modal">Set date</button>
         </div>
+
+        <div id="checkdatewritten">
+        </div>
+        <div id="checkdatewritten1"></div>
             <input type="text" class="meetlink" placeholder="Paste your written exam form here..." name="link">
             <h6 class="message-md">Message:</h6>
             <textarea class="form-control" rows="3" name="meet_msg"></textarea>
@@ -228,26 +277,6 @@ if(isset($_GET["success"])){
 </div>
 </form>
 <!-- end modal create written sched -->
-
-<!-- start modal written exam -->
-
-<!-- <div class="modal fade" id="writtenApply1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
- <div class="modal-dialog modal-dialog-centered" role="document">
-     <div class="modal-content">
-     <div class="modal-header">
-         <h5 class="modal-titles" id="exampleModalLongTitle">List of user take written exam</h5>
-         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-         <span aria-hidden="true">&times;</span>
-         </button>
-     </div>
-     <div class="modal-body">
-     <div class="table-responsive" id="writtenTbl">       
-     </div>
-     
-     </div>
- </div>
-</div> -->
-    <!-- end modal written exam -->   
 
 <!-- start modal written applicant -->
 
@@ -294,13 +323,12 @@ if(isset($_GET["success"])){
             <input type="hidden" class="peopleSid" value="" name="id">
         </div>
         <br>
-        <!-- <div class="radioInterview">
-        <p><input type="radio" name="radioI" value="initial" id="1"> Initial Interview &nbsp;</p>
-        <p><input type="radio" name="radioI" value="written" id="2"> Written Exam &nbsp;</p>
-        <p><input type="radio" name="radioI" value="final" id="3"> Final Interview </p>
-        </div> -->
+        <div id="datemeet" style="float: right;">
+        <button type="button" onclick="showdatefinal()" style="border-radius:4px;border:none;background-color:#fd5757;color:white;" data-toggle="modal" data-target="#calendar3" data-dismiss="modal">Set date</button>
+        </div>
         <div id="checkdatefinal">
-            
+        </div>
+        <div id="checkdatefinal1">
         </div>
             <input type="text" class="meetlink" placeholder="Paste your meeting link here..." name="link">
             <h6 class="message-md">Message:</h6>
@@ -427,10 +455,6 @@ if(isset($_GET["success"])){
         <div class="table-responsive" id="contractTbl">       
         </div>
         </div>
-        <!-- <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary" style="width:100%">Save Changes</button>
-        </div>  -->
         </div>
     </div>
 </div>

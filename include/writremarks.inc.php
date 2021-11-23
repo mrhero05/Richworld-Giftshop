@@ -2,7 +2,7 @@
 
 include "dbc.inc.php";
 
-$sql = "SELECT account.firstname,account.lastname,applyjob.job_id,applyjob.apply_status,job.job_name,written_sched.wsched_accid from written_sched INNER JOIN account on account.acc_id = written_sched.wsched_accid INNER JOIN applyjob on applyjob.account_id = written_sched.wsched_accid INNER JOIN job on job.job_id = applyjob.job_id";
+$sql = "SELECT account.firstname,account.lastname,applyjob.job_id,applyjob.apply_status,job.job_name,written_sched.wsched_accid from written_sched INNER JOIN account on account.acc_id = written_sched.wsched_accid INNER JOIN applyjob on applyjob.account_id = written_sched.wsched_accid INNER JOIN job on job.job_id = applyjob.job_id where applyjob.apply_status = 'Interview Passed/Scheduling Written Exam'";
 $result = mysqli_query($conn,$sql);
 
 echo '

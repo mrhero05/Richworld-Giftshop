@@ -772,3 +772,162 @@ function calculate_age() {
 	document.getElementById("age").value = calculatedAge;
      
 }
+
+function showdate(){
+    $(document).ready(function() {
+
+        var calendar = $('#calendarbody').fullCalendar({
+            
+         editable:true,
+         weekends:false,
+         header:{
+          left:'prev,next today',
+          center:'title',
+          right:'month',
+         },
+         eventOrder: "id",
+         events: "include/events.inc.php",
+         selectable:true,
+         selectHelper:true,
+         displayEventTime: false,
+         timezone:"local",
+         select: function(start, end, jsEvent, view){
+            var start = $.fullCalendar.formatDate(start, "MM-DD-Y");
+            swal("Are you sure you want to select this date?", {
+                buttons: ["Cancel", "Yes"],
+              })
+              .then((willDelete) => {
+                if (willDelete) {
+                  swal("Schedule Successfully Selected", {
+                    icon: "success",
+                  });
+                  $(document).ready(function(){
+                    $('#checkdate1').load('include/setdatesched.inc.php',{
+                        date:start
+                    });
+                    });
+                  $('#createmeet').modal('show');
+
+                } else {
+                  swal("Please Select Again");
+                }
+              });
+            
+         },
+       
+        selectAllow: function(info) {
+            if ( info.start.isBefore(moment().add(-1, 'days')) )
+                return false;
+            return true;          
+        }
+    
+       });
+      
+     });
+}
+
+function showdatewritten(){
+    $(document).ready(function() {
+
+        var calendar = $('#calendarbody2').fullCalendar({
+            
+         editable:true,
+         weekends:false,
+         header:{
+          left:'prev,next today',
+          center:'title',
+          right:'month',
+         },
+         eventOrder: "id",
+         events: "include/eventswrit.inc.php",
+         selectable:true,
+         selectHelper:true,
+         displayEventTime: false,
+         timezone:"local",
+         select: function(start, end, jsEvent, view){
+            var start = $.fullCalendar.formatDate(start, "MM-DD-Y");
+            swal("Are you sure you want to select this date?", {
+                buttons: ["Cancel", "Yes"],
+              })
+              .then((willDelete) => {
+                if (willDelete) {
+                  swal("Schedule Successfully Selected", {
+                    icon: "success",
+                  });
+                  $(document).ready(function(){
+                    $('#checkdatewritten1').load('include/setdateschedwrit.inc.php',{
+                        date:start
+                    });
+                    });
+                
+
+                } else {
+                  swal("Please Select Again");
+                }
+              });
+            
+         },
+       
+        selectAllow: function(info) {
+            if ( info.start.isBefore(moment().add(-1, 'days')) )
+                return false;
+            return true;          
+        }
+    
+       });
+      
+     });
+}
+
+function showdatefinal(){
+    $(document).ready(function() {
+
+        var calendar = $('#calendarbody3').fullCalendar({
+            
+         editable:true,
+         weekends:false,
+         header:{
+          left:'prev,next today',
+          center:'title',
+          right:'month',
+         },
+         eventOrder: "id",
+         events: "include/eventsfin.inc.php",
+         selectable:true,
+         selectHelper:true,
+         displayEventTime: false,
+         timezone:"local",
+         select: function(start, end, jsEvent, view){
+            var start = $.fullCalendar.formatDate(start, "MM-DD-Y");
+            swal("Are you sure you want to select this date?", {
+                buttons: ["Cancel", "Yes"],
+              })
+              .then((willDelete) => {
+                if (willDelete) {
+                  swal("Schedule Successfully Selected", {
+                    icon: "success",
+                  });
+                  $(document).ready(function(){
+                    $('#checkdatefinal1').load('include/setdateschedfin.inc.php',{
+                        date:start
+                    });
+                    });
+              
+
+                } else {
+                  swal("Please Select Again");
+                }
+              });
+            
+         },
+       
+        selectAllow: function(info) {
+            if ( info.start.isBefore(moment().add(-1, 'days')) )
+                return false;
+            return true;          
+        }
+    
+       });
+      
+     });
+}

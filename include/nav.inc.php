@@ -62,8 +62,7 @@ while($row = mysqli_fetch_assoc($result)){
                                 echo '<li><a class="dropdown-item" style="cursor:pointer" data-toggle="modal" data-target="#createmodal">Create Account</a></li>';
                             }
                             ?>
-                            <li><a class="dropdown-item" href="#">TBD</a></li>
-                            <li><a class="dropdown-item" href="#">TBD</a></li>
+                            
                             <li><hr class="dropdown-divider"></li>
                             <li><form action="include/logout.inc.php" method="POST"><a class="dropdown-item"><button type="submit" name="logout" style="color:red">Log out</button></a></form></li>
                         </ul>
