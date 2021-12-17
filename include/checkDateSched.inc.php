@@ -1,7 +1,6 @@
 <?php
 include 'dbc.inc.php';
 date_default_timezone_set('Asia/Manila');
-$accid = $_POST["id"];
 
 $t1 = "8:00 am - 10:00am";
 $t2 = "10:00 am - 12:00pm";

@@ -2589,3 +2589,14 @@ background:#3d3b53;
     font-weight: 600;
     margin-left: 10%;
 }
+
+.filejob{
+    text-align: center;
+    width: 100% !important;
+}
+.childfile{
+    width: 80% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+

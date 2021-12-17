@@ -24,7 +24,7 @@ $sqlcheck = "SELECT * from account_complete where acc_id = '$accid'";
 $resultcheck = mysqli_query($conn,$sqlcheck);
 if(mysqli_num_rows($resultcheck) > 0){
   while($row = mysqli_fetch_assoc($resultcheck)){
-    if($row["age"] == "none" || $row["birthday"] == "none" || $row["civilstatus"] == "none" || $row["caddress"] == "none" || $row["gender"] == "none"){
+    if($row["age"] == "none" || $row["birthday"] == "none" || $row["civilstatus"] == "none" || $row["caddress"] == "none" || $row["gender"] == "none" || $row["apply_resume"] == "none" || $row["tor"] == "none" || $row["letter"] == "none"){
       header("location:index.php?error=complete-your-info");
       exit();
     }
@@ -225,7 +225,7 @@ if(mysqli_num_rows($resultcheck) > 0){
           
     </div>
     <!-- start modal view job index -->
-  <form action="applyindex.php" method="POST">
+  <form action="include/applyjobid.inc.php" method="POST">
           <div class="modal fade" id="viewjobIndex" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">

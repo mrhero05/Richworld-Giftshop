@@ -1,6 +1,6 @@
 <?php
 include "dbc.inc.php";
-session_start();
+//session_start();
 if(isset($_SESSION["profile-name"])){
 $accid = $_SESSION["userId"];
 $sql = "SELECT * from account where acc_id = '$accid'";
