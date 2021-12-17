@@ -1,11 +1,12 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
 // if(!empty($_POST["date"]) && !empty($_POST["time"]) && !empty($_POST["id"]) && !empty($_POST["link"]) && !empty($_POST["meet_msg"])){
 include "dbc.inc.php";
 session_start();
 $date = $_POST["date"];
 $time = $_POST["time"];
 $link = $_POST["link"];
-$id = $_POST["id"];
+ $id = $_POST["id"];
 $msg = $_POST["meet_msg"];
 $admin = $_SESSION["userId"];
 
@@ -26,5 +27,37 @@ $currentDateTime = date('m/d/Y H:i:s');
 $time1 = date('h:i A', strtotime($currentDateTime));
 $sqllog = "INSERT INTO activitylog (admin_id,log_date,log_time,log_desc) values ('$admin','$fulldate','$time1','Schedule user to initial interview')";
 mysqli_query($conn,$sqllog);
-header("location:../joblisting.php?success=sendsuccess");
+
+
+$sqlemail = "SELECT * from account where acc_id = $id";
+$resultemail = mysqli_query($conn,$sqlemail);
+$email = "";
+if(mysqli_num_rows($resultemail) > 0){
+    while($row = mysqli_fetch_assoc($resultemail)){
+        $email = $row["email"];
+    }
+}
+
+require '../vendor/autoload.php';
+$mail = new PHPMailer;
+$mail->isSMTP();
+$mail->Host='smtp.gmail.com';
+$mail->Port=587;
+$mail->SMTPAuth=true;
+$mail->SMTPSecure='tls';
+$mail->Username='floortrading.val@gmail.com';
+$mail->Password='valtrading123';
+$mail->setFrom('floortrading.val@gmail.com', 'Floor Trading OTP Code');
+$mail->addAddress($email);
+
+$mail->isHTML(true);
+$mail->Subject="Forgot Password Verification Code";
+$mail->Body="message";
+if (!$mail->send()){
+echo 'error';
+}else{
+echo 'Email Sent';
+}
+
+//header("location:../joblisting.php?success=sendsuccess");
 exit();

@@ -2,10 +2,12 @@
 include 'include/head.inc.php';
 include 'include/dbc.inc.php';
 session_start();
+if(isset($_SESSION["acc_type"])){
 if($_SESSION["acc_type"] == "admin"){
   header("location:dashboard.php");
   exit();
   }
+}
 ?>
 
 </body>
@@ -102,7 +104,7 @@ if($_SESSION["acc_type"] == "admin"){
         echo '<span>'.$name.'</span>';
         ?>
               <br><br>
-        <form action="include/profile_complete.inc.php" method="POST">
+        <form action="include/profile_complete.inc.php" method="POST" enctype="multipart/form-data">
         <div class="container">
           <div class="row">
             <div class="col-lg-6">
@@ -155,6 +157,25 @@ if($_SESSION["acc_type"] == "admin"){
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
             </select>
+            </div>
+            <br>
+            <div class="filejob">
+              <div class="childfile">
+              <div class="col-lg-12">
+              <label>Resume</label>   
+              <input class="form-control form-control" id="formFile1" type="file" name="resume">
+              </div>
+              <div class="col-lg-12">
+              <br>
+              <label>Application Letter</label> 
+              <input class="form-control form-control" id="formFile2" type="file" name="appletter">
+              </div>
+              <br>
+              <div class="col-lg-12">
+              <label>Tor</label> 
+              <input class="form-control form-control" id="formFile3" type="file" name="tor">
+              </div>
+              </div>
             </div>
             ';
             ?> 
